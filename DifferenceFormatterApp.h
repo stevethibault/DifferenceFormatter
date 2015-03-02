@@ -16,10 +16,12 @@ using namespace Poco::Util;
 class DifferenceFormatterApp: public Application
 {
 public:
+
 	DifferenceFormatterApp(): _helpRequested(false)
 	{}
 
 protected:
+
 	void initialize(Application& self);
 
 	void uninitialize();
@@ -37,6 +39,7 @@ protected:
 	void printProperties(const std::string& base);
 
 private:
+
 	bool _helpRequested;
 };
 

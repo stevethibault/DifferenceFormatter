@@ -53,6 +53,8 @@ void DifferenceFormatterApp::displayHelp()
     helpFormatter.format(std::cout);
 }
 
+
+
 int DifferenceFormatterApp::main(const ArgVec& args)
 {
     if (_helpRequested)
@@ -61,7 +63,7 @@ int DifferenceFormatterApp::main(const ArgVec& args)
     }
     else
     {
-
+        generateDifferenceReport();
     }
     return Application::EXIT_OK;
 }

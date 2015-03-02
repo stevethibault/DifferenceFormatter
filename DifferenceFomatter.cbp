@@ -24,6 +24,13 @@
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
@@ -40,6 +47,13 @@
          <Option type="1" />
          <Option compiler="gcc" />
          <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.9" />
+            <Add directory="/usr/include/c++/4.9/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.9" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed" />
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
@@ -60,15 +74,19 @@
          </MakeCommands>
       </Target>
       </Build>
-      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp">
-      </Unit>
       <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatterApp.cpp">
       </Unit>
-      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceParser.cpp">
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceReport.cpp">
       </Unit>
       <Unit filename="/home/steve/projects/DifferenceFormatter/main.cpp">
       </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/stream.cpp">
+      </Unit>
       <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatterApp.h">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceReport.h">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/stream.h">
       </Unit>
       <Unit filename="/home/steve/projects/DifferenceFormatter/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
