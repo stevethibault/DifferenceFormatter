@@ -53,7 +53,11 @@ void DifferenceFormatterApp::displayHelp()
     helpFormatter.format(std::cout);
 }
 
+void DifferenceFormatterApp::generateDifferenceReport()
+{
+    std::ifstream input_file(config().getString(diff_file));
 
+}
 
 int DifferenceFormatterApp::main(const ArgVec& args)
 {
