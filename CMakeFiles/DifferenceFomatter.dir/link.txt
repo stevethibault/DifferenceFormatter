@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++1y    CMakeFiles/DifferenceFomatter.dir/main.cpp.o CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o  -o DifferenceFomatter  -L/usr/local/lib/lib -rdynamic -lPocoFoundationd -lPocoNetd -lPocoUtild -Wl,-rpath,/usr/local/lib/lib 
