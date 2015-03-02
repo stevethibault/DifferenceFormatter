@@ -111,6 +111,30 @@ DifferenceFomatter/fast:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/build
 .PHONY : DifferenceFomatter/fast
 
+DifferenceFormatter.o: DifferenceFormatter.cpp.o
+.PHONY : DifferenceFormatter.o
+
+# target to build an object file
+DifferenceFormatter.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o
+.PHONY : DifferenceFormatter.cpp.o
+
+DifferenceFormatter.i: DifferenceFormatter.cpp.i
+.PHONY : DifferenceFormatter.i
+
+# target to preprocess a source file
+DifferenceFormatter.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.i
+.PHONY : DifferenceFormatter.cpp.i
+
+DifferenceFormatter.s: DifferenceFormatter.cpp.s
+.PHONY : DifferenceFormatter.s
+
+# target to generate assembly for a file
+DifferenceFormatter.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.s
+.PHONY : DifferenceFormatter.cpp.s
+
 DifferenceFormatterApp.o: DifferenceFormatterApp.cpp.o
 .PHONY : DifferenceFormatterApp.o
 
@@ -134,6 +158,30 @@ DifferenceFormatterApp.s: DifferenceFormatterApp.cpp.s
 DifferenceFormatterApp.cpp.s:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.s
 .PHONY : DifferenceFormatterApp.cpp.s
+
+DifferenceParser.o: DifferenceParser.cpp.o
+.PHONY : DifferenceParser.o
+
+# target to build an object file
+DifferenceParser.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o
+.PHONY : DifferenceParser.cpp.o
+
+DifferenceParser.i: DifferenceParser.cpp.i
+.PHONY : DifferenceParser.i
+
+# target to preprocess a source file
+DifferenceParser.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.i
+.PHONY : DifferenceParser.cpp.i
+
+DifferenceParser.s: DifferenceParser.cpp.s
+.PHONY : DifferenceParser.s
+
+# target to generate assembly for a file
+DifferenceParser.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.s
+.PHONY : DifferenceParser.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -168,9 +216,15 @@ help:
 	@echo "... DifferenceFomatter"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... DifferenceFormatter.o"
+	@echo "... DifferenceFormatter.i"
+	@echo "... DifferenceFormatter.s"
 	@echo "... DifferenceFormatterApp.o"
 	@echo "... DifferenceFormatterApp.i"
 	@echo "... DifferenceFormatterApp.s"
+	@echo "... DifferenceParser.o"
+	@echo "... DifferenceParser.i"
+	@echo "... DifferenceParser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/steve/projects/DifferenceFormatter
 CMakeFiles/DifferenceFomatter.dir/all:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/depend
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/steve/projects/DifferenceFormatter/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/steve/projects/DifferenceFormatter/CMakeFiles  1 2 3 4
 	@echo "Built target DifferenceFomatter"
 .PHONY : CMakeFiles/DifferenceFomatter.dir/all
 
@@ -69,7 +69,7 @@ all: CMakeFiles/DifferenceFomatter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DifferenceFomatter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/projects/DifferenceFormatter/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/projects/DifferenceFormatter/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DifferenceFomatter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/projects/DifferenceFormatter/CMakeFiles 0
 .PHONY : CMakeFiles/DifferenceFomatter.dir/rule

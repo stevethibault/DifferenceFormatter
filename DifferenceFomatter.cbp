@@ -1,92 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="DifferenceFomatter" />
-		<Option makefile_is_custom="1" />
-		<Option compiler="gcc" />
-		<Option virtualFolders="CMake Files/;" />
-		<Build>
-			<Target title="all">
-				<Option type="4" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add directory="include" />
-				</Compiler>
-				<MakeCommands>
-					<Build command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 all' />
-					<CompileFile command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
-					<Clean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<DistClean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<AskRebuildNeeded command="$make -q -f $makefile $target" />
-					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
-				</MakeCommands>
-			</Target>
-			<Target title="DifferenceFomatter">
-				<Option output="/home/steve/projects/DifferenceFormatter/DifferenceFomatter" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="/home/steve/projects/DifferenceFormatter" />
-				<Option object_output="./" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add directory="/usr/local/include" />
-					<Add directory="include" />
-				</Compiler>
-				<MakeCommands>
-					<Build command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 DifferenceFomatter' />
-					<CompileFile command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
-					<Clean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<DistClean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<AskRebuildNeeded command="$make -q -f $makefile $target" />
-					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
-				</MakeCommands>
-			</Target>
-			<Target title="DifferenceFomatter/fast">
-				<Option output="/home/steve/projects/DifferenceFormatter/DifferenceFomatter" prefix_auto="0" extension_auto="0" />
-				<Option working_dir="/home/steve/projects/DifferenceFormatter" />
-				<Option object_output="./" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add directory="/usr/local/include" />
-					<Add directory="include" />
-				</Compiler>
-				<MakeCommands>
-					<Build command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 DifferenceFomatter/fast' />
-					<CompileFile command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
-					<Clean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<DistClean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<AskRebuildNeeded command="$make -q -f $makefile $target" />
-					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option type="4" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add directory="include" />
-				</Compiler>
-				<MakeCommands>
-					<Build command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 rebuild_cache' />
-					<CompileFile command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
-					<Clean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<DistClean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
-					<AskRebuildNeeded command="$make -q -f $makefile $target" />
-					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
-				</MakeCommands>
-			</Target>
-		</Build>
-		<Unit filename="CMakeLists.txt">
-			<Option virtualFolder="CMake Files/" />
-		</Unit>
-		<Unit filename="DifferenceFormatterApp.cpp" />
-		<Unit filename="DifferenceFormatterApp.h" />
-		<Unit filename="include/DifferenceParser.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="src/DifferenceParser.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-		</Extensions>
-	</Project>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="DifferenceFomatter" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/steve/projects/DifferenceFormatter" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="DifferenceFomatter">
+         <Option output="/home/steve/projects/DifferenceFormatter/DifferenceFomatter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/steve/projects/DifferenceFormatter" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 DifferenceFomatter" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="DifferenceFomatter/fast">
+         <Option output="/home/steve/projects/DifferenceFormatter/DifferenceFomatter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/steve/projects/DifferenceFormatter" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 DifferenceFomatter/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/steve/projects/DifferenceFormatter" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatterApp.cpp">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceParser.cpp">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/main.cpp">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/DifferenceFormatterApp.h">
+      </Unit>
+      <Unit filename="/home/steve/projects/DifferenceFormatter/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
 </CodeBlocks_project_file>

@@ -95,16 +95,66 @@ CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o.provides: CMakeFi
 
 CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o.provides.build: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o
 
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o: CMakeFiles/DifferenceFomatter.dir/flags.make
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o: DifferenceFormatter.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/steve/projects/DifferenceFormatter/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o -c /home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp > CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.i
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp -o CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.s
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.requires:
+.PHONY : CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.requires
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.provides: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.provides.build
+.PHONY : CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.provides
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.provides.build: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o: CMakeFiles/DifferenceFomatter.dir/flags.make
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o: DifferenceParser.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/steve/projects/DifferenceFormatter/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o -c /home/steve/projects/DifferenceFormatter/DifferenceParser.cpp
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/steve/projects/DifferenceFormatter/DifferenceParser.cpp > CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.i
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/steve/projects/DifferenceFormatter/DifferenceParser.cpp -o CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.s
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.requires:
+.PHONY : CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.requires
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.provides: CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.provides.build
+.PHONY : CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.provides
+
+CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.provides.build: CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o
+
 # Object files for target DifferenceFomatter
 DifferenceFomatter_OBJECTS = \
 "CMakeFiles/DifferenceFomatter.dir/main.cpp.o" \
-"CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o"
+"CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o" \
+"CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o" \
+"CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o"
 
 # External object files for target DifferenceFomatter
 DifferenceFomatter_EXTERNAL_OBJECTS =
 
 DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/main.cpp.o
 DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o
+DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o
+DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o
 DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/build.make
 DifferenceFomatter: CMakeFiles/DifferenceFomatter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable DifferenceFomatter"
@@ -116,6 +166,8 @@ CMakeFiles/DifferenceFomatter.dir/build: DifferenceFomatter
 
 CMakeFiles/DifferenceFomatter.dir/requires: CMakeFiles/DifferenceFomatter.dir/main.cpp.o.requires
 CMakeFiles/DifferenceFomatter.dir/requires: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o.requires
+CMakeFiles/DifferenceFomatter.dir/requires: CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o.requires
+CMakeFiles/DifferenceFomatter.dir/requires: CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o.requires
 .PHONY : CMakeFiles/DifferenceFomatter.dir/requires
 
 CMakeFiles/DifferenceFomatter.dir/clean:

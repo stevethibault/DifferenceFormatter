@@ -4,7 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/steve/projects/DifferenceFormatter/DifferenceFormatter.cpp" "/home/steve/projects/DifferenceFormatter/CMakeFiles/DifferenceFomatter.dir/DifferenceFormatter.cpp.o"
   "/home/steve/projects/DifferenceFormatter/DifferenceFormatterApp.cpp" "/home/steve/projects/DifferenceFormatter/CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.o"
+  "/home/steve/projects/DifferenceFormatter/DifferenceParser.cpp" "/home/steve/projects/DifferenceFormatter/CMakeFiles/DifferenceFomatter.dir/DifferenceParser.cpp.o"
   "/home/steve/projects/DifferenceFormatter/main.cpp" "/home/steve/projects/DifferenceFormatter/CMakeFiles/DifferenceFomatter.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
