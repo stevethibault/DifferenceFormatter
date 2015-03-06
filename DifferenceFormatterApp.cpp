@@ -1,5 +1,8 @@
 #include "DifferenceFormatterApp.h"
 
+namespace Waters
+{
+
 void DifferenceFormatterApp::initialize(Application& self)
 {
     loadConfiguration(); // load default configuration files, if present
@@ -101,3 +104,4 @@ void DifferenceFormatterApp::printProperties(const std::string& base)
     }
 }
 
+};

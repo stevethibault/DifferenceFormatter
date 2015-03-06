@@ -15,6 +15,9 @@
 using namespace Poco;
 using namespace Poco::Util;
 
+namespace Waters
+{
+
 class DifferenceFormatterApp: public Application
 {
 public:
@@ -46,5 +49,6 @@ private:
     void generateDifferenceReport();
 };
 
+};
 #endif // DIFFERENCEPARSERAPP_H
 

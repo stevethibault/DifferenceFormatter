@@ -1,3 +1,3 @@
 #include "DifferenceFormatterApp.h"
 
-POCO_APP_MAIN(DifferenceFormatterApp)
+POCO_APP_MAIN(Waters::DifferenceFormatterApp)

@@ -2,7 +2,11 @@
 #define DIFFERENCEPARSER_H
 
 #include "stream.h"
+#include "FileDifference.h"
 #include <iostream>
+
+namespace Waters
+{
 
 class DifferenceReport
 {
@@ -20,4 +24,5 @@ class DifferenceReport
 
 };
 
+};
 #endif // DIFFERENCEREPORT_H

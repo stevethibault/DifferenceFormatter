@@ -1,0 +1,1156 @@
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAAutoZeroOffsets.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAAutoZeroOffsets.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAAutoZeroOffsets.cs	2014-12-11 13:25:10.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAAutoZeroOffsets.cs	2012-10-26 11:07:30.000000000 -0400
+@@ -23,12 +23,11 @@
+     private Waters.ACQUITY.ConsoleLabel unitsA;
+     private Waters.ACQUITY.ConsoleLabel unitsB;
+     private IRemotePDA iRemotePDA = null;
+     private Waters.ACQUITY.ConsoleButton resetOffsetButton;
+     private Waters.ACQUITY.ConsoleButton cancelButton;
+-    private string filename, parentHelpID;
+-        private IdentityInfo identityInfo = Identity.Info();
++    private string filename, keyword;
+ 
+     /// <summary>
+     /// Required designer variable.
+     /// </summary>
+     private System.ComponentModel.Container components = null;
+@@ -424,23 +423,18 @@
+     }
+ 
+     private void PDAAutoZeroOffsets_Activated(object sender, System.EventArgs e)
+     {
+       realtimeThread.EnableUpdates = true;
+-            // Save current Help ID
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
+-            
+-            // Set new Help ID
+-            F1HelpFilter.SetHelpID(identityInfo, this, "HelpID_AutozeroOffsetForm");
+-        }
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++      F1HelpFilter.SetHelpID(this,null, "Preparing_the_System/Working_with_Instrument_Methods/setting_the_absorbance_detection_baseline_to_zero.htm" ); 
++    }
+ 
+     private void PDAAutoZeroOffsets_Deactivate(object sender, System.EventArgs e)
+     {
+       realtimeThread.EnableUpdates = false;
+-
+-            // Restore Help ID
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID); 
++      F1HelpFilter.SetPreviousHelpID(filename, keyword); 
+     }
+ 
+     /// <summary>
+     /// GetStatusThread
+     /// </summary>
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrateWavelength.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrateWavelength.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrateWavelength.cs	2014-12-11 13:25:10.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrateWavelength.cs	2014-10-23 09:11:08.000000000 -0400
+@@ -50,11 +50,11 @@
+     private Waters.ACQUITY.ConsoleLabel consoleLabel5;   //"nm"
+     private Waters.ACQUITY.ConsoleLabel consoleLabel1;
+     private Waters.ACQUITY.ConsoleButton printButton;   //"Run Time:"
+     private string xmlResult;
+     private Waters.ACQUITY.ConsoleButton resultsButton;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+ 
+         private IdentityInfo identityInfo = Identity.Info();
+ 
+     /// <summary>
+     /// Required designer variable.
+@@ -659,19 +659,21 @@
+         resultsButton_Click(this, new System.EventArgs());
+     }
+ 
+     private void PDACalWavelength_Activated(object sender, System.EventArgs e)
+     {
+-            // It's a Modal Dialog, grab the help ID of the parent
+-            F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
+ 
+-            // Set teh Help ID of the Modal Dialog
+-            F1HelpFilter.SetHelpID(identityInfo, this, "HelpID_CalibrateWavelengthDialog");
++      F1HelpFilter.SetHelpID(identityInfo, this, "Calibrating_The_Wavelength");
++//#if BUILD_2489
++//      F1HelpFilter.SetHelpID( this, "w2489.chm::", "Maintaining_the_Detector/calibrating_the_wavelength.htm" );
++//#else
++//      F1HelpFilter.SetHelpID(this,"acqpda.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_wavelength.htm" ); 
++//#endif
+     }
+ 
+     private void PDACalWavelength_Deactivate(object sender, System.EventArgs e)
+     {
+-            // Restore the Help ID of the parent
+-            F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+     }
+   }
+ }
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrationVerification.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrationVerification.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrationVerification.cs	2014-12-11 16:42:28.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDACalibrationVerification.cs	2012-10-26 11:07:46.000000000 -0400
+@@ -55,11 +55,11 @@
+     private Waters.ACQUITY.ConsoleButton printButton;   //"Run Time:"
+     private string xmlResult;
+     private Waters.ACQUITY.ConsoleButton resultsButton;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel3;
+     private Waters.ACQUITY.ConsoleLabel passedLabel;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+ 
+     /// <summary>
+     /// Required designer variable.
+     /// </summary>
+     private System.ComponentModel.Container components = null;
+@@ -719,20 +719,17 @@
+       string report = XmlToText(xmlResult);
+       Print(report);
+       }
+     private void PDACalibrationVerification_Activated(object sender, System.EventArgs e)
+       {
+-          // Save current Help ID
+-          F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
+-      
+-      // Set new Help ID
+-        F1HelpFilter.SetHelpID(Identity.Info(), this, "HelpID_CalibratingThePDA");
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm"); //NOTRANSLATE
+       }
+ 
+     private void PDACalibrationVerification_Deactivate(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+     #endregion
+ 
+     #region Public Class Methods
+     public static string XmlToText(string xmlIn)
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAChangeLamp.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAChangeLamp.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAChangeLamp.cs	2014-12-11 13:34:48.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAChangeLamp.cs	2013-06-18 14:04:06.000000000 -0400
+@@ -41,11 +41,11 @@
+     private System.Windows.Forms.Timer timer1;
+     private Waters.ACQUITY.ConsoleButton installButton;
+     private Waters.ACQUITY.ConsoleButton printButton;
+     private Waters.ACQUITY.ConsoleButton cancelButton;
+     private System.ComponentModel.IContainer components;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+ 
+     private bool lampMemDeviceCurrentlyAccessible = false;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+ 
+@@ -633,21 +633,23 @@
+         }
+       }
+ 
+     private void PDAChangeLamp_Activated(object sender, System.EventArgs e)
+       {
+-      // Save the current Help
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
+ 
+-      // Set the new Help ID
+       F1HelpFilter.SetHelpID(identityInfo, this, "Changing_The_Lamp");
++      //#if BUILD_2489
++      //      F1HelpFilter.SetHelpID( this, "w2489.chm::", "Maintaining_the_Detector/changing_the_lamp.htm" );
++      //#else
++      //      F1HelpFilter.SetHelpID(this,"acqpda.chm::", "Maintaining_the_PDA_Detector/Changing_the_lamp.htm" ); 
++      //#endif
+       }
+ 
+     private void PDAChangeLamp_Deactivate(object sender, System.EventArgs e)
+       {
+-      // Restore the Help ID
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+ 
+     private void UpdateLampHistory()
+       {
+       lock (this)
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAControlPanel.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAControlPanel.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAControlPanel.cs	2015-01-12 11:52:54.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAControlPanel.cs	2015-01-22 15:45:32.000000000 -0500
+@@ -20,12 +20,14 @@
+   {
+   /// <summary>
+   /// Summary description for PDAControlPanel.
+   /// </summary>
+   /// 
+-  [Guid(ServerLibClass.GUID_CONTROL_PANEL)]
+-  [ClassInterface(ClassInterfaceType.AutoDispatch)]
++  //BEGIN_MAK0_CORE
++  //[Guid(ServerLibClass.GUID_CONTROL_PANEL)]
++  //[ClassInterface(ClassInterfaceType.AutoDispatch)]
++  //END_MAK0_CORE
+ 
+   public class PDAControlPanel : System.Windows.Forms.UserControl
+     {
+     private System.ComponentModel.IContainer components;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel2;
+@@ -149,22 +151,26 @@
+         MenuCommand resetCommand = new MenuCommand(Resources.GetString("Menu_ResetPDA"), new EventHandler(resetMenu_Click));
+ 
+         MenuCommand helpCommand = new MenuCommand(Resources.GetString("PDAControlPanel_Help"), new EventHandler(helpMenu_Click));
+ 
+         // Check if Console is already running, if so, do not add menu item for it
+-        if (!(System.Diagnostics.Process.GetCurrentProcess().ProcessName.StartsWith("ACQUITYConsole", StringComparison.InvariantCultureIgnoreCase)))
++        //BEGIN_MAK0_CORE
++        if (!(System.Diagnostics.Process.GetCurrentProcess().ProcessName.StartsWith(CompanyBrand.ClientProcessName, StringComparison.InvariantCultureIgnoreCase)))
++        //END_MAK0_CORE
+         {
+             MenuCommand consoleCommand = new MenuCommand(Resources.GetString("Menu_LaunchConsole"), cpConsoleButton1.LaunchConsoleMenuEvent);
+             popup.MenuCommands.Add(consoleCommand);
+         }
+ 
+         // Add All commands to the context menu popup
+         popup.MenuCommands.AddRange(new MenuCommand[] { resetCommand, helpCommand });
+ 
+         resetCommand.Update += new EventHandler(MenuItemNotExclusive);
+ 
+-        const string commonassy = "Waters.ACQUITY.CommonForms";  //NOTRANSLATE
++        //BEGIN_MAK0_CORE
++        string commonassy = CompanyBrand.AssemblyPrefix + "CommonForms";  //NOTRANSLATE
++        //END_MAK0_CORE
+         lampError = ResourceHelper.LoadBitmap(commonassy, "Waters.ACQUITY.Images.LampErrorTool_small.gif", new Point(0, 0)); //NOTRANSLATE
+         lampOff = ResourceHelper.LoadBitmap(commonassy, "Waters.ACQUITY.Images.LampOffTool_small.gif", new Point(0, 0)); //NOTRANSLATE
+         lampOn = ResourceHelper.LoadBitmap(commonassy, "Waters.ACQUITY.Images.LampOnTool_small.gif", new Point(0, 0)); //NOTRANSLATE
+ 
+         maskBmp = statusLEDResource.LEDBitmap(LED.Mode.Mask);
+@@ -890,12 +896,12 @@
+         ((MenuCommand)sender).Enabled = false;
+       }
+ 
+     private void helpMenu_Click(object sender, System.EventArgs e)
+       {
+-        F1HelpFilter.SetHelpID(this, String.Empty, helpKeyword, helpFile); 
+-        F1HelpFilter.ShowContextHelp();
++          F1HelpFilter.SetHelpID(this, String.Empty, helpKeyword, helpFile);
++          F1HelpFilter.ShowContextHelp();
+       }
+ 
+     private void PDAControlPanel_Load(object sender, EventArgs e)
+       {
+       }
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorResources.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorResources.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorResources.cs	2014-09-19 15:37:42.000000000 -0400
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorResources.cs	2015-01-26 11:09:18.000000000 -0500
+@@ -28,13 +28,17 @@
+       {
+       if (rm == null)
+         {
+         assy = a;
+ 
+-        //AssemblyName assyName = new AssemblyName(a.FullName);
+-        //name = assyName.Name;
+-        name = "Waters.ACQUITY." + identityInfo.ConsoleAssy;
++//BEGIN_MAKO_CORE
++        string rescoll = identityInfo.GetIdentityString("ResourceCollection");
++        if (!string.IsNullOrEmpty(rescoll))
++            name = rescoll;
++        else
++//END_MAKO_CORE
++            name = "Waters.ACQUITY." + identityInfo.ConsoleAssy;
+ #if PDA140_COMPATIBLE
+         name = name.Replace("140", "");
+ #endif
+ 
+         rm = _Initialize(name, assy);
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorTopForm.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorTopForm.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorTopForm.cs	2015-01-12 12:19:22.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDADetectorTopForm.cs	2014-11-17 15:29:52.000000000 -0500
+@@ -70,12 +70,12 @@
+     private bool isLampOn = false;
+     private string lampState = string.Empty;
+ 
+     private bool flowCellMemDeviceCurrentlyAccessible = false;
+ 
+-    private static string helpSubFile = null;
+-    private static string helpFile;
++    private static string helpFile = null;
++    private static string parentHelpFile;
+     private string helpKeyword = null;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+     private bool validIdentity = false;
+ 
+@@ -119,14 +119,14 @@
+ 
+         validIdentity = (identityInfo != null) && identityInfo.IsValid;
+ 
+         if (validIdentity)
+           {
+-          helpSubFile = identityInfo.HelpSubFile + ".chm::";
+-          helpFile = identityInfo.HelpFile + ".chm";
++          helpFile = identityInfo.HelpSubFile + ".chm::";
++          parentHelpFile = identityInfo.HelpFile + ".chm";
+ 
+-          helpKeyword = identityInfo.HelpKeyword("HelpID_ControlPanel"); //NOTRANSLATE
++          helpKeyword = identityInfo.HelpKeyword("Setting_Wavelengths"); //NOTRANSLATE
+           }
+ 
+         this.pdaDetectorLampCounterControl1.RemotePDA = iRemotePDA;
+ 
+         Assembly assembly = this.GetType().Assembly;
+@@ -710,11 +710,18 @@
+         }
+ 
+       PDAPlot.EnableUpdates = true;
+       realtimeThread.EnableUpdates = true;
+ 
+-      F1HelpFilter.SetHelpID(identityInfo, this, "HelpID_ControlPanel");
++      F1HelpFilter.SetHelpID(identityInfo, this, "Setting_Wavelengths");
++
++      //      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++      //#if BUILD_2998
++      //      F1HelpFilter.SetHelpID( this, "W2998.chm::", "Preparing_the_PDA_Detector/setting_wavelengths.htm" );  //NOTRANSLATE
++      //#else
++      //      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Preparing_the_PDA_Detector/setting_wavelengths.htm");   //NOTRANSLATE   
++      //#endif
+       }
+ 
+     /// <summary>
+     /// GetStatusThread
+     /// </summary>
+@@ -948,13 +955,20 @@
+     /// <param name="e"></param>
+     private void SetWavelengthA(object sender, System.EventArgs e)
+       {
+       if (isLampOn)
+         {
++        //string helpFile;
++        //#if BUILD_2998
++        //            helpFile = "W2998.chm::";
++        //#else
++        //        helpFile = "acqpda.chm::";
++        //#endif
++
+             IPDAFormManagerCompatibility fm = PDAGlobals.Compat(iRemotePDA.Name);
+ 
+-        ParameterForm waveForm = new ParameterForm(helpSubFile, "Preparing_the_PDA_Detector/setting_wavelengths.htm"); //NOTRANSLATE
++        ParameterForm waveForm = new ParameterForm(helpFile, "Preparing_the_PDA_Detector/setting_wavelengths.htm"); //NOTRANSLATE
+         waveForm.Text = fm.ProductName;
+         waveForm.Instrument = Resources.GetString("SetWavelengthA_Instrument");
+         waveForm.Prompt = Resources.GetString("SetWavelengthA_Prompt");
+         waveForm.Units = Resources.GetString("Wavelength_Units");
+         waveForm.DecimalPlaces = 0;
+@@ -1607,22 +1621,22 @@
+ 
+       if (alarmID < 3000)
+         {
+         helpAlarmPage = identityInfo.HelpSubFileAlarmPage + "/Alarm_Help_" + Convert.ToString(alarmID) + ".htm";  //NOTRANSLATE
+ 
+-        F1HelpFilter.SetHelpID(this, helpSubFile, helpAlarmPage, helpFile);
++        F1HelpFilter.SetHelpID(this, helpFile, helpAlarmPage, parentHelpFile);
+         }
+       else
+         {
+-        helpAlarmPage = identityInfo.HelpFileAlarmPage + "/alarm_help_" + Convert.ToString(alarmID) + ".htm";  //NOTRANSLATE
++        helpAlarmPage = identityInfo.HelpFileAlarmPage + "/Alarm_Help_" + Convert.ToString(alarmID) + ".htm";  //NOTRANSLATE
+ 
+-        F1HelpFilter.SetHelpID(this, "", helpAlarmPage, helpFile);
++        F1HelpFilter.SetHelpID(this, "", helpAlarmPage, parentHelpFile);
+         }
+ 
+       F1HelpFilter.ShowContextHelp();
+ 
+-      F1HelpFilter.SetHelpID(this, helpSubFile, helpKeyword, helpFile);
++      F1HelpFilter.SetHelpID(this, helpFile, helpKeyword, parentHelpFile);
+       }
+ 
+     }
+   }
+ 
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAErbiumCalibration.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAErbiumCalibration.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAErbiumCalibration.cs	2014-12-15 11:18:26.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAErbiumCalibration.cs	2013-05-29 11:20:04.000000000 -0400
+@@ -74,11 +74,11 @@
+     private Waters.ACQUITY.ConsoleButton saveCaptures;
+     private Waters.ACQUITY.ConsoleButton captureSpectrum;
+     private Waters.ACQUITY.ConsoleLabel statusLabel;
+     private Waters.ACQUITY.ConsoleLabel exceptionMessage;
+     string stopText;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+     private Waters.ACQUITY.ConsoleGroupBox resultsGroupBox;
+     private Waters.ACQUITY.ConsoleLabel peakFoundLabel5;
+     private Waters.ACQUITY.ConsoleLabel peakFoundLabel4;
+     private Waters.ACQUITY.ConsoleLabel peakFoundLabel3;
+     private Waters.ACQUITY.ConsoleLabel peakFoundLabel2;
+@@ -105,12 +105,12 @@
+     private Waters.ACQUITY.ConsoleGroupBox graphTypeGroupBox;
+     private Waters.ACQUITY.ConsoleGroupBox xAxisGroupBox;
+     private Waters.ACQUITY.ConsoleGroupBox wavelengthCalGroupBox;
+     private Waters.ACQUITY.ConsoleLabel label14;
+ 
+-    private static string helpSubFile = null;
+-    private static string helpFile;
++    private static string helpFile = null;
++    private static string parentHelpFile;
+     private string helpKeyword = null;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+     private bool validIdentity = false;
+ 
+@@ -144,12 +144,12 @@
+ 
+         validIdentity = (identityInfo != null) && identityInfo.IsValid;
+ 
+         if (validIdentity)
+           {
+-          helpSubFile = identityInfo.HelpSubFile + ".chm::";
+-          helpFile = identityInfo.HelpFile + ".chm";
++          helpFile = identityInfo.HelpSubFile + ".chm::";
++          parentHelpFile = identityInfo.HelpFile + ".chm";
+ 
+           helpKeyword = "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm";
+           }
+ 
+         ConsoleStyles.ChangeBackground(this, BackgroundStyleType.PanelColor);
+@@ -1224,17 +1224,24 @@
+     //            }
+     //#endif
+     //        }
+     private void PDAErbiumCalibration_Activated(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
+-      F1HelpFilter.SetHelpID(identityInfo, this, "HelpID_CalibratingThePDA");
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++
++      //#if BUILD_2998
++      //      F1HelpFilter.SetHelpID(this, "W2998.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm"); //NOTRANSLATE
++      //#else
++      //      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm"); //NOTRANSLATE
++      //#endif
++
++      F1HelpFilter.SetHelpID(this, helpFile, helpKeyword);
+       }
+ 
+     private void PDAErbiumCalibration_Deactivate(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+     #endregion
+ 
+     #region Public Class Methods
+     private static string XmlResults(string xmlIn)
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAInstrumentImage.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAInstrumentImage.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAInstrumentImage.cs	2011-05-26 17:43:16.000000000 -0400
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAInstrumentImage.cs	2015-01-22 15:52:56.000000000 -0500
+@@ -37,10 +37,24 @@
+                 pictureBox = pdaPictureBox;
+                 ToolTipText = Resources.GetString("PDAName");
+ 
+                 string img = "Waters.ACQUITY.Images.Pda.gif";
+                 string glowImg = "Waters.ACQUITY.Images.PDAglow.gif";
++
++                //BEGIN_MAKO_CORE
++                IdentityInfo identityInfo = Identity.Info();
++                if (identityInfo != null)
++                {
++                    string im = identityInfo.GetIdentityString("ImageName");
++                    if (!string.IsNullOrEmpty(im))
++                        img = im;
++                    string gl = identityInfo.GetIdentityString("GlowImageName");
++                    if (!string.IsNullOrEmpty(gl))
++                        glowImg = gl;
++                }
++                //END_MAK0_CORE
++
+                 if (!LoadImagesFromUIAssy(img, glowImg))
+                 {
+                     Assembly assembly = this.GetType().Assembly;
+                     Stream stream = assembly.GetManifestResourceStream(img);
+                     bitmap = new Bitmap(stream);
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDALampCounterControl.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDALampCounterControl.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDALampCounterControl.cs	2014-12-15 11:19:40.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDALampCounterControl.cs	2014-10-23 09:11:10.000000000 -0400
+@@ -71,10 +71,18 @@
+           Resources.GetString("LampCounter_Prompt"),
+           counter,
+           identityInfo,
+           "Configuring_The_Lamp_Life_Maintenance_Threshold");
+ 
++        //#if BUILD_2489
++        //          "w2489.chm::", //NOTRANSLATE
++        //          "Preparing_the_Detector/configuring_the_lamp_life_maintenance_threshold.htm" ); //NOTRANSLATE
++        //#else
++        // "acqpda.chm::", //NOTRANSLATE
++        //          "Preparing_the_PDA_Detector/configuring_the_lamp_life_maintenance_threshold.htm"); //NOTRANSLATE
++        //#endif
++
+         form.Title = Resources.GetString("LampCounter_Caption");
+ 
+         form.Minimum = 0.0F;
+         form.Maximum = 50000.0F;
+ 
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAOpticalFilterOverride.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAOpticalFilterOverride.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAOpticalFilterOverride.cs	2014-12-11 13:46:48.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAOpticalFilterOverride.cs	2014-10-23 09:11:10.000000000 -0400
+@@ -31,11 +31,11 @@
+     private string FilterSecondOrderStr;
+     private string FilterNoneStr;
+     private string FilterErbiumStr;
+     private string FilterShutterStr;
+ 
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+ 
+     /// <summary>
+     /// Required designer variable.
+@@ -283,15 +283,21 @@
+         }
+       }
+ 
+     private void PDAOpticalFilterOverride_Activated(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++
+       F1HelpFilter.SetHelpID(identityInfo, this, "Setting_The_Optical_Filter_Override");
++      //#if BUILD_2489
++      //      F1HelpFilter.SetHelpID( this, "w2489.chm::", "Preparing_the_Detector/setting_the_optical_filter_override.htm" );
++      //#else
++      //      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Preparing_the_PDA_Detector/setting_the_optical_filter_override.htm");
++      //#endif
+       }
+ 
+     private void PDAOpticalFilterOverride_Deactivate(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+     }
+   }
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAReadEnergy.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAReadEnergy.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAReadEnergy.cs	2015-01-08 11:15:28.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDAReadEnergy.cs	2012-10-26 11:08:54.000000000 -0400
+@@ -84,21 +84,21 @@
+     private Waters.ACQUITY.ConsoleLabel wavelengthLabel;
+     private Waters.ACQUITY.ConsoleDropdown wavelenComboBox;
+     private Waters.ACQUITY.ConsoleGroupBox specCaptureGroupBox;
+     private Waters.ACQUITY.ConsoleLabel energyReadOutLabel;
+     private Waters.ACQUITY.ConsoleLabel label2;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+     private Waters.ACQUITY.ConsoleCheckBox darkCurrent;
+     private Waters.ACQUITY.ConsoleLabel exposureTimePrompt;
+     private Waters.ACQUITY.ConsoleLabel exposureTimeUnits;
+     private Waters.ACQUITY.ConsoleGroupBox energyValueGroupBox;
+     private Waters.ACQUITY.ConsoleLabel label1;
+     private Waters.ACQUITY.ConsoleLabel label3;
+     private Waters.ACQUITY.ConsoleGroupBox xAxisGroupBox;
+ 
+-    private static string helpSubFile = null;
+-    private static string helpFile;
++    private static string helpFile = null;
++    private static string parentHelpFile;
+     private string helpKeyword = null;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+     private bool validIdentity = false;
+ 
+@@ -137,12 +137,12 @@
+ 
+         validIdentity = (identityInfo != null) && identityInfo.IsValid;
+ 
+         if (validIdentity)
+           {
+-          helpSubFile = identityInfo.HelpSubFile + ".chm::";
+-          helpFile = identityInfo.HelpFile + ".chm";
++          helpFile = identityInfo.HelpSubFile + ".chm::";
++          parentHelpFile = identityInfo.HelpFile + ".chm";
+ 
+           helpKeyword = "Maintaining_the_PDA_Detector/Determining_the_status_of_the_PDA_detector.htm";
+           }
+ 
+         ConsoleStyles.ChangeBackground(this, BackgroundStyleType.PanelColor);
+@@ -836,17 +836,24 @@
+       this.statusLabel.Text = text;
+       }
+ 
+     private void PDAReadEnergy_Activated(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
+-      F1HelpFilter.SetHelpID(identityInfo, this, "HelpID_ReadEnergy");
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++
++      //#if BUILD_2998
++      //      F1HelpFilter.SetHelpID(this, "W2998.chm::", "Maintaining_the_PDA_Detector/interpreting_pda_energy_and_comparing_pda_spectra.htm");  //NOTRANSLATE
++      //#else
++      //      F1HelpFilter.SetHelpID( this, "acqpda.chm::", "Maintaining_the_PDA_Detector/Determining_the_status_of_the_PDA_detector.htm" );  //NOTRANSLATE
++      //#endif
++
++      F1HelpFilter.SetHelpID(this, helpFile, helpKeyword);
+       }
+ 
+     private void PDAReadEnergy_Deactivate(object sender, System.EventArgs e)
+       {
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+     #endregion
+ 
+     #region Public Class Methods
+     private static string XmlResults(string xmlIn)
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanel.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanel.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanel.cs	2014-12-11 13:52:36.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanel.cs	2012-10-26 11:09:02.000000000 -0400
+@@ -69,11 +69,11 @@
+     private Waters.ACQUITY.ConsoleLabel consoleLabel6;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel7;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel8;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel9;
+     private Waters.ACQUITY.ConsoleLabel consoleLabel10;
+-    private string filename, parentHelpID;
++    private string filename, keyword;
+ 
+     public PDARearPanel()
+       {
+       try
+         {
+@@ -1794,19 +1794,19 @@
+ 
+     private void PDARearPanel_Activated(object sender, System.EventArgs e)
+       {
+       realtimeThread.EnableUpdates = true;
+ 
+-      F1HelpFilter.GetHelpID(ref filename, ref parentHelpID);
+-      F1HelpFilter.SetHelpID(Identity.Info(), this, "HelpID_RearPanel");
++      F1HelpFilter.GetHelpID(ref filename, ref keyword);
++      F1HelpFilter.SetHelpID(this, null, "Troubleshooting_and_Resolving_Problems/troubleshooting_rear_panel_input_output_connections.htm");
+       }
+ 
+     private void PDARearPanel_Deactivate(object sender, System.EventArgs e)
+       {
+       realtimeThread.EnableUpdates = false;
+ 
+-      F1HelpFilter.SetPreviousHelpID(filename, parentHelpID);
++      F1HelpFilter.SetPreviousHelpID(filename, keyword);
+       }
+ 
+     /// <summary>
+     /// Called by realtimeThread to get status
+     /// </summary>
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanelReduced.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanelReduced.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanelReduced.cs	2014-12-11 13:55:18.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDARearPanelReduced.cs	2012-10-26 11:09:10.000000000 -0400
+@@ -439,11 +439,11 @@
+     private void PDARearPanel_Activated(object sender, System.EventArgs e)
+       {
+       realtimeThread.EnableUpdates = true;
+ 
+       F1HelpFilter.GetHelpID(ref filename, ref keyword);
+-      F1HelpFilter.SetHelpID(Identity.Info(), this, "HelpID_RearPanel");
++      F1HelpFilter.SetHelpID(this, null, "Troubleshooting_and_Resolving_Problems/troubleshooting_rear_panel_input_output_connections.htm");
+       }
+ 
+     private void PDARearPanel_Deactivate(object sender, System.EventArgs e)
+       {
+       realtimeThread.EnableUpdates = false;
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASchematicForm.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASchematicForm.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASchematicForm.cs	2015-01-08 10:34:38.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASchematicForm.cs	2012-10-30 20:51:30.000000000 -0400
+@@ -913,16 +913,23 @@
+     private void PDASchematicForm_Activated(object sender, System.EventArgs e)
+       {
+       if (!initialized)
+         {
+         initialized = true;
++
++        // Initialze instrument LEDs
++        //if( Globals.thePDADetectorTopForm != null )
++        //{
++        //this.powerLed.Mode = ((PDADetectorTopForm)Globals.thePDADetectorTopForm).powerLed.Mode;
++        //this.lampLed.Mode = ((PDADetectorTopForm)Globals.thePDADetectorTopForm).lampLed.Mode;
++        //}
+         }
+ 
+       realtimeThread.EnableUpdates = true;
+ 
+       F1HelpFilter.GetHelpID(ref filename, ref keyword);
+-      F1HelpFilter.SetHelpID(Identity.Info(), this, "HelpID_DeterminePDAStatus");
++      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Preparing_the_PDA_Detector/setting_wavelengths.htm"); //NOTRANSLATE     
+       }
+ 
+     private void PDASchematicForm_Deactivate(object sender, System.EventArgs e)
+       {
+       realtimeThread.EnableUpdates = false;
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASetLampSerialNumber.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASetLampSerialNumber.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASetLampSerialNumber.cs	2014-12-11 16:41:28.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/CorePDASetLampSerialNumber.cs	2014-10-23 09:11:12.000000000 -0400
+@@ -275,11 +275,17 @@
+ 
+     private void PDASetLampSerialNumber_Activated(object sender, System.EventArgs e)
+       {
+       serialNumber.Focus();
+       F1HelpFilter.GetHelpID(ref filename, ref keyword);
++
+       F1HelpFilter.SetHelpID(identityInfo, this, "Changing_The_Lamp");
++      //#if BUILD_2489
++      //      F1HelpFilter.SetHelpID( this, "w2489.chm::", "Maintaining_the_Detector/changing_the_lamp.htm" );
++      //#else
++      //      F1HelpFilter.SetHelpID(this, "acqpda.chm::", "Maintaining_the_PDA_Detector/Changing_the_lamp.htm");
++      //#endif
+       }
+ 
+     private void BSMWetPrimeForm_Deactivate(object sender, System.EventArgs e)
+       {
+       F1HelpFilter.SetPreviousHelpID(filename, keyword);
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/RecallSetCalConstants.cs C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/RecallSetCalConstants.cs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Console/ConsoleCorePDA/RecallSetCalConstants.cs	2014-12-15 11:19:26.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Console/ConsoleCorePDA/RecallSetCalConstants.cs	2014-11-18 11:08:48.000000000 -0500
+@@ -28,12 +28,12 @@
+     private System.Windows.Forms.Button closeButton;
+     private Waters.ACQUITY.ConsoleLabel pixel512Units;
+     private string retrievedLambda1Str;
+     private string retrievedLambda512Str;
+ 
+-    private static string helpSubFile = null;
+-    private static string helpFile;
++    private static string helpFile = null;
++    private static string parentHelpFile;
+     private string helpKeyword = null;
+ 
+     private IdentityInfo identityInfo = Identity.Info();
+     private Label labelWarning;
+     private bool validIdentity = false;
+@@ -65,12 +65,12 @@
+ 
+         validIdentity = (identityInfo != null) && identityInfo.IsValid;
+ 
+         if (validIdentity)
+           {
+-          helpSubFile = identityInfo.HelpSubFile + ".chm::";
+-          helpFile = identityInfo.HelpFile + ".chm";
++          helpFile = identityInfo.HelpSubFile + ".chm::";
++          parentHelpFile = identityInfo.HelpFile + ".chm";
+ 
+           helpKeyword = "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm";
+           }
+ 
+         ConsoleStyles.ChangeBackground(this, BackgroundStyleType.WindowColor);
+@@ -379,11 +379,18 @@
+         }
+       }
+     private void RecallSetCalConstants_Activated(object sender, System.EventArgs e)
+       {
+       F1HelpFilter.GetHelpID(ref filename, ref keyword);
+-      F1HelpFilter.SetHelpID(Identity.Info(), this, "HelpID_CalibratingThePDA");
++
++      //#if BUILD_2998
++      //            F1HelpFilter.SetHelpID(this, "W2998.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm");
++      //#else
++      //      F1HelpFilter.SetHelpID(this,"acqpda.chm::", "Maintaining_the_PDA_Detector/Calibrating_the_PDA_detector.htm" ); 
++      //#endif
++
++      F1HelpFilter.SetHelpID(this, helpFile, helpKeyword);
+       }
+ 
+     private void RecallSetCalConstants_Deactivate(object sender, System.EventArgs e)
+       {
+       F1HelpFilter.SetPreviousHelpID(filename, keyword);
+Only in C:\Build\Working\Instruments\PDA\CorePDA/Console: CorePDACom
+Only in C:\Build\Working\Instruments\PDA\CorePDA/Console: CorePDAControl
+Only in C:\Build\Working\Instruments\PDA\CorePDA/Console: CorePDAWebService
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/AnalogOutPage.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/AnalogOutPage.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/AnalogOutPage.cpp	2014-12-11 16:52:28.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/AnalogOutPage.cpp	2014-10-29 12:28:34.000000000 -0400
+@@ -512,10 +512,13 @@
+   EnableControls( 1 );
+ 
+   CEditorPropertyPage::sFilename = Identity::GetIdentity()->m_helpFile;
+   CEditorPropertyPage::sHelpKeyword = Identity::GetIdentity()->m_helpKeywords.Get( IDD )->keyword;
+ 
++  //CEditorPropertyPage::sFilename = "acqconsl";
++  //CEditorPropertyPage::sHelpKeyword = "/Preparing_the_System/Working_with_Instrument_Methods/Controlling_events_and_external_signals.htm";
++
+   return CEditorPropertyPage::OnSetActive();
+   }
+ 
+ //---------------------------------------------------------------------------
+ // CAnalogOutPage OnOK
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/ChannelPage.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/ChannelPage.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/ChannelPage.cpp	2014-12-11 16:52:26.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/ChannelPage.cpp	2014-10-16 11:19:12.000000000 -0400
+@@ -591,12 +591,12 @@
+       }
+     else
+       break;
+     }
+ 
+-  CEditorPropertyPage::sFilename = Identity::GetIdentity()->m_helpFile;
+-  CEditorPropertyPage::sHelpKeyword = Identity::GetIdentity()->m_helpKeywords.Get( IDD )->keyword;  
++  CEditorPropertyPage::sFilename = "acqconsl";
++  CEditorPropertyPage::sHelpKeyword = "/Preparing_the_System/Working_with_Instrument_Methods/Setting_detector_parameters.htm";
+ 
+   return CEditorPropertyPage::OnSetActive();
+   }
+ 
+ int CChannelPage::GetCurrentChannel()
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgr.odl C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgr.odl
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgr.odl	2014-09-10 15:14:04.000000000 -0400
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgr.odl	2015-02-05 10:00:56.000000000 -0500
+@@ -7,11 +7,11 @@
+ #include <olectl.h>
+ #include <idispids.h>
+ #include "Identity.idl"
+ 
+ [ uuid(GUID_LIBRARY_EDITOR), version(1.0),
+-  helpstring("Waters PDA Method Editor Control"),
++  helpstring("PDA Method Editor Control"),
+   control ]
+ library PDAEDITMGRLib
+ {
+   importlib(STDOLE_TLB);
+   importlib(STDTYPE_TLB);
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgrCtl.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgrCtl.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgrCtl.cpp	2014-11-11 14:40:44.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/CorePDAEditMgrCtl.cpp	2015-01-26 11:16:40.000000000 -0500
+@@ -1044,11 +1044,13 @@
+         m_detType = dt;
+         }
+ 
+     // Note that MassLynx default.w98 is set to UPLC_LG_500NM (DetectorType_0)
+     // Need to change this default here based on Identity for "W2998"
+-    if (Identity::GetIdentity()->m_instrType == "W2998")
++//BEGIN_MAKO_CORE
++    if (Identity::GetIdentity()->GetChromatographyType() == Identity::ChromatographyType::HPLC)
++//END_MAKO_CORE
+       m_detType = HPLC_2998_800NM;
+ 
+       break;
+ 
+     default:
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/EventGrid.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/EventGrid.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/EventGrid.cpp	2014-12-19 14:55:30.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAEditMgr/EventGrid.cpp	2015-01-26 15:03:22.000000000 -0500
+@@ -1481,11 +1481,13 @@
+       break;
+     case Wavelength:
+       result = _T("192"); // NOTRANSLATE
+       break;
+     case Resolution:
+-    if (Identity::GetIdentity()->m_instrType == "W2998")
++//BEGIN_MAKO_CORE
++    if (Identity::GetIdentity()->GetChromatographyType() == Identity::ChromatographyType::HPLC)
++//END_MAKO_CORE
+     result = _T("4.8"); // NOTRANSLATE
+     else
+     result = _T("1.2"); // NOTRANSLATE
+       break;
+     case Lamp:
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrComms.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrComms.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrComms.cpp	2014-05-28 13:27:20.000000000 -0400
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrComms.cpp	2015-01-26 11:14:36.000000000 -0500
+@@ -429,70 +429,86 @@
+     {
+     //CorePDAInstrStatusDetail *pStatus = static_cast<CorePDAInstrStatusDetail *>(CurrentStatus());
+     CInstrumentStatusLock status(this);
+     STATUSCLASS* pStatus = static_cast<STATUSCLASS*>(status.CurrentStatus());
+ 
+-    WatersXmlEnum* pNextAlarm = &pStatus->m_xml.ledAlarm.type;
+-    CCorePDAInstrAlarmData* pAlarm = static_cast<CCorePDAInstrAlarmData*>(CurrentAlarm());
+-
+-    // Assign alarm ID into WatersXmlEnum to look up localized text
+-  bool temp = WatersXmlVariable::OptimizeAssignments;
+-  WatersXmlVariable::OptimizeAssignments = false;
+-    *pNextAlarm = pAlarm->Type();
+-  WatersXmlVariable::OptimizeAssignments = temp;
+-
+-    CString rawText = pAlarm->NativeText();
+-    CString nativeString = rawText;
+-
+-    CString localizedString = (BSTR)(*pNextAlarm);
+-    if( (int)(*pNextAlarm) < 0 )         // no localized matching string found?
+-      localizedString = rawText;
+-
+-    // Firmware version 1.10 does not support formattable messages. For now, if we find a parenthesized suffix
+-    // appended to the returned text, we will copy it to the returned message (even though it may contain
+-    // English text)
+-
+-    int len = rawText.GetLength();
+-    if( rawText[len-1] == TCHAR(')') )
+-      {
+-      int index = rawText.Find( TCHAR('(') );
+-      if( index > 0 )
+-        {
+-        CString suffix = rawText.Mid( index );
+-
+-        localizedString.Append( _T(" ") );
+-        localizedString.Append( suffix );
+-
+-        nativeString.Append( _T(" ") );
+-        nativeString.Append( suffix );
+-        }
+-      }
++//BEGIN_MAKO_CORE
++  if( pStatus != NULL )
++  {
++//END_MAKO_CORE
++    WatersXmlEnum* pNextAlarm = &pStatus->m_xml.ledAlarm.type;
++    CCorePDAInstrAlarmData* pAlarm = static_cast<CCorePDAInstrAlarmData*>(CurrentAlarm());
++
++    // Assign alarm ID into WatersXmlEnum to look up localized text
++    bool temp = WatersXmlVariable::OptimizeAssignments;
++    WatersXmlVariable::OptimizeAssignments = false;
++    *pNextAlarm = pAlarm->Type();
++    WatersXmlVariable::OptimizeAssignments = temp;
++
++    CString rawText = pAlarm->NativeText();
++    CString nativeString = rawText;
++
++    CString localizedString = (BSTR)(*pNextAlarm);
++    if( (int)(*pNextAlarm) < 0 )         // no localized matching string found?
++      localizedString = rawText;
++
++    // Firmware version 1.10 does not support formattable messages. For now, if we find a parenthesized suffix
++    // appended to the returned text, we will copy it to the returned message (even though it may contain
++    // English text)
++
++    int len = rawText.GetLength();
++    if( rawText[len-1] == TCHAR(')') )
++      {
++      int index = rawText.Find( TCHAR('(') );
++      if( index > 0 )
++      {
++      CString suffix = rawText.Mid( index );
++
++      localizedString.Append( _T(" ") );
++      localizedString.Append( suffix );
++
++      nativeString.Append( _T(" ") );
++      nativeString.Append( suffix );
++      }
++      }
+ 
+-    pAlarm->SetText( localizedString, nativeString );
++    pAlarm->SetText( localizedString, nativeString );
+ 
+-  if( fakeAlarm && pAlarm->Type() > 0 )
+-    SetAlarm( pAlarm->Type(), pAlarm->Text(), pAlarm->NativeText() );
++    if( fakeAlarm && pAlarm->Type() > 0 )
++      SetAlarm( pAlarm->Type(), pAlarm->Text(), pAlarm->NativeText() );
++  }
++//BEGIN_MAKO_CORE
+     }
++//END_MAKO_CORE
+   return ret;
+   }
+ 
+ void CCorePDAInstrComms::SetAlarm( int alarmType, LPCSTR alarmText, LPCSTR nativeText )
+ {
+   SetAlarmState(true);
+ 
+   CInstrumentStatusLock status(this);
+   STATUSCLASS* pStatus = static_cast<STATUSCLASS*>(status.CurrentStatus());
+-  WatersXmlDocument* pDoc = &pStatus->m_xml;
+-  CInstrument::SetAlarm( pDoc, alarmType, alarmText, nativeText );
++//BEGIN_MAKO_CORE
++  if( pStatus != NULL )
++  {
++//END_MAKO_CORE
++    WatersXmlDocument* pDoc = &pStatus->m_xml;
++    CInstrument::SetAlarm( pDoc, alarmType, alarmText, nativeText );
++//BEGIN_MAKO_CORE
++  }
++//END_MAKO_CORE
+ }
+ 
+ bool CCorePDAInstrComms::GetAlarmState()
+ {
+   CInstrumentStatusLock status(this);
+   STATUSCLASS* pStatus = static_cast<STATUSCLASS*>(status.CurrentStatus());
+ 
+-  return ( pStatus->CorePDAStatus.ComStatus.state == ComRmtStatus::Error );
++//BEGIN_MAKO_CORE
++  return ( pStatus != NULL && pStatus->CorePDAStatus.ComStatus.state == ComRmtStatus::Error );
++//END_MAKO_CORE
+ }
+ 
+ void CCorePDAInstrComms::SetAlarmState( bool sw )
+ {
+   CInstrumentStatusLock status(this);
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrObject.cpp C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrObject.cpp
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrObject.cpp	2015-01-05 10:33:48.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAInstr/CorePDAInstrObject.cpp	2015-02-02 09:55:50.000000000 -0500
+@@ -571,12 +571,12 @@
+     //const CorePDAInstrStatusDetail* pStatus = (CorePDAInstrStatusDetail*)CurrentStatus();
+ 
+     CInstrumentStatusLock status(Instrument());
+     STATUSCLASS* pStatus = CurrentPDAStatus(status);
+ 
+-    pXML->lampSerialNumber = CA2T(pStatus->CorePDAStatus.czLampSerialNumber);
+-
++  if( pStatus != 0 )
++      pXML->lampSerialNumber = CA2T(pStatus->CorePDAStatus.czLampSerialNumber);
+ 
+     if (pConfig != NULL)
+       {
+       //-------------NEW_CONFIG------------------
+       pXML->supportsReducedIO = (pConfig->CorePDAConfig.supportsReducedIO == 0) ? false: true;
+@@ -1033,10 +1033,11 @@
+   m_configKey = m_configurationName;
+ 
+   //RunTimeInMethod should persist if it is ever set.
+   m_opts = desiredOptions | (m_opts & InstrClient_RunTimeInMethod);
+ 
++  LaunchConsole(FALSE);
+   GetClientBuffer();
+ 
+   CInstrument* pInstrument = m_pInstrument;
+ 
+   SetUp();
+@@ -1061,14 +1062,11 @@
+ #ifdef STATUS_THREAD
+   if (bCreateThread && m_hStatusThread == 0)
+     CreateStatusThread();
+ #endif
+ 
+-  LaunchConsole(FALSE);
+-
+   SetClockTime();
+-  
+   }
+ 
+ // FUNCTION
+ //
+ /// <summary>__PrintMethod
+@@ -2020,12 +2018,10 @@
+     else
+       minFwVersion = pID->m_legacyHwMinFirmwareVersion;
+     if( minFwVersion.IsEmpty() )
+       minFwVersion = m_embeddedVersion;
+ 
+-    minFwVersion = (pID->m_instrType == "W2998") ? pID->m_legacyHwMinFirmwareVersion : m_embeddedVersion;
+-
+       if ( !fwVersionReported.IsEmpty() && !minFwVersion.IsEmpty() )
+         {
+         if ( CompareFirmwareVersion( fwVersionReported, minFwVersion ) < 0 )
+           {
+           CString value = pID->GetXMLResources()->Enumeration( _T("tAlarmType"), _T("ICSAlarmMinimumFirmwareVersion_3003") );
+@@ -2159,16 +2155,23 @@
+ //
+ /// <summary>__SetSystemComponents
+ /// </summary>
+ //
+ void CorePDAInstrObject::__SetSystemComponents(BSTR systemName, BSTR acquisitionNodeName, int count, BSTR* components)
+-  {
+-  CString cSystemName(systemName);
+-  SetSystemName( cSystemName );
++{
++  CString cSystemName(systemName);
++  SetSystemName( cSystemName );
+ 
+-  m_system.SetComponents( count, components );
+-  }
++  m_system.SetComponents( count, components );
++
++  if ( !m_system.IsValidSystem() )
++  {
++    CString msg = pID->GetXMLResources()->Enumeration( _T("tAlarmType"), _T("ICSAlarmInvalidSystem_3004") );
++    CString nativeMsg = "Invalid system configuration";
++    SetClientAlarm( 3004, ComRmtAlarm::Error, msg, nativeMsg );
++  }
++}
+ 
+ // FUNCTION
+ //
+ /// <summary>__SetContext
+ /// </summary>
+@@ -2876,11 +2879,11 @@
+       {
+       methodHas3DCh = true;
+ 
+       if( channelNames != NULL )
+         {
+-      if (Identity::GetIdentity()->m_instrType == "W2998")
++      if (Identity::GetIdentity()->m_instrType == "A10-PDA")
+         channelDescrCompositionStrs[chanCount].LoadString(IDS_CH3D_NAME_2998);
+       else
+         channelDescrCompositionStrs[chanCount].LoadString(IDS_CH3D_NAME);
+ 
+         if( channelDescriptions != NULL )
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAResENU/CorePDAEditMgr.rc C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAResENU/CorePDAEditMgr.rc
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAResENU/CorePDAEditMgr.rc	2014-11-10 09:17:32.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAResENU/CorePDAEditMgr.rc	2015-01-26 14:37:36.000000000 -0500
+@@ -5,11 +5,11 @@
+ #define APSTUDIO_READONLY_SYMBOLS
+ /////////////////////////////////////////////////////////////////////////////
+ //
+ // Generated from the TEXTINCLUDE 2 resource.
+ //
+-#include "afxres.h"
++#include "afxres.h"
+ /////////////////////////////////////////////////////////////////////////////
+ #undef APSTUDIO_READONLY_SYMBOLS
+ 
+ /////////////////////////////////////////////////////////////////////////////
+ // English (U.S.) resources
+@@ -756,9 +756,9 @@
+ //
+ #ifndef ICS_RESOURCE_DLL
+ 1 TYPELIB "EditMgr.tlb"
+ #include "CoInstrumentVersion.rc"
+ #endif
+-
++
+ /////////////////////////////////////////////////////////////////////////////
+ #endif    // not APSTUDIO_INVOKED
+ 
+Only in C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAServer: CoInstrumentVersion.rc
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.h C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.h
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.h	2013-01-17 09:49:30.000000000 -0500
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.h	2015-01-23 11:00:18.000000000 -0500
+@@ -263,9 +263,11 @@
+     bool IsClassInited() {
+         return ( m_pInstrImpl != 0 );
+     }
+ };
+ 
+-OBJECT_ENTRY_AUTO(__uuidof(PDAServer), CCorePDAServer)
++//BEGIN_MAKO_CORE
++OBJECT_ENTRY_AUTO(__uuidof(SERVERCOCLASS), CCorePDAServer)
++//END_MAKO_CORE
+ //
+ // END OF CorePDAServerCoClass.h
+ //
+diff --recursive --expand-tabs --tabsize=2 --unified=5 C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.rgs C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.rgs
+--- C:\Build\Working\Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.rgs	2009-04-15 13:00:04.000000000 -0400
++++ C:\Build\Working\OEM Instruments\PDA\CorePDA/Driver/CorePDAServer/CorePDAServerCoClass.rgs	2015-01-30 18:33:52.000000000 -0500
+@@ -1,22 +1,22 @@
+ HKCR
+ {
+-  Waters.$FilenameRoot$Server.1 = s 'Waters $FilenameRoot$Server Class'
++  $Company$.$FilenameRoot$Server.1 = s '$Company$ $FilenameRoot$Server Class'
+   {
+     CLSID = s '$ProxyCLSID$'
+   }
+-  Waters.$FilenameRoot$Server = s 'Waters $FilenameRoot$Server Class'
++  $Company$.$FilenameRoot$Server = s '$Company$ $FilenameRoot$Server Class'
+   {
+     CLSID = s '$ProxyCLSID$'
+-    CurVer = s 'Waters.$FilenameRoot$Server.1'
++    CurVer = s '$Company$.$FilenameRoot$Server.1'
+   }
+   NoRemove CLSID
+   {
+-    ForceRemove $ProxyCLSID$ = s 'Waters $FilenameRoot$Server Class'
++    ForceRemove $ProxyCLSID$ = s '$Company$ $FilenameRoot$Server Class'
+     {
+-      ProgID = s 'Waters.$FilenameRoot$Server.1'
+-      VersionIndependentProgID = s 'Waters.$FilenameRoot$Server'
++      ProgID = s '$Company$.$FilenameRoot$Server.1'
++      VersionIndependentProgID = s '$Company$.$FilenameRoot$Server'
+       ForceRemove 'Programmable'
+       LocalServer32 = s '%MODULE%'
+       val AppID = s '%APPID%'
+       'TypeLib' = s '$InstrTypeLib$'
+     }

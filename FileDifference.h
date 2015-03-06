@@ -2,22 +2,36 @@
 #define FILEDIFFERENCE_H
 
 #include <Poco/File.h>
-#include <Poco/JSON.h>
 #include <Poco/JSON/Object.h>
 #include <Poco/Path.h>
 #include <string>
 #include <vector>
-#include <pair>
+#include <tuple>
 
-namespace waters
+namespace Waters
 {
+
+
+class Line
+{
+    public:
+        enum class LineType : char {unchanged = ' ', added = '+', removed = '-', missing = '\0'};
+
+        Line() {}
+
+        Line(LineType line) : lineType{line}
+        {}
+
+    protected:
+        LineType lineType{LineType::missing};
+};
 
 class CodeLine : public Line
 {
     public:
-        CodeLine(std::string line_text)
+        CodeLine(std::string line_text, int line_number)
         {
-            lineType = line_text[0];
+            lineType = static_cast<Line::LineType>(line_text[0]);
             code = line_text.substr(1, line_text.length() - 2);
         };
 
@@ -26,40 +40,33 @@ class CodeLine : public Line
         std::string code{};
 };
 
-class Line
-{
-    public:
-        enum class LineType : char {unchanged = ' ', added ='+', removed = '-', missing = '\0'};
+    static std::pair<Waters::Line, int> makeLine(const std::string& line_text, const int previous_line_number)
+    {
+        char line_code;
+        int line_number = previous_line_number;
 
-        static std::pair<Waters::Line, int> makeLine(const std::string& line_text, const int previous_line_number)
+        if (line_text.length() == 0)
         {
-            char line_code;
-            int line_number = previous_line_number;
-
-            if (line_text.length() == 0)
-            {
-                return std::make_pair(Line{LineType::missing}, line_number);
-            }
-            else
-            {
-                return std::make_pair(CodeLine{line_text, ++line_number}, line_number);
-            }
+            return std::make_pair(Line{Line::LineType::missing}, line_number);
         }
-
-    protected:
-        LineType lineType{LineType::missing};
-};
+        else
+        {
+            return std::make_pair(CodeLine(line_text, ++line_number), line_number);
+        }
+    }
 
 class Difference
 {
     private:
         int start_line;
         int line_count;
-        vector<Line> lines;
+        std::vector<Line> lines;
 };
 
 class DifferenceSet
 {
+    public:
+        DifferenceSet(std::string line_numbers);
     private:
         Difference left_difference{};
         Difference right_difference{};
