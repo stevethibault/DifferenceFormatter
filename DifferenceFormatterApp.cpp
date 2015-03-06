@@ -55,8 +55,10 @@ void DifferenceFormatterApp::displayHelp()
 
 void DifferenceFormatterApp::generateDifferenceReport()
 {
-    std::ifstream input_file(config().getString(diff_file));
-
+    std::ifstream input_stream(config().getString("diff_file"));
+    std::ofstream output_stream(config().getString("report_file"));
+    DifferenceReport report(input_stream, output_stream);
+    report.generate();
 }
 
 int DifferenceFormatterApp::main(const ArgVec& args)

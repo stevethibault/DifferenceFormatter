@@ -7,11 +7,14 @@
 class DifferenceReport
 {
     public:
-        DifferenceReport(istream diff_istream);
+        DifferenceReport(std::istream& diff_istream, std::ostream& output_stream);
         virtual ~DifferenceReport();
 
+        void generate();
+
     protected:
-        istream input_stream{};
+        std::istream& diff_input_stream;
+        std::ostream& report_output_stream;
 
     private:
 

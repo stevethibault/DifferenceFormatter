@@ -1,6 +1,7 @@
 #ifndef DIFFERENCEPARSERAPP_H
 #define DIFFERENCEPARSERAPP_H
 
+#include "DifferenceReport.h"
 #include <Poco/Util/Application.h>
 #include <Poco/Util/Option.h>
 #include <Poco/Util/OptionSet.h>
@@ -8,6 +9,7 @@
 #include <Poco/Util/AbstractConfiguration.h>
 #include <Poco/AutoPtr.h>
 #include <iostream>
+#include <fstream>
 #include <sstream>
 
 using namespace Poco;
@@ -39,8 +41,9 @@ protected:
 	void printProperties(const std::string& base);
 
 private:
-
 	bool _helpRequested;
+
+    void generateDifferenceReport();
 };
 
 #endif // DIFFERENCEPARSERAPP_H

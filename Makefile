@@ -159,6 +159,30 @@ DifferenceReport.cpp.s:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceReport.cpp.s
 .PHONY : DifferenceReport.cpp.s
 
+FileDifference.o: FileDifference.cpp.o
+.PHONY : FileDifference.o
+
+# target to build an object file
+FileDifference.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/FileDifference.cpp.o
+.PHONY : FileDifference.cpp.o
+
+FileDifference.i: FileDifference.cpp.i
+.PHONY : FileDifference.i
+
+# target to preprocess a source file
+FileDifference.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/FileDifference.cpp.i
+.PHONY : FileDifference.cpp.i
+
+FileDifference.s: FileDifference.cpp.s
+.PHONY : FileDifference.s
+
+# target to generate assembly for a file
+FileDifference.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/FileDifference.cpp.s
+.PHONY : FileDifference.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -222,6 +246,9 @@ help:
 	@echo "... DifferenceReport.o"
 	@echo "... DifferenceReport.i"
 	@echo "... DifferenceReport.s"
+	@echo "... FileDifference.o"
+	@echo "... FileDifference.i"
+	@echo "... FileDifference.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

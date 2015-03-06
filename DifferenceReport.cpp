@@ -1,6 +1,8 @@
-#include "DifferenceParser.h"
+#include "DifferenceReport.h"
 
-DifferenceReport::DifferenceReport(istream diff_istream) : input_stream(diff_file)
+DifferenceReport::DifferenceReport(std::istream& diff_istream, std::ostream& report_stream) :
+                                        diff_input_stream{diff_istream},
+                                        report_output_stream{report_stream}
 {
     //ctor
 }
@@ -8,4 +10,10 @@ DifferenceReport::DifferenceReport(istream diff_istream) : input_stream(diff_fil
 DifferenceReport::~DifferenceReport()
 {
     //dtor
+}
+
+
+void DifferenceReport::generate()
+{
+
 }

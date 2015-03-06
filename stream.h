@@ -10,4 +10,5 @@ namespace diff
     std::string getline(std::istream& istm);
 }
 
-#end //STREAM_H
+#endif
+ //STREAM_H
