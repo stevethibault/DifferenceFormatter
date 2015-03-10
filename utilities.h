@@ -1,9 +1,7 @@
-#ifndef STREAM_H
-#define STREAM_H
+#ifndef UTIL_H
+#define UTIL_H
 
-#include <istream>
 #include <string>
-#include <memory>
 #include <vector>
 
 namespace util
@@ -12,5 +10,4 @@ namespace util
     std::vector<T> split(const T & str, const T & delimiters);
 }
 
-#endif
- //STREAM_H
+#endif //UTIL_H

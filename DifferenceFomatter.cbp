@@ -92,8 +92,8 @@
 		<Unit filename="UnifiedDifferenceFile.cpp" />
 		<Unit filename="UnifiedDifferenceFile.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="stream.cpp" />
-		<Unit filename="stream.h" />
+		<Unit filename="util.cpp" />
+		<Unit filename="util.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

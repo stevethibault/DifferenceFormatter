@@ -1,7 +1,7 @@
 #ifndef DIFFERENCEPARSER_H
 #define DIFFERENCEPARSER_H
 
-#include "stream.h"
+#include "util.h"
 #include "FileDifference.h"
 #include <iostream>
 

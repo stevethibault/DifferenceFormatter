@@ -1,7 +1,7 @@
 #ifndef FILEDIFFERENCE_H
 #define FILEDIFFERENCE_H
 
-#include "stream.h"
+#include "util.h"
 #include <Poco/File.h>
 #include <Poco/JSON/Object.h>
 #include <Poco/Path.h>
