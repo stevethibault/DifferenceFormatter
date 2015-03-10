@@ -1,6 +1,7 @@
 #ifndef FILEDIFFERENCE_H
 #define FILEDIFFERENCE_H
 
+#include "stream.h"
 #include <Poco/File.h>
 #include <Poco/JSON/Object.h>
 #include <Poco/Path.h>
@@ -40,33 +41,36 @@ class CodeLine : public Line
         std::string code{};
 };
 
-    static std::pair<Waters::Line, int> makeLine(const std::string& line_text, const int previous_line_number)
-    {
-        char line_code;
-        int line_number = previous_line_number;
+static std::pair<Waters::Line, int> makeLine(const std::string& line_text, const int previous_line_number)
+{
+    char line_code;
+    int line_number = previous_line_number;
 
-        if (line_text.length() == 0)
-        {
-            return std::make_pair(Line{Line::LineType::missing}, line_number);
-        }
-        else
-        {
-            return std::make_pair(CodeLine(line_text, ++line_number), line_number);
-        }
+    if (line_text.length() == 0)
+    {
+        return std::make_pair(Line{Line::LineType::missing}, line_number);
     }
+    else
+    {
+        return std::make_pair(CodeLine(line_text, ++line_number), line_number);
+    }
+}
 
 class Difference
 {
+    public:
+        Difference(){}
+        Difference(const std::string& line_range);
     private:
-        int start_line;
-        int line_count;
-        std::vector<Line> lines;
+        int start_line{};
+        int line_count{};
+        std::vector<Line> lines{};
 };
 
 class DifferenceSet
 {
     public:
-        DifferenceSet(std::string line_numbers);
+        DifferenceSet(const std::string& line_numbers);
     private:
         Difference left_difference{};
         Difference right_difference{};
@@ -74,11 +78,28 @@ class DifferenceSet
 
 class FileDifferences
 {
+    public:
+        FileDifferences() {}
+        FileDifferences(const std::string& commandline);
+
+        static FileDifferences parse(const std::string commandline, std::istream istm);
+
+        std::string commandLine() const;
+        void commandLine(const std::string& commandline);
+
+        Poco::Path leftFile() const;
+        void leftFile(const std::string& left_file);
+
+        Poco::Path rightFile() const;
+        void rightFile(const std::string& right_file);
+
+        void addDifferenceSet(DifferenceSet diffSet);
+
     private:
-        std::string diff_commandline{};
+        std::string command_line{};
         Poco::Path left_file{};
         Poco::Path right_file{};
-        std::vector<DifferenceSet> difference_set{};
+        std::vector<DifferenceSet> differences{};
 };
 
 }

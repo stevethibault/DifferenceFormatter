@@ -1,7 +1,7 @@
 #ifndef DIFFERENCEPARSERAPP_H
 #define DIFFERENCEPARSERAPP_H
 
-#include "DifferenceReport.h"
+#include "UnifiedDifferenceFile.h"
 #include <Poco/Util/Application.h>
 #include <Poco/Util/Option.h>
 #include <Poco/Util/OptionSet.h>
@@ -46,7 +46,7 @@ protected:
 private:
 	bool _helpRequested;
 
-    void generateDifferenceReport();
+    void parseDifferenceFile();
 };
 
 };

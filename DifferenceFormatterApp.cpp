@@ -56,12 +56,17 @@ void DifferenceFormatterApp::displayHelp()
     helpFormatter.format(std::cout);
 }
 
-void DifferenceFormatterApp::generateDifferenceReport()
+void DifferenceFormatterApp::parseDifferenceFile()
 {
     std::ifstream input_stream(config().getString("diff_file"));
-    std::ofstream output_stream(config().getString("report_file"));
-    DifferenceReport report(input_stream, output_stream);
-    report.generate();
+    UnifiedDifferenceFile diff{input_stream};
+
+    while (!input_stream.eof())
+    {
+        std::string diff_line;
+        std::getline(input_stream, diff_line);
+        diff.parse();
+    }
 }
 
 int DifferenceFormatterApp::main(const ArgVec& args)
@@ -72,7 +77,7 @@ int DifferenceFormatterApp::main(const ArgVec& args)
     }
     else
     {
-        generateDifferenceReport();
+        parseDifferenceFile();
     }
     return Application::EXIT_OK;
 }
