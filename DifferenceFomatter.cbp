@@ -25,6 +25,7 @@
 				<Option object_output="./" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="--diff_file ./makodiff4.txt" />
 				<Compiler>
 					<Add directory="/usr/include" />
 					<Add directory="/usr/include/c++/4.9" />
@@ -69,6 +70,18 @@
 					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 edit_cache' />
+					<CompileFile command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 &quot;$file&quot;' />
+					<Clean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
+					<DistClean command='/usr/bin/make -f &quot;/home/steve/projects/DifferenceFormatter/Makefile&quot;  VERBOSE=1 clean' />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option type="4" />
 				<Option compiler="gcc" />
@@ -85,15 +98,22 @@
 		<Unit filename="CMakeLists.txt">
 			<Option virtualFolder="CMake Files/" />
 		</Unit>
+		<Unit filename="CodeLine.cpp" />
+		<Unit filename="CodeLine.h" />
+		<Unit filename="Difference.cpp" />
+		<Unit filename="Difference.h" />
 		<Unit filename="DifferenceFormatterApp.cpp" />
 		<Unit filename="DifferenceFormatterApp.h" />
+		<Unit filename="DifferenceSet.cpp" />
+		<Unit filename="DifferenceSet.h" />
 		<Unit filename="FileDifference.cpp" />
 		<Unit filename="FileDifference.h" />
+		<Unit filename="Line.cpp" />
+		<Unit filename="Line.h" />
 		<Unit filename="UnifiedDifferenceFile.cpp" />
 		<Unit filename="UnifiedDifferenceFile.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="util.cpp" />
-		<Unit filename="util.h" />
+		<Unit filename="utilities.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

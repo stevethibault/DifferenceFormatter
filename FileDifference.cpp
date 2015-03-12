@@ -2,22 +2,6 @@
 
 namespace Waters
 {
-Difference::Difference(const std::string& line_numbers)
-{
-    auto tokens = util::split<std::string>(line_numbers, ",");
-
-    start_line = std::stoi(tokens[0]);
-    line_count = std::stoi(tokens[1]);
-}
-
-DifferenceSet::DifferenceSet(const std::string& line_numbers)
-{
-    auto tokens = util::split<std::string>(line_numbers, " ");
-
-    left_difference = Difference(tokens[0]);
-    right_difference = Difference(tokens[1]);
-}
-
 
 FileDifferences::FileDifferences(const std::string& input_line) :
     command_line{input_line}

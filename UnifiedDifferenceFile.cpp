@@ -41,7 +41,12 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
     }
     else if (line.substr(0, 3) == "@@ ")
     {
-        DifferenceSet(line.substr(2, line.length() - 6));
+        diffSet = DifferenceSet(line.substr(2, line.length() - 6));
+        fileDiff.addDifferenceSet(diffSet);
+    }
+    else if (line[0] == ' ' || line.length() == 0)
+    {
+        diffSet.addDifference(line, Line::LineType::unchanged);
     }
 }
 

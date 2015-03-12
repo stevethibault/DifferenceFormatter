@@ -16,7 +16,7 @@ set(ALL_LIBS
 include_directories(${POCO_INCLUDE_PATH})
 link_directories(${LIB_PATH}/lib ${BUILD_DIRECTORY})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y -ggdb")
 
 file(GLOB ALL_SOURCES *.cpp)
 file(GLOB ALL_HEADERS *.h)

@@ -38,6 +38,9 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/steve/projects/DifferenceFormatter
 
@@ -49,8 +52,8 @@ CMAKE_BINARY_DIR = /home/steve/projects/DifferenceFormatter
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,6 +114,54 @@ DifferenceFomatter/fast:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/build
 .PHONY : DifferenceFomatter/fast
 
+CodeLine.o: CodeLine.cpp.o
+.PHONY : CodeLine.o
+
+# target to build an object file
+CodeLine.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/CodeLine.cpp.o
+.PHONY : CodeLine.cpp.o
+
+CodeLine.i: CodeLine.cpp.i
+.PHONY : CodeLine.i
+
+# target to preprocess a source file
+CodeLine.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/CodeLine.cpp.i
+.PHONY : CodeLine.cpp.i
+
+CodeLine.s: CodeLine.cpp.s
+.PHONY : CodeLine.s
+
+# target to generate assembly for a file
+CodeLine.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/CodeLine.cpp.s
+.PHONY : CodeLine.cpp.s
+
+Difference.o: Difference.cpp.o
+.PHONY : Difference.o
+
+# target to build an object file
+Difference.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Difference.cpp.o
+.PHONY : Difference.cpp.o
+
+Difference.i: Difference.cpp.i
+.PHONY : Difference.i
+
+# target to preprocess a source file
+Difference.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Difference.cpp.i
+.PHONY : Difference.cpp.i
+
+Difference.s: Difference.cpp.s
+.PHONY : Difference.s
+
+# target to generate assembly for a file
+Difference.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Difference.cpp.s
+.PHONY : Difference.cpp.s
+
 DifferenceFormatterApp.o: DifferenceFormatterApp.cpp.o
 .PHONY : DifferenceFormatterApp.o
 
@@ -135,6 +186,30 @@ DifferenceFormatterApp.cpp.s:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceFormatterApp.cpp.s
 .PHONY : DifferenceFormatterApp.cpp.s
 
+DifferenceSet.o: DifferenceSet.cpp.o
+.PHONY : DifferenceSet.o
+
+# target to build an object file
+DifferenceSet.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceSet.cpp.o
+.PHONY : DifferenceSet.cpp.o
+
+DifferenceSet.i: DifferenceSet.cpp.i
+.PHONY : DifferenceSet.i
+
+# target to preprocess a source file
+DifferenceSet.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceSet.cpp.i
+.PHONY : DifferenceSet.cpp.i
+
+DifferenceSet.s: DifferenceSet.cpp.s
+.PHONY : DifferenceSet.s
+
+# target to generate assembly for a file
+DifferenceSet.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/DifferenceSet.cpp.s
+.PHONY : DifferenceSet.cpp.s
+
 FileDifference.o: FileDifference.cpp.o
 .PHONY : FileDifference.o
 
@@ -158,6 +233,30 @@ FileDifference.s: FileDifference.cpp.s
 FileDifference.cpp.s:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/FileDifference.cpp.s
 .PHONY : FileDifference.cpp.s
+
+Line.o: Line.cpp.o
+.PHONY : Line.o
+
+# target to build an object file
+Line.cpp.o:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Line.cpp.o
+.PHONY : Line.cpp.o
+
+Line.i: Line.cpp.i
+.PHONY : Line.i
+
+# target to preprocess a source file
+Line.cpp.i:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Line.cpp.i
+.PHONY : Line.cpp.i
+
+Line.s: Line.cpp.s
+.PHONY : Line.s
+
+# target to generate assembly for a file
+Line.cpp.s:
+	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/Line.cpp.s
+.PHONY : Line.cpp.s
 
 UnifiedDifferenceFile.o: UnifiedDifferenceFile.cpp.o
 .PHONY : UnifiedDifferenceFile.o
@@ -207,30 +306,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-util.o: util.cpp.o
-.PHONY : util.o
-
-# target to build an object file
-util.cpp.o:
-	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/util.cpp.o
-.PHONY : util.cpp.o
-
-util.i: util.cpp.i
-.PHONY : util.i
-
-# target to preprocess a source file
-util.cpp.i:
-	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/util.cpp.i
-.PHONY : util.cpp.i
-
-util.s: util.cpp.s
-.PHONY : util.s
-
-# target to generate assembly for a file
-util.cpp.s:
-	$(MAKE) -f CMakeFiles/DifferenceFomatter.dir/build.make CMakeFiles/DifferenceFomatter.dir/util.cpp.s
-.PHONY : util.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,21 +315,30 @@ help:
 	@echo "... DifferenceFomatter"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CodeLine.o"
+	@echo "... CodeLine.i"
+	@echo "... CodeLine.s"
+	@echo "... Difference.o"
+	@echo "... Difference.i"
+	@echo "... Difference.s"
 	@echo "... DifferenceFormatterApp.o"
 	@echo "... DifferenceFormatterApp.i"
 	@echo "... DifferenceFormatterApp.s"
+	@echo "... DifferenceSet.o"
+	@echo "... DifferenceSet.i"
+	@echo "... DifferenceSet.s"
 	@echo "... FileDifference.o"
 	@echo "... FileDifference.i"
 	@echo "... FileDifference.s"
+	@echo "... Line.o"
+	@echo "... Line.i"
+	@echo "... Line.s"
 	@echo "... UnifiedDifferenceFile.o"
 	@echo "... UnifiedDifferenceFile.i"
 	@echo "... UnifiedDifferenceFile.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... util.o"
-	@echo "... util.i"
-	@echo "... util.s"
 .PHONY : help
 
 

@@ -1,7 +1,7 @@
 #ifndef DIFFERENCEPARSER_H
 #define DIFFERENCEPARSER_H
 
-#include "util.h"
+#include "utilities.h"
 #include "FileDifference.h"
 #include <iostream>
 
@@ -22,6 +22,7 @@ class UnifiedDifferenceFile
         std::istream& diff_stream;
         std::vector<FileDifferences> fileDiffs{};
         FileDifferences fileDiff{};
+        DifferenceSet diffSet{};
 
         void parseLine(const std::string& line);
 };
