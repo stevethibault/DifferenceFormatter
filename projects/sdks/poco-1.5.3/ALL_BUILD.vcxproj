@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{B393752D-C77F-46F6-A3B9-ABD2E4F86B3A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckTypeSize.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFile.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFileCXX.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindCygwin.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindOpenSSL.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\SelectLibraryConfigurations.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\FindMySQL.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\cmake_uninstall.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\InstallRequiredSystemLibraries.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPack.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPackComponent.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckTypeSize.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFile.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFileCXX.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindCygwin.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindOpenSSL.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\SelectLibraryConfigurations.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\FindMySQL.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\cmake_uninstall.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\InstallRequiredSystemLibraries.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPack.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPackComponent.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckTypeSize.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFile.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFileCXX.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindCygwin.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindOpenSSL.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\SelectLibraryConfigurations.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\FindMySQL.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\cmake_uninstall.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\InstallRequiredSystemLibraries.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPack.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPackComponent.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckTypeSize.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFile.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFileCXX.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindCygwin.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindOpenSSL.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\SelectLibraryConfigurations.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\FindMySQL.cmake;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\cmake\cmake_uninstall.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\InstallRequiredSystemLibraries.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPack.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CPackComponent.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Templates\CPackConfig.cmake.in;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\poco-1.5.3\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/PocoData.vcxproj">
+      <Project>0B56109D-3E5A-4F55-BBEA-CE06FE6F992B</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/ODBC/PocoDataODBC.vcxproj">
+      <Project>C1A61E12-A7F2-4635-8767-7B2626C97E54</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/SQLite/PocoDataSQLite.vcxproj">
+      <Project>201A6D26-730E-40BA-A898-3B7410AB3EC8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Foundation/PocoFoundation.vcxproj">
+      <Project>F03BA08F-52F9-45A6-B81E-F6B4BDE02DCF</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/JSON/PocoJSON.vcxproj">
+      <Project>8AF55551-BCB5-481F-A9EB-36A6434F4373</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/MongoDB/PocoMongoDB.vcxproj">
+      <Project>0D21F7A5-AB4A-465E-B71E-98A673280B3D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Net/PocoNet.vcxproj">
+      <Project>F03D84E9-69AF-4F2C-AE14-785D71C58552</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/PDF/PocoPDF.vcxproj">
+      <Project>50C25B76-44A8-40F7-8ACB-CEC24994FB60</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Util/PocoUtil.vcxproj">
+      <Project>D572DE99-E53F-4386-B1DE-E5D7A6345562</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/XML/PocoXML.vcxproj">
+      <Project>E8EE4066-5EFC-4E7A-9F90-3DCC4D0C5F1A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Zip/PocoZip.vcxproj">
+      <Project>6AF35B6E-4C67-4559-A152-4314B059B292</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

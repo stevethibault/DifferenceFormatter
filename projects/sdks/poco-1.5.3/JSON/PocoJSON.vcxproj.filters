@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\JSONException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\ParseHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\PrintHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Query.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Stringifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\Template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\src\TemplateCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

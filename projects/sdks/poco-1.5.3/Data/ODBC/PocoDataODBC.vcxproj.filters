@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Binder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\ConnectionHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Connector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\EnvironmentHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Extractor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\ODBCException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\ODBCMetaColumn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\ODBCStatementImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Parameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Preparator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\SessionImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\TypeInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Unicode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\src\Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\ODBC\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

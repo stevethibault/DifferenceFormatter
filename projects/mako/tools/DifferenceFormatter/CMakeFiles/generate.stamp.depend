@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt
+C:/Projects/DifferenceFormatter/cmake/modules/WatersControlCommon.cmake
+C:/Projects/DifferenceFormatter/cmake/modules/CopyInclude.cmake
+C:/Projects/DifferenceFormatter/cmake/modules/CopyBinaries.cmake
+C:/Projects/DifferenceFormatter/cmake/modules/Tracing.cmake

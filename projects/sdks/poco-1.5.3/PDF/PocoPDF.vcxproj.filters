@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\adler32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\deflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Destination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\gzio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_annotation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_binary.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_boolean.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_catalog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_destination.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_dict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_doc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_doc_png.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encoder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encoder_cns.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encoder_cnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encoder_jp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encoder_kr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encrypt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_encryptdict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_ext_gstate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_font.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_base14.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_cid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_cns.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_cnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_jp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_kr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_fontdef_type1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_font_cid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_font_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_font_type1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_gstate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_image.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_image_png.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_mmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_name.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_null.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_number.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_objects.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_outline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_pages.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_page_label.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_page_operator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_real.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_streams.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\hpdf_xref.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\infback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\inffast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\inflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\inftrees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\LinkAnnotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Outline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\Page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\PDFException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\png.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pnggccrd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngget.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngmem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngpread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngrio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngrtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngrutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngtest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngvcrd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngwio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngwtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\pngwutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\TextAnnotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\trees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\src\zutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

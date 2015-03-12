@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Array.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Binary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Connection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Cursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\DeleteRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Element.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\GetMoreRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\InsertRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\JavaScriptCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\KillCursorsRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\Message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\MessageHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\ObjectId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\QueryRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\RegularExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\ReplicaSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\RequestMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\ResponseMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\src\UpdateRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

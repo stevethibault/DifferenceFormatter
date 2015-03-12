@@ -1,0 +1,3 @@
+C:/Projects/DifferenceFormatter/projects/mako/tools/DifferenceFormatter/CMakeFiles/DifferenceFomatter.dir
+C:/Projects/DifferenceFormatter/projects/mako/tools/CMakeFiles/ALL_BUILD.dir
+C:/Projects/DifferenceFormatter/projects/mako/CMakeFiles/ZERO_CHECK.dir

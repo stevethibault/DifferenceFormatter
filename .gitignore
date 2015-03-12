@@ -1,34 +1,72 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+syntax: glob
+.dep/
+.deps/
+.libs/
+.git/
+Debug/
+Release/
+obj/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
+*.d
+*.ipch
 *.la
-*.a
-*.lib
+*.lo
+*.ncb
+*.o
+*.opensdf
+*.pb.cc
+*.pb.h
+*.sdf
+*.suo
+*.user
+*.pyc
+*.buildlog
 
-# Executables
-*.exe
-*.out
-*.app
 
-# CMake
-CMakeCache.txt
-cmake_install.cmake
-CMakeFiles
-MakeFile
+src/sdks/poco-1.5.3/Foundation/src/MSG00001.bin
+src/sdks/poco-1.5.3/Foundation/src/pocomsg.h
+src/sdks/poco-1.5.3/Foundation/src/pocomsg.rc
+src/sdks/poco-1.5.3/config.make
+src/sdks/poco-1.5.3/lib/
+src/sdks/poco-1.5.3/output/
+src/sdks/poco-1.5.3/Foundation/testsuite/test.txt
+src/sdks/poco-1.5.3/Foundation/testsuite/nonexistent.txt
+
+
+installer\*.msm
+*.wixpdb
+installer\quartz.wxs
+installer\typhoon_config_*.wxs
+
+*.log
+
+src/sdks/poco-1.5.3/Foundation/src/pocomsg.rc
+src/sdks/poco-1.5.3/Foundation/src/pocomsg.h
+
+syntax: regexp
+^bin/
+^build/
+^projects/
+^src/sdks/lttng/build/
+^src/sdks/lua-5.2.1/build/
+^src/sdks/mlrwsdk/build
+^src/sdks/node-v0.6.11/build/
+^src/sdks/node-v0.6.11/out/
+^src/sdks/poco.*/bin/
+^src/sdks/protobuf-2.4.1/build/
+^src/sdks/zeromq.*/bin/
+^src/sdks/zeromq-3.2.2/build/
+^src/sdks/nanomsg.*/bin/
+^src/sdks/nanomsg-0.4-beta/build/
+^webserver/bin/
+^webserver/node_modules/
+^webserver/server/message/
+^config
+^include/core/
+^include/hardwarecontrol/
+^include/hardware/
+^include/peaks/
+^include/sdks/
+^include/vxworks/
+^src/sdks/zeromq-3.2.2/lib/Win32/
+^data_store/

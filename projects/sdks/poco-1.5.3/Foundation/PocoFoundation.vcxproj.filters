@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ASCIIEncoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Ascii.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AtomicCounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AbstractObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ActiveDispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ArchiveStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AsyncChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base64Decoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base64Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base32Decoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base32Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\BinaryReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\BinaryWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Bugcheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ByteOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Channel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Checksum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Clock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Condition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Configurable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ConsoleChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\CountingStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeFormatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Debugger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DeflatingStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DigestEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DigestStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryIteratorStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryWatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Environment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Error.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\EventArgs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FPEnvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FIFOBufferStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileStreamFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Formatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FormattingChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Glob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Hash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HashStatistic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HexBinaryDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HexBinaryEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\InflatingStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin1Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin2Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin9Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LineEndingConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LocalDateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LogFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LogStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LoggingFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LoggingRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MD4Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MD5Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Manifest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MemoryPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MemoryStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Message.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Mutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NamedEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NamedMutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NestedDiagnosticContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Notification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NotificationCenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NotificationQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TimedNotificationQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PriorityNotificationQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NullChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NullStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumberFormatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumberParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PatternFormatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Pipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PipeImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PipeStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PurgeStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RWLock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RandomStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RefCountedObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RegularExpression.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RotateStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Runnable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SHA1Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Semaphore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SharedLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SharedMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SignalHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SimpleFileChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SortedDirectoryIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SplitterChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Stopwatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamCopier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamTokenizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumericString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StringTokenizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SynchronizedObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TaskManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TaskNotification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TeeStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TemporaryFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextEncoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextBufferIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadTarget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadLocal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timespan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timestamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timezone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Token.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URIStreamFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URIStreamOpener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF16Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF32Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF8Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF8String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UUID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UUIDGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Unicode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UnicodeConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Var.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\VarHolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\VarIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Void.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1250Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1251Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1252Encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\adler32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\deflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\infback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inffast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inftrees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_chartables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_compile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_exec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_fullinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_globals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_maketables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_newline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_ord2utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_study.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_try_flipped.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_ucd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_valid_utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_xclass.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\trees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\zutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\EventLogChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\WindowsConsoleChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt" />
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\projects\sdks\CMakeFiles\8356715d7f8ce90ca9b481ad59835b4f\pocomsg.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{77CEBD24-B135-4717-BC08-92AE2ADC405B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BA512916-A4F5-4A47-9547-F28BC7768614}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
