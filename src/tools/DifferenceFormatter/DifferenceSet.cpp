@@ -3,52 +3,66 @@
 namespace Waters
 {
 
-Difference::Difference(const std::string& line_numbers)
-{
-    auto tokens = util::split<std::string>(line_numbers, ",");
-
-    start_line = std::stoi(tokens[0]);
-    line_count = std::stoi(tokens[1]);
-}
-
 DifferenceSet::DifferenceSet(const std::string& line_numbers)
 {
     auto tokens = util::split<std::string>(line_numbers, " ");
 
-    left_difference = Difference(tokens[0]);
-    right_difference = Difference(tokens[1]);
+	left_difference = Difference(tokens[0]);
+	right_difference = Difference(tokens[1]);
 }
 
-void DifferenceSet::addDifference(const std::string& line, Line::LineType lineType)
+void DifferenceSet::addDifference(const std::string& line)
 {
+	Line::LineType lineType;
+	std::string newLine;
+
+	if (line.length() == 0)
+	{
+		lineType = Line::LineType::unchanged;
+		newLine = line;
+	}
+	else
+	{
+		lineType = static_cast<Line::LineType>(line[0]);
+		newLine = line.substr(1, line.length() - 1);
+	}
+
+
     switch (lineType)
     {
         case Line::LineType::unchanged:
+
             if (left_lines > right_lines)
             {
-                for (int i = 0; i < left_lines - right_lines; ++i)
-                {
-                    right_difference.addLine("");
-                }
+				BalanceWithBlankLines(right_difference, left_lines - right_lines);
+				right_lines = left_lines;
             }
             else if (right_lines > left_lines)
             {
-                for (int i = 0; i < right_lines -left_lines; ++i)
-                {
-                    left_difference.addLine("");
-                }
-            }
-            left_difference.addLine(line);
-            right_difference.addLine(line);
+				BalanceWithBlankLines(right_difference, right_lines - left_lines);
+				left_lines = right_lines;
+			}
+
+			left_difference.addLine(newLine, lineType);
+			right_difference.addLine(newLine, lineType);
             break;
         case Line::LineType::removed:
-            left_difference.addLine(line);
+			left_difference.addLine(newLine, lineType);
             ++left_lines;
             break;
         case Line::LineType::added:
-            right_difference.addLine(line);
+			right_difference.addLine(newLine, lineType);
             ++right_lines;
+			break;
     }
 }
 
+void DifferenceSet::BalanceWithBlankLines(Difference &difference, int imbalance)
+{
+	for (int i = 0; i < imbalance; ++i)
+	{
+		difference.addLine("", Line::LineType::missing);
+	}
+
+}
 };

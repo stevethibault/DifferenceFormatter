@@ -8,13 +8,18 @@
 namespace Waters
 {
 
+std::pair<int, Waters::Line> make_line(std::string lineText, Line::LineType lineType, int lineNumber);
+
 class CodeLine : public Line
 {
     public:
-        CodeLine(std::string line_text, int line_number)
+		CodeLine(std::string lineText, int line_number, Line::LineType lineType) : Line(lineType)
         {
-            lineType = static_cast<Line::LineType>(line_text[0]);
-            code = line_text.substr(1, line_text.length() - 2);
+            
+			if (lineText.length() > 0)
+			{
+				code = lineText.substr(1, lineText.length() - 2);
+			}
         };
         ~CodeLine() {}
 
@@ -22,7 +27,6 @@ class CodeLine : public Line
         int line_number{};
         std::string code{};
 };
-
 
 };
 

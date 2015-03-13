@@ -4,7 +4,7 @@ namespace Waters
 {
 
 FileDifferences::FileDifferences(const std::string& input_line) :
-    command_line{input_line}
+    command_line(input_line)
 {
 
 }
@@ -39,7 +39,7 @@ void FileDifferences::rightFile(const std::string& right)
     right_file = Poco::Path(right);
 }
 
-void FileDifferences::addDifferenceSet(DifferenceSet diffSet)
+void FileDifferences::addDifferenceSet(std::shared_ptr<DifferenceSet> diffSet)
 {
     differences.push_back(diffSet);
 }

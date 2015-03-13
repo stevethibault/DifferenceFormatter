@@ -3,15 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{B61D04DC-088B-43FD-B439-80361F33D066}"
 	ProjectSection(ProjectDependencies) = postProject
 		{EE26798A-8AA7-45A9-9C39-401087D1C99D} = {EE26798A-8AA7-45A9-9C39-401087D1C99D}
-		{DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D} = {DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DifferenceFormatter", "tools\DifferenceFormatter\DifferenceFormatter.vcxproj", "{EE26798A-8AA7-45A9-9C39-401087D1C99D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DifferenceFormatter", "DifferenceFormatter.vcxproj", "{EE26798A-8AA7-45A9-9C39-401087D1C99D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D} = {DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\..\ZERO_CHECK.vcxproj", "{DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D}"
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject

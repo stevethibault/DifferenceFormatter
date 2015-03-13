@@ -16,37 +16,41 @@ UnifiedDifferenceFile::~UnifiedDifferenceFile()
 
 void UnifiedDifferenceFile::parse()
 {
-    while (!diff_stream.eof())
+
+	std::string line{};
+	std::getline(diff_stream, line);
+
+    while (!diff_stream.eof());
     {
-        std::string line{};
-        std::getline(diff_stream, line);
-        parseLine(line);
-    }
+		std::getline(diff_stream, line);
+		parseLine(line);
+	} 
 }
 
 
 void UnifiedDifferenceFile::parseLine(const std::string& line)
 {
-    if (line.substr(0, 4) == "diff")
-    {
-        fileDiff = FileDifferences(line);
-    }
+	if (line.substr(0, 4) == "diff")
+	{
+		fileDiff = std::make_shared<FileDifferences>(line);
+		fileDiffs.push_back(fileDiff);
+	}
     else if (line.substr(0, 4) == "--- ")
     {
-        fileDiff.leftFile(line.substr(3, line.length() - 4));
+        fileDiff->leftFile(line.substr(3, line.length() - 4));
     }
     else if (line.substr(0, 4) == "+++ ")
     {
-        fileDiff.leftFile(line.substr(3, line.length() - 4));
+        fileDiff->rightFile(line.substr(3, line.length() - 4));
     }
     else if (line.substr(0, 3) == "@@ ")
     {
-        diffSet = DifferenceSet(line.substr(2, line.length() - 6));
-        fileDiff.addDifferenceSet(diffSet);
+        diffSet = std::make_shared<DifferenceSet>(line.substr(3, line.length() - 6));
+        fileDiff->addDifferenceSet(diffSet);
     }
-    else if (line[0] == ' ' || line.length() == 0)
+	else if (line[0] == '+' || line[0] == '-' || line[0] == ' ' || line.length() == 0)
     {
-        diffSet.addDifference(line, Line::LineType::unchanged);
+		diffSet->addDifference(line);
     }
 }
 

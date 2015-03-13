@@ -58,15 +58,17 @@ void DifferenceFormatterApp::displayHelp()
 
 void DifferenceFormatterApp::parseDifferenceFile()
 {
-    std::ifstream input_stream(config().getString("diff_file"));
-    UnifiedDifferenceFile diff{input_stream};
+	std::ifstream input_stream(config().getString("diff_file"), std::ifstream::in);
+	if (!input_stream.fail())
+	{
+		UnifiedDifferenceFile diff{input_stream};
 
-    while (!input_stream.eof())
-    {
-        std::string diff_line;
-        std::getline(input_stream, diff_line);
-        diff.parse();
-    }
+		diff.parse();
+	}
+	else
+	{
+		std::cout << "Couldn't find the file" << std::endl;
+	}
 }
 
 int DifferenceFormatterApp::main(const ArgVec& args)
@@ -77,8 +79,18 @@ int DifferenceFormatterApp::main(const ArgVec& args)
     }
     else
     {
-        parseDifferenceFile();
+		try
+		{
+			parseDifferenceFile();
+		}
+		catch (std::exception ex)
+		{
+			std::cout << ex.what() << std::endl;
+		}
     }
+
+	std::cin.get();
+
     return Application::EXIT_OK;
 }
 

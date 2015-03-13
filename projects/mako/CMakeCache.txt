@@ -155,6 +155,12 @@ DifferenceFomatter_BINARY_DIR:STATIC=C:/Projects/DifferenceFormatter/projects/ma
 DifferenceFomatter_SOURCE_DIR:STATIC=C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter
 
 //Value Computed by CMake
+DifferenceFormatter_BINARY_DIR:STATIC=C:/Projects/DifferenceFormatter/projects/mako/tools/DifferenceFormatter
+
+//Value Computed by CMake
+DifferenceFormatter_SOURCE_DIR:STATIC=C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter
+
+//Value Computed by CMake
 Mako_BINARY_DIR:STATIC=C:/Projects/DifferenceFormatter/projects/mako
 
 //Value Computed by CMake
@@ -285,6 +291,8 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Stored GUID
 DifferenceFomatter_GUID_CMAKE:INTERNAL=A83047AF-C3E2-4814-BFBC-2E235176ABB2
+//Stored GUID
+DifferenceFormatter_GUID_CMAKE:INTERNAL=EE26798A-8AA7-45A9-9C39-401087D1C99D
 //Stored GUID
 SG_Filter_CMake Rules_GUID_CMAKE:INTERNAL=861F250D-F668-41B8-B37C-3EF6FB841C74
 //Stored GUID

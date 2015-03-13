@@ -1,6 +1,6 @@
 # CMake entry point
 cmake_minimum_required (VERSION 3.0.0)
-project (DifferenceFomatter)
+project (DifferenceFormatter)
 
 GET_FILENAME_COMPONENT(ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../.. ABSOLUTE)
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${ROOT}/cmake/modules/")

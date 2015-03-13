@@ -162,8 +162,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/tools/DifferenceFormatter/DifferenceFomatter.vcxproj">
-      <Project>A83047AF-C3E2-4814-BFBC-2E235176ABB2</Project>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/tools/DifferenceFormatter/DifferenceFormatter.vcxproj">
+      <Project>EE26798A-8AA7-45A9-9C39-401087D1C99D</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

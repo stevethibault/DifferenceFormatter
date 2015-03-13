@@ -10,7 +10,7 @@
 #include <Poco/Path.h>
 #include <string>
 #include <vector>
-#include <tuple>
+#include <memory>
 
 namespace Waters
 {
@@ -20,6 +20,16 @@ class FileDifferences
     public:
         FileDifferences() {}
         FileDifferences(const std::string& commandline);
+		FileDifferences(FileDifferences &&fileDiff) : command_line(std::move(fileDiff.command_line)), left_file(std::move(fileDiff.left_file)), right_file(std::move(fileDiff.right_file)), differences(std::move(fileDiff.differences)) {}
+
+		FileDifferences& operator=(FileDifferences&& fileDiff)
+		{
+			command_line = std::move(fileDiff.command_line);
+			left_file = std::move(fileDiff.left_file);
+			right_file = std::move(fileDiff.right_file);
+			differences = std::move(fileDiff.differences);
+			return *this;
+		}
 
         static FileDifferences parse(const std::string commandline, std::istream istm);
 
@@ -32,13 +42,13 @@ class FileDifferences
         Poco::Path rightFile() const;
         void rightFile(const std::string& right_file);
 
-        void addDifferenceSet(DifferenceSet diffSet);
+        void addDifferenceSet(std::shared_ptr<DifferenceSet> diffSet);
 
     private:
         std::string command_line{};
         Poco::Path left_file{};
         Poco::Path right_file{};
-        std::vector<DifferenceSet> differences{};
+        std::vector<std::shared_ptr<DifferenceSet>> differences{};
 };
 
 }

@@ -4,6 +4,7 @@
 #include "utilities.h"
 #include "FileDifference.h"
 #include <iostream>
+#include <memory>
 
 namespace Waters
 {
@@ -20,9 +21,9 @@ class UnifiedDifferenceFile
 
     private:
         std::istream& diff_stream;
-        std::vector<FileDifferences> fileDiffs{};
-        FileDifferences fileDiff{};
-        DifferenceSet diffSet{};
+		std::vector<std::shared_ptr<FileDifferences>> fileDiffs{};
+		std::shared_ptr<FileDifferences> fileDiff{};
+        std::shared_ptr<DifferenceSet> diffSet{};
 
         void parseLine(const std::string& line);
 };
