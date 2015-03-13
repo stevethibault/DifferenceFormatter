@@ -6,6 +6,7 @@ syntax: glob
 Debug/
 Release/
 obj/
+bin/
 
 *.d
 *.ipch
@@ -22,7 +23,7 @@ obj/
 *.pyc
 *.buildlog
 
-
+Makefile
 src/sdks/poco-1.5.3/Foundation/src/MSG00001.bin
 src/sdks/poco-1.5.3/Foundation/src/pocomsg.h
 src/sdks/poco-1.5.3/Foundation/src/pocomsg.rc
