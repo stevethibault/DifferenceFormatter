@@ -366,8 +366,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceSet.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.h" />
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\json_stream.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.h" />
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utf8_json.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utilities.h" />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.cpp"  />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.cpp"  />

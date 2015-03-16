@@ -1,6 +1,7 @@
 #ifndef DIFFERENCEPARSER_H
 #define DIFFERENCEPARSER_H
 
+#include "json_stream.h"
 #include "utilities.h"
 #include "FileDifference.h"
 #include <iostream>
@@ -16,6 +17,7 @@ class UnifiedDifferenceFile
         virtual ~UnifiedDifferenceFile();
 
         void parse();
+		void serializeToJSON() const;
 
     protected:
 

@@ -42,10 +42,16 @@
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\json_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utf8_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utilities.h">

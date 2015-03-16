@@ -44,5 +44,11 @@ void FileDifferences::addDifferenceSet(std::shared_ptr<DifferenceSet> diffSet)
     differences.push_back(diffSet);
 }
 
+const std::vector<std::shared_ptr<DifferenceSet>> FileDifferences::getDifferences() const
+{
+	return differences;
+}
+
+
 };
 

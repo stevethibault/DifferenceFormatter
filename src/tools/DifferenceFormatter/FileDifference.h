@@ -44,6 +44,9 @@ class FileDifferences
 
         void addDifferenceSet(std::shared_ptr<DifferenceSet> diffSet);
 
+		const std::vector<std::shared_ptr<DifferenceSet>> getDifferences() const;
+
+
     private:
         std::string command_line{};
         Poco::Path left_file{};

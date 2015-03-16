@@ -64,6 +64,8 @@ void DifferenceFormatterApp::parseDifferenceFile()
 		UnifiedDifferenceFile diff{input_stream};
 
 		diff.parse();
+
+		diff.serializeToJSON();
 	}
 	else
 	{
