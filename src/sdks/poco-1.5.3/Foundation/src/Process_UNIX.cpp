@@ -18,6 +18,7 @@
 #include "Poco/Exception.h"
 #include "Poco/NumberFormatter.h"
 #include "Poco/Pipe.h"
+#include "Poco/Timestamp.h"
 #include <errno.h>
 #include <signal.h>
 #include <sys/time.h>
