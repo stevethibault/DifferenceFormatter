@@ -18,9 +18,8 @@ void UnifiedDifferenceFile::parse()
 {
 
 	std::string line{};
-	std::getline(diff_stream, line);
 
-    while (!diff_stream.eof());
+    while (!diff_stream.eof())
     {
 		std::getline(diff_stream, line);
 		parseLine(line);

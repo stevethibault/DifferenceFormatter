@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{EE26798A-8AA7-45A9-9C39-401087D1C99D}</ProjectGUID>
+    <ProjectGUID>{921FAACD-FFDA-4118-9D64-2E38E0E0D7A2}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>DifferenceFormatter</ProjectName>
@@ -85,7 +85,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -102,10 +102,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,7 +113,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>Copying DifferenceFormatter.exe to bin directory</Message>
+      <Message>Copying C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe to C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe</Message>
       <Command>setlocal
 C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E copy_if_different C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe
 if %errorlevel% neq 0 goto :cmEnd
@@ -141,7 +141,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -157,10 +157,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -168,7 +168,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>Copying DifferenceFormatter.exe to bin directory</Message>
+      <Message>Copying C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe to C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe</Message>
       <Command>setlocal
 C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E copy_if_different C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe
 if %errorlevel% neq 0 goto :cmEnd
@@ -196,7 +196,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -212,10 +212,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -223,7 +223,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>Copying DifferenceFormatter.exe to bin directory</Message>
+      <Message>Copying C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe to C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe</Message>
       <Command>setlocal
 C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E copy_if_different C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe
 if %errorlevel% neq 0 goto :cmEnd
@@ -251,7 +251,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -267,10 +267,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\GeneratedTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -278,7 +278,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>Copying DifferenceFormatter.exe to bin directory</Message>
+      <Message>Copying C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe to C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe</Message>
       <Command>setlocal
 C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E copy_if_different C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.exe C:/Projects/DifferenceFormatter/bin/DifferenceFormatter.exe
 if %errorlevel% neq 0 goto :cmEnd
@@ -316,7 +316,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\cmake\modules\Tracing.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt</Message>
@@ -329,7 +329,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\cmake\modules\Tracing.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt</Message>
@@ -342,7 +342,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\cmake\modules\Tracing.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt</Message>
@@ -355,7 +355,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\cmake\modules\Tracing.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;C:\Projects\DifferenceFormatter\cmake\modules\WatersControlCommon.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyInclude.cmake;C:\Projects\DifferenceFormatter\cmake\modules\CopyBinaries.cmake;C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\mako\tools\DifferenceFormatter\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
@@ -380,7 +380,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/ZERO_CHECK.vcxproj">
-      <Project>DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D</Project>
+      <Project>78B764FA-9F26-4E0C-BBAE-0CEEB114A9DC</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

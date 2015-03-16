@@ -40,15 +40,9 @@ goto:eof
 
 :default_config
 SETLOCAL
-set CONFIG=%TYPHOON_DEFAULT_CONFIG%
+set CONFIG=%MAKO_DEFAULT_CONFIG%
 if ".%CONFIG%" == "." set CONFIG=Debug
 (ENDLOCAL
 	IF "%~1" NEQ "" SET %~1=%CONFIG%
 )
-goto:eof
-
-
-:link_error
-cd %CURRENT_DIR%
-echo Failed to link %DEVROOT%\config directory, build failed (did you disable UAC?)
 goto:eof

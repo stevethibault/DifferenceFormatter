@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{B393752D-C77F-46F6-A3B9-ABD2E4F86B3A}</ProjectGUID>
+    <ProjectGUID>{B0FE0E03-4E15-4978-98CA-52F57DB8AE40}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -65,7 +65,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -75,7 +75,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -85,7 +85,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -95,7 +95,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,37 +163,37 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/PocoData.vcxproj">
-      <Project>0B56109D-3E5A-4F55-BBEA-CE06FE6F992B</Project>
+      <Project>7B1592DA-56C4-4341-9D2C-481972204802</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/ODBC/PocoDataODBC.vcxproj">
-      <Project>C1A61E12-A7F2-4635-8767-7B2626C97E54</Project>
+      <Project>776AB425-D156-46BD-BC94-87C6825DE27A</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/SQLite/PocoDataSQLite.vcxproj">
-      <Project>201A6D26-730E-40BA-A898-3B7410AB3EC8</Project>
+      <Project>CB68BB44-9C8D-4214-A521-09DAEAEC9AEB</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Foundation/PocoFoundation.vcxproj">
-      <Project>F03BA08F-52F9-45A6-B81E-F6B4BDE02DCF</Project>
+      <Project>E4E9B5E9-F146-44EB-8BC3-545F8C94B75D</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/JSON/PocoJSON.vcxproj">
-      <Project>8AF55551-BCB5-481F-A9EB-36A6434F4373</Project>
+      <Project>FAFFFE5B-E934-4432-B5D1-A7E32C34F008</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/MongoDB/PocoMongoDB.vcxproj">
-      <Project>0D21F7A5-AB4A-465E-B71E-98A673280B3D</Project>
+      <Project>16C454E7-EC29-47A0-930C-FACF3E491BBE</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Net/PocoNet.vcxproj">
-      <Project>F03D84E9-69AF-4F2C-AE14-785D71C58552</Project>
+      <Project>3E920ED2-74C8-4392-9A28-E6A10FC603AF</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/PDF/PocoPDF.vcxproj">
-      <Project>50C25B76-44A8-40F7-8ACB-CEC24994FB60</Project>
+      <Project>ECA32386-62FB-4867-B1AD-2CD9F31B4AB9</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Util/PocoUtil.vcxproj">
-      <Project>D572DE99-E53F-4386-B1DE-E5D7A6345562</Project>
+      <Project>9985E1AD-AFA3-4343-9807-E63BF4396ED2</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/XML/PocoXML.vcxproj">
-      <Project>E8EE4066-5EFC-4E7A-9F90-3DCC4D0C5F1A</Project>
+      <Project>04F4868B-5F6E-4B76-B216-9AF054D59000</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Zip/PocoZip.vcxproj">
-      <Project>6AF35B6E-4C67-4559-A152-4314B059B292</Project>
+      <Project>CEBB4936-7DF6-49FD-9B9B-6F6D4DDB5AE1</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

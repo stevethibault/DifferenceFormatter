@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{B61D04DC-088B-43FD-B439-80361F33D066}</ProjectGUID>
+    <ProjectGUID>{11B1AA4D-FFA2-4630-B241-919AE275F736}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -163,10 +163,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/tools/DifferenceFormatter/DifferenceFormatter.vcxproj">
-      <Project>EE26798A-8AA7-45A9-9C39-401087D1C99D</Project>
+      <Project>921FAACD-FFDA-4118-9D64-2E38E0E0D7A2</Project>
     </ProjectReference>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/ZERO_CHECK.vcxproj">
-      <Project>DEA7D920-F9D9-4B2E-8D9F-822AD43C1F8D</Project>
+      <Project>78B764FA-9F26-4E0C-BBAE-0CEEB114A9DC</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

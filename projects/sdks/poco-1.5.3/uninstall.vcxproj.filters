@@ -11,7 +11,7 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{BA512916-A4F5-4A47-9547-F28BC7768614}</UniqueIdentifier>
+      <UniqueIdentifier>{B422E4E0-B33B-430A-9E08-212561ED20B0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -75,8 +75,3 @@ if (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
 endif (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
 add_subdirectory(poco-1.5.3)
 set(CMAKE_DEBUG_POSTFIX "")
-
-
-add_subdirectory(Test)
-
-

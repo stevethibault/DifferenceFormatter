@@ -12,14 +12,10 @@ echo Config: $CONFIG
 CURRENT_DIR=$PWD
 cd ../..
 DEVROOT=$PWD
-PROJECTROOT=$DEVROOT/projects/typhoon/$CONFIG
+PROJECTROOT=$DEVROOT/projects/mako/$CONFIG
 
 mkdir -p $PROJECTROOT
 cd $PROJECTROOT
-
-if [ ! -d "$DEVROOT/config" ]; then
-	ln -s "$DEVROOT/instruments/acquity_pump" "$DEVROOT/config"
-fi
 
 cmake -G"Eclipse CDT4 - Unix Makefiles" $DEVROOT/src -DCMAKE_BUILD_TYPE=$CONFIG
 

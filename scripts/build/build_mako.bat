@@ -1,5 +1,5 @@
 :: Build typhoon
-:: Usage: build_typhoon <BuildType> <VSVersion>
+:: Usage: build_mako <BuildType> <VSVersion>
 ::		BuildType - Debug or Release [default: Debug]
 ::		VSVersion - vs2013, vs2012 or vs2010 [default: highest installed version]
 @echo on

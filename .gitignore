@@ -38,6 +38,7 @@ installer\*.msm
 *.wixpdb
 installer\quartz.wxs
 installer\typhoon_config_*.wxs
+installer\mako_config_*.wxs
 
 *.log
 
@@ -59,6 +60,7 @@ syntax: regexp
 ^src/sdks/zeromq-3.2.2/build/
 ^src/sdks/nanomsg.*/bin/
 ^src/sdks/nanomsg-0.4-beta/build/
+^projects/sdks/CMakeFiles
 ^webserver/bin/
 ^webserver/node_modules/
 ^webserver/server/message/

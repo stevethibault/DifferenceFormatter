@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Projects/DifferenceFormatter/build/sdks/${BUILD_TYPE}/")
+  set(CMAKE_INSTALL_PREFIX "C:/Projects/DifferenceFormatter/build/sdks/${BUILD_TYPE}")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,6 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("C:/Projects/DifferenceFormatter/projects/sdks/unittest++/cmake_install.cmake")
   include("C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/cmake_install.cmake")
 
 endif()

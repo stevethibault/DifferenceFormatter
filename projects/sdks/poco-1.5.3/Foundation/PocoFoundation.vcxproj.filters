@@ -546,13 +546,13 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{D7859BA3-26A2-4BA1-B500-2EF92A8ADEA5}</UniqueIdentifier>
+      <UniqueIdentifier>{BD488E29-7C77-4D11-AF4A-EA10AFDF4D11}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{77CEBD24-B135-4717-BC08-92AE2ADC405B}</UniqueIdentifier>
+      <UniqueIdentifier>{6D935AED-F143-4413-8BF6-CF8A46F29FB3}</UniqueIdentifier>
     </Filter>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{BA512916-A4F5-4A47-9547-F28BC7768614}</UniqueIdentifier>
+      <UniqueIdentifier>{B422E4E0-B33B-430A-9E08-212561ED20B0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

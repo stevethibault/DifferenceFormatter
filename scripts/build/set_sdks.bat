@@ -1,5 +1,5 @@
 set CONFIG=%1
-if ".%CONFIG%" == "." set CONFIG=%TYPHOON_DEFAULT_CONFIG%
+if ".%CONFIG%" == "." set CONFIG=%MAKO_DEFAULT_CONFIG%
 if ".%CONFIG%" == "." set CONFIG=Debug
 
 set BUILD_SCRIPT_DIR=%CD%
