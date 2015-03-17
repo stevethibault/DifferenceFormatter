@@ -1,5 +1,5 @@
-#ifndef DIFFERENCE_H
-#define DIFFERENCE_H
+#ifndef DIFFERENCECHUNK_H
+#define DIFFERENCECHUNK_H
 
 #include "utilities.h"
 #include "Line.h"
@@ -29,4 +29,4 @@ namespace Waters
 
 };
 
-#endif // DIFFERENCE_H
+#endif // DIFFERENCECHUNK_H

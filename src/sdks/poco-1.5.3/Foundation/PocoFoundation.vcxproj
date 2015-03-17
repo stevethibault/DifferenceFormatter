@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E53F82DC-DD3B-448A-9172-F1E638AF3B59}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>PocoFoundation</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\src\sdks\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PocoFoundation.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PocoFoundationd</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\src\sdks\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PocoFoundation.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PocoFoundation</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\src\sdks\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PocoFoundation.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">PocoFoundation</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\src\sdks\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PocoFoundation.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">PocoFoundation</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR="Debug";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR=\"Debug\";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Projects/DifferenceFormatter/src/sdks/lib/Debug/PocoFoundationd.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/src/sdks/Debug/PocoFoundationd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR="Release";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR=\"Release\";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Projects/DifferenceFormatter/src/sdks/lib/Release/PocoFoundation.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/src/sdks/Release/PocoFoundation.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR="MinSizeRel";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR=\"MinSizeRel\";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Projects/DifferenceFormatter/src/sdks/lib/MinSizeRel/PocoFoundation.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/src/sdks/MinSizeRel/PocoFoundation.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR="RelWithDebInfo";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;DBUG_OFF;POCO_OS_FAMILY_WINDOWS;PCRE_STATIC;Foundation_EXPORTS;CMAKE_INTDIR=\"RelWithDebInfo\";PocoFoundation_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\CppUnit\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\XML\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Net\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\NetSSL_OpenSSL\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Util\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Data\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\WebWidgets\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Zip\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Crypto\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Web\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\JSON\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\MongoDB\include;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\PDF\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib;iphlpapi.lib;gdi32.lib;odbc32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Projects/DifferenceFormatter/src/sdks/lib/RelWithDebInfo/PocoFoundation.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/src/sdks/RelWithDebInfo/PocoFoundation.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/src/sdks --check-stamp-file C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/src/sdks --check-stamp-file C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/src/sdks --check-stamp-file C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/src/sdks --check-stamp-file C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\CMakeFiles\8356715d7f8ce90ca9b481ad59835b4f\pocomsg.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating src/pocomsg.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\Microsoft SDKs\Windows\v7.0\Bin\MC.Exe" -h C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src -r C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src/pocomsg.mc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/CMakeFiles/8356715d7f8ce90ca9b481ad59835b4f/pocomsg.h.rule;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating src/pocomsg.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\Microsoft SDKs\Windows\v7.0\Bin\MC.Exe" -h C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src -r C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src/pocomsg.mc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/CMakeFiles/8356715d7f8ce90ca9b481ad59835b4f/pocomsg.h.rule;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating src/pocomsg.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\Microsoft SDKs\Windows\v7.0\Bin\MC.Exe" -h C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src -r C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src/pocomsg.mc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/CMakeFiles/8356715d7f8ce90ca9b481ad59835b4f/pocomsg.h.rule;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating src/pocomsg.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\Microsoft SDKs\Windows\v7.0\Bin\MC.Exe" -h C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src -r C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/Foundation/src/pocomsg.mc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/CMakeFiles/8356715d7f8ce90ca9b481ad59835b4f/pocomsg.h.rule;C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.h" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ASCIIEncoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Ascii.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AtomicCounter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AbstractObserver.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ActiveDispatcher.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ArchiveStrategy.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\AsyncChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base64Decoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base64Encoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base32Decoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Base32Encoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\BinaryReader.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\BinaryWriter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Bugcheck.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ByteOrder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Channel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Checksum.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Clock.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Condition.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Configurable.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ConsoleChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\CountingStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTime.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeFormat.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeFormatter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DateTimeParser.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Debugger.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DeflatingStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DigestEngine.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DigestStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryIterator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryIteratorStrategy.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\DirectoryWatcher.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Environment.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Error.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ErrorHandler.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Event.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\EventArgs.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Exception.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FPEnvironment.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\File.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FIFOBufferStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FileStreamFactory.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Format.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Formatter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\FormattingChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Glob.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Hash.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HashStatistic.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HexBinaryDecoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\HexBinaryEncoder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\InflatingStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin1Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin2Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Latin9Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LineEndingConverter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LocalDateTime.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LogFile.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LogStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Logger.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LoggingFactory.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\LoggingRegistry.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MD4Engine.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MD5Engine.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Manifest.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MemoryPool.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\MemoryStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Message.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Mutex.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NamedEvent.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NamedMutex.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NestedDiagnosticContext.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Notification.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NotificationCenter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NotificationQueue.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TimedNotificationQueue.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PriorityNotificationQueue.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NullChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NullStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumberFormatter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumberParser.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Path.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PatternFormatter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Pipe.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PipeImpl.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PipeStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Process.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\PurgeStrategy.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RWLock.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Random.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RandomStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RefCountedObject.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RegularExpression.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\RotateStrategy.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Runnable.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SHA1Engine.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Semaphore.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SharedLibrary.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SharedMemory.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SignalHandler.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SimpleFileChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SortedDirectoryIterator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SplitterChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Stopwatch.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamConverter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamCopier.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StreamTokenizer.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\String.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\NumericString.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\StringTokenizer.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\SynchronizedObject.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Task.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TaskManager.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TaskNotification.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TeeStream.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TemporaryFile.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextConverter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextEncoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextIterator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\TextBufferIterator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Thread.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadTarget.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadLocal.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\ThreadPool.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timer.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timespan.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timestamp.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Timezone.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Token.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URI.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URIStreamFactory.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\URIStreamOpener.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF16Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF32Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF8Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UTF8String.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UUID.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UUIDGenerator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Unicode.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\UnicodeConverter.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Var.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\VarHolder.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\VarIterator.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Void.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1250Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1251Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\Windows1252Encoding.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\adler32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\crc32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\deflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\infback.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inffast.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\inftrees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_chartables.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_compile.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_exec.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_fullinfo.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_globals.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_maketables.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_newline.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_ord2utf8.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_study.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_tables.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_try_flipped.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_ucd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_valid_utf8.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pcre_xclass.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\trees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\zutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\EventLogChannel.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\WindowsConsoleChannel.cpp"  />
+    <None Include="C:\Projects\DifferenceFormatter\src\sdks\poco-1.5.3\Foundation\src\pocomsg.mc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/src/sdks/ZERO_CHECK.vcxproj">
+      <Project>FE5D8EA6-4158-4D00-AEA3-43DEB2757503</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

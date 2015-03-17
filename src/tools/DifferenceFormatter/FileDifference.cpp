@@ -4,19 +4,19 @@ namespace Waters
 {
 
 FileDifferences::FileDifferences(const std::string& input_line) :
-    command_line(input_line)
+    line(input_line)
 {
 
 }
 
 std::string FileDifferences::commandLine() const
 {
-    return command_line;
+    return line;
 }
 
 void FileDifferences::commandLine(const std::string& command)
 {
-    command_line = command;
+    line = command;
 }
 
 Poco::Path FileDifferences::leftFile() const

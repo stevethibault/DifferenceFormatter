@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{6EF804C4-A140-4BB8-9675-A9CE73A150A8}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>CTemplatePythonGeneratedFiles</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\src\sdks\unittest++;C:\Projects\DifferenceFormatter\src\sdks\ctemplate;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPythonInterp.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFiles.cmake;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_string.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_enums.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_cache.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_modifiers.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_emitter.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_annotator.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_pathops.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_namelist.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\find_ptr.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\per_expand_data.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary_interface.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPythonInterp.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFiles.cmake;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_string.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_enums.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_cache.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_modifiers.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_emitter.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_annotator.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_pathops.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_namelist.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\find_ptr.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\per_expand_data.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary_interface.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPythonInterp.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFiles.cmake;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_string.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_enums.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_cache.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_modifiers.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_emitter.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_annotator.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_pathops.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_namelist.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\find_ptr.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\per_expand_data.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary_interface.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -HC:/Projects/DifferenceFormatter/src/sdks -BC:/Projects/DifferenceFormatter/projects/sdks --check-stamp-file C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPythonInterp.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageHandleStandardArgs.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\FindPackageMessage.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CMakeParseArguments.cmake;C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\share\cmake-3.1\Modules\CheckIncludeFiles.cmake;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\config.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_string.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_enums.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_cache.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_modifiers.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_emitter.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_annotator.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_pathops.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_namelist.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\find_ptr.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\per_expand_data.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\str_ref.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\ctemplate\template_dictionary_interface.h.in;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser_fsm.config">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating htmlparser/htmlparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config &gt; htmlparser/htmlparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating htmlparser/htmlparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config &gt; htmlparser/htmlparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating htmlparser/htmlparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config &gt; htmlparser/htmlparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating htmlparser/htmlparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config &gt; htmlparser/htmlparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/htmlparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser_fsm.config">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating htmlparser/jsparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config &gt; htmlparser/jsparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating htmlparser/jsparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config &gt; htmlparser/jsparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating htmlparser/jsparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config &gt; htmlparser/jsparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating htmlparser/jsparser_fsm.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\ProgramData\chocolatey\lib\cmake.3.1.3\content\cmake-3.1.3-win32-x86\bin\cmake.exe -E make_directory htmlparser
+if %errorlevel% neq 0 goto :cmEnd
+C:\bin\python\python.exe C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/generate_fsm.py C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config &gt; htmlparser/jsparser_fsm.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/htmlparser/jsparser_fsm.config;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\generate_fsm.py;C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser_fsm.config;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\DifferenceFormatter\projects\sdks\CMakeFiles\a421a623b65f153b67d1524ce0e72e97\CTemplatePythonGeneratedFiles.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Projects/DifferenceFormatter/projects/sdks/CMakeFiles/a421a623b65f153b67d1524ce0e72e97/CTemplatePythonGeneratedFiles.rule;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\CTemplatePythonGeneratedFiles</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Projects/DifferenceFormatter/projects/sdks/CMakeFiles/a421a623b65f153b67d1524ce0e72e97/CTemplatePythonGeneratedFiles.rule;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\CTemplatePythonGeneratedFiles</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Projects/DifferenceFormatter/projects/sdks/CMakeFiles/a421a623b65f153b67d1524ce0e72e97/CTemplatePythonGeneratedFiles.rule;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\CTemplatePythonGeneratedFiles</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Projects/DifferenceFormatter/projects/sdks/CMakeFiles/a421a623b65f153b67d1524ce0e72e97/CTemplatePythonGeneratedFiles.rule;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\htmlparser_fsm.h;C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\htmlparser\jsparser_fsm.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\CTemplatePythonGeneratedFiles</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Projects\DifferenceFormatter\projects\sdks\ctemplate\CMakeFiles\CTemplatePythonGeneratedFiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/ZERO_CHECK.vcxproj">
+      <Project>5040F103-F3D5-48DC-8703-0CA37AC0F667</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

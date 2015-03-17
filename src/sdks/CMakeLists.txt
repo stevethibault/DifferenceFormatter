@@ -59,14 +59,17 @@ else (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
 endif (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
 
 include_directories("${ROOT}/src/sdks/unittest++")
+include_directories("${ROOT}/src/sdks/ctemplate")
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+set(CTEMPLATE_SOURCE_ROOT "${ROOT}/src/sdks/ctemplate")
 
 
 set(CMAKE_DEBUG_POSTFIX "")
 add_subdirectory(unittest++)
+add_subdirectory(ctemplate)
 if (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
     set(BUILD_SHARED_LIBS "On" CACHE BOOL "BUILD_SHARED_LIBS" FORCE  )
 endif (CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )

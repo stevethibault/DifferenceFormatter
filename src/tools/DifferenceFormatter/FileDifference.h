@@ -1,6 +1,7 @@
 #ifndef FILEDIFFERENCE_H
 #define FILEDIFFERENCE_H
 
+#include "Difference.h"
 #include "DifferenceSet.h"
 #include "DifferenceChunk.h"
 #include "Line.h"
@@ -15,16 +16,16 @@
 namespace Waters
 {
 
-class FileDifferences
+class FileDifferences : public Difference
 {
     public:
         FileDifferences() {}
-        FileDifferences(const std::string& commandline);
-		FileDifferences(FileDifferences &&fileDiff) : command_line(std::move(fileDiff.command_line)), left_file(std::move(fileDiff.left_file)), right_file(std::move(fileDiff.right_file)), differences(std::move(fileDiff.differences)) {}
+        FileDifferences(const std::string& line);
+		FileDifferences(FileDifferences &&fileDiff) : line(std::move(fileDiff.line)), left_file(std::move(fileDiff.left_file)), right_file(std::move(fileDiff.right_file)), differences(std::move(fileDiff.differences)) {}
 
 		FileDifferences& operator=(FileDifferences&& fileDiff)
 		{
-			command_line = std::move(fileDiff.command_line);
+			line = std::move(fileDiff.line);
 			left_file = std::move(fileDiff.left_file);
 			right_file = std::move(fileDiff.right_file);
 			differences = std::move(fileDiff.differences);
@@ -48,7 +49,7 @@ class FileDifferences
 
 
     private:
-        std::string command_line{};
+        std::string line{};
         Poco::Path left_file{};
         Poco::Path right_file{};
         std::vector<std::shared_ptr<DifferenceSet>> differences{};

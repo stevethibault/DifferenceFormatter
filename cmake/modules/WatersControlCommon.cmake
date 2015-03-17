@@ -8,7 +8,7 @@ if ( CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
   if (NOT SDKS_DIRECTORY)
     set(SDKS_DIRECTORY "${SDKS_STAGING_DIRECTORY}")
   endif (NOT SDKS_DIRECTORY)
-  
+
 else ( CMAKE_SYSTEM MATCHES "Linux" AND NOT ANDROID )
   set(BUILD_DIRECTORY "${ROOT}/build/mako/\$(Configuration)")
   set(SDKS_DIRECTORY "${ROOT}/build/sdks/\$(Configuration)")
@@ -49,6 +49,8 @@ elseif ((CMAKE_SYSTEM MATCHES "Linux") AND NOT ANDROID )
   # set(LTTNG_LIB lttng-ust)
   set(THREADS rt pthread dl)
 endif()
+
+set(C_TEMPLATE_LIB "ctemplate")
 
 set(UNITTEST_MAIN "${ROOT}/src/sdks/unittest++/UnitTestMain.cpp")
 

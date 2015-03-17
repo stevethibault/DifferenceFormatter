@@ -1,0 +1,3 @@
+C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeFiles/DifferenceFormatter.dir
+C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeFiles/ALL_BUILD.dir
+C:/Projects/DifferenceFormatter/src/tools/DifferenceFormatter/CMakeFiles/ZERO_CHECK.dir

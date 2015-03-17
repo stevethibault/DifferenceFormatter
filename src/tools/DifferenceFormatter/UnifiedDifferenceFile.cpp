@@ -31,21 +31,26 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 {
 	if (line.substr(0, 4) == "diff")
 	{
-		fileDiff = std::make_shared<FileDifferences>(line);
-		fileDiffs.push_back(fileDiff);
+		diff = std::make_shared<FileDifferences>(line);
+		diffs.push_back(diff);
+	}
+	else if (line.substr(0, 5) == "Only")
+	{
+		diff = std::make_shared<DirectoryDifference>(line);
+		diffs.push_back(diff);
 	}
     else if (line.substr(0, 4) == "--- ")
     {
-        fileDiff->leftFile(line.substr(3, line.length() - 4));
+		std::dynamic_pointer_cast<FileDifferences>(diff)->leftFile(line.substr(3, line.length() - 4));
     }
     else if (line.substr(0, 4) == "+++ ")
     {
-        fileDiff->rightFile(line.substr(3, line.length() - 4));
+		std::dynamic_pointer_cast<FileDifferences>(diff)->rightFile(line.substr(3, line.length() - 4));
     }
     else if (line.substr(0, 3) == "@@ ")
     {
         diffSet = std::make_shared<DifferenceSet>(line.substr(3, line.length() - 6));
-        fileDiff->addDifferenceSet(diffSet);
+		std::dynamic_pointer_cast<FileDifferences>(diff)->addDifferenceSet(diffSet);
     }
 	else if (line[0] == '+' || line[0] == '-' || line[0] == ' ' || line.length() == 0)
     {
@@ -54,11 +59,9 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 }
 
 
-void UnifiedDifferenceFile::serializeToJSON() const
+void UnifiedDifferenceFile::generateHTMLReport() const
 {
-	//json_stream js(std::string(".\test.json"));
-
-	//js << diffSet;
+	
 }
 
 };

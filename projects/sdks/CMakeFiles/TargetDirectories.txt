@@ -1,4 +1,5 @@
 C:/Projects/DifferenceFormatter/projects/sdks/unittest++/CMakeFiles/UnitTest++.dir
+C:/Projects/DifferenceFormatter/projects/sdks/ctemplate/CMakeFiles/CTemplatePythonGeneratedFiles.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Foundation/CMakeFiles/PocoFoundation.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/CMakeFiles/uninstall.dir
 C:/Projects/DifferenceFormatter/projects/sdks/unittest++/CMakeFiles/check.dir
@@ -8,10 +9,11 @@ C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/CMakeFiles/PocoDat
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/JSON/CMakeFiles/PocoJSON.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/ODBC/CMakeFiles/PocoDataODBC.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Zip/CMakeFiles/PocoZip.dir
-C:/Projects/DifferenceFormatter/projects/sdks/unittest++/CMakeFiles/ALL_BUILD.dir
+C:/Projects/DifferenceFormatter/projects/sdks/ctemplate/CMakeFiles/ALL_BUILD.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Util/CMakeFiles/PocoUtil.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Net/CMakeFiles/PocoNet.dir
 C:/Projects/DifferenceFormatter/projects/sdks/CMakeFiles/ZERO_CHECK.dir
+C:/Projects/DifferenceFormatter/projects/sdks/ctemplate/CMakeFiles/ctemplate.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/Data/SQLite/CMakeFiles/PocoDataSQLite.dir
 C:/Projects/DifferenceFormatter/projects/sdks/unittest++/CMakeFiles/TestUnitTest++.dir
 C:/Projects/DifferenceFormatter/projects/sdks/poco-1.5.3/PDF/CMakeFiles/PocoPDF.dir

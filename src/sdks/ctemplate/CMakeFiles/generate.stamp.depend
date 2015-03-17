@@ -1,0 +1,24 @@
+# CMake generation dependency list for this directory.
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/CMakeLists.txt
+C:/ProgramData/chocolatey/lib/cmake.3.1.3/content/cmake-3.1.3-win32-x86/share/cmake-3.1/Modules/FindPythonInterp.cmake
+C:/ProgramData/chocolatey/lib/cmake.3.1.3/content/cmake-3.1.3-win32-x86/share/cmake-3.1/Modules/FindPackageHandleStandardArgs.cmake
+C:/ProgramData/chocolatey/lib/cmake.3.1.3/content/cmake-3.1.3-win32-x86/share/cmake-3.1/Modules/FindPackageMessage.cmake
+C:/ProgramData/chocolatey/lib/cmake.3.1.3/content/cmake-3.1.3-win32-x86/share/cmake-3.1/Modules/CMakeParseArguments.cmake
+C:/ProgramData/chocolatey/lib/cmake.3.1.3/content/cmake-3.1.3-win32-x86/share/cmake-3.1/Modules/CheckIncludeFiles.cmake
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/config.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/config.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_string.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_enums.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_cache.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_modifiers.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_emitter.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_annotator.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_dictionary.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_pathops.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_namelist.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/find_ptr.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/per_expand_data.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/str_ref.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/str_ref.h.in
+C:/Projects/DifferenceFormatter/src/sdks/ctemplate/src/ctemplate/template_dictionary_interface.h.in

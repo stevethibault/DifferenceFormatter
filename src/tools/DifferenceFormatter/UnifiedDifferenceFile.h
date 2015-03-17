@@ -2,8 +2,10 @@
 #define DIFFERENCEPARSER_H
 
 #include "utilities.h"
+#include "ctemplate\template.h"
+#include "Difference.h"
 #include "FileDifference.h"
-#include "json_stream.h"
+#include "DirectoryDifference.h"
 #include <iostream>
 #include <memory>
 
@@ -17,14 +19,14 @@ class UnifiedDifferenceFile
         virtual ~UnifiedDifferenceFile();
 
         void parse();
-		void serializeToJSON() const;
+		void generateHTMLReport() const;
 
     protected:
 
     private:
         std::istream& diff_stream;
-		std::vector<std::shared_ptr<FileDifferences>> fileDiffs{};
-		std::shared_ptr<FileDifferences> fileDiff{};
+		std::vector<std::shared_ptr<Difference>> diffs{};
+		std::shared_ptr<Difference> diff{};
         std::shared_ptr<DifferenceSet> diffSet{};
 
         void parseLine(const std::string& line);
