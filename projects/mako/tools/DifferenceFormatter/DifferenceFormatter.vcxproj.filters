@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.cpp">
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceChunk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.cpp">
@@ -30,7 +30,7 @@
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.h">
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceChunk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.h">
@@ -42,16 +42,10 @@
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\json_stream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utf8_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utilities.h">

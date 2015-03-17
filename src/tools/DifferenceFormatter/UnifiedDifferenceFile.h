@@ -1,9 +1,9 @@
 #ifndef DIFFERENCEPARSER_H
 #define DIFFERENCEPARSER_H
 
-#include "json_stream.h"
 #include "utilities.h"
 #include "FileDifference.h"
+#include "json_stream.h"
 #include <iostream>
 #include <memory>
 

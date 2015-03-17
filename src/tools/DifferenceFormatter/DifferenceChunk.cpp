@@ -1,9 +1,9 @@
-#include "Difference.h"
+#include "DifferenceChunk.h"
 
 namespace Waters
 {
 
-Difference::Difference(const std::string& line_numbers)
+DifferenceChunk::DifferenceChunk(const std::string& line_numbers)
 {
 	auto tokens = util::split<std::string>(line_numbers, ",");
 
@@ -12,7 +12,7 @@ Difference::Difference(const std::string& line_numbers)
 	current_line_number = start_line;
 }
 
-void Difference::addLine(const std::string& lineText, Line::LineType lineType)
+void DifferenceChunk::addLine(const std::string& lineText, Line::LineType lineType)
 {
 
     lines.push_back(Line(lineText, current_line_number, lineType));

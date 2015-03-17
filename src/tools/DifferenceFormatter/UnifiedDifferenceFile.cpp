@@ -56,9 +56,9 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 
 void UnifiedDifferenceFile::serializeToJSON() const
 {
-	json_stream js(std::string(".\test.json"));
+	//json_stream js(std::string(".\test.json"));
 
-	js << diffSet;
+	//js << diffSet;
 }
 
 };

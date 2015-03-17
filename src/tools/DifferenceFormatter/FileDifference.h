@@ -2,7 +2,7 @@
 #define FILEDIFFERENCE_H
 
 #include "DifferenceSet.h"
-#include "Difference.h"
+#include "DifferenceChunk.h"
 #include "Line.h"
 #include "utilities.h"
 #include <Poco/File.h>

@@ -7,8 +7,8 @@ DifferenceSet::DifferenceSet(const std::string& line_numbers)
 {
     auto tokens = util::split<std::string>(line_numbers, " ");
 
-	left_difference = Difference(tokens[0]);
-	right_difference = Difference(tokens[1]);
+	left_difference = DifferenceChunk(tokens[0]);
+	right_difference = DifferenceChunk(tokens[1]);
 }
 
 void DifferenceSet::addDifference(const std::string& line)
@@ -57,7 +57,7 @@ void DifferenceSet::addDifference(const std::string& line)
     }
 }
 
-void DifferenceSet::BalanceWithBlankLines(Difference &difference, int imbalance)
+void DifferenceSet::BalanceWithBlankLines(DifferenceChunk &difference, int imbalance)
 {
 	for (int i = 0; i < imbalance; ++i)
 	{

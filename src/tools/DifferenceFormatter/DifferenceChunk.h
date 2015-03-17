@@ -11,12 +11,12 @@
 namespace Waters
 {
 
-	class Difference
+	class DifferenceChunk
 	{
 		public:
-			Difference(){}
-			Difference(const std::string& line_range);
-			~Difference(){}
+			DifferenceChunk() {}
+			DifferenceChunk(const std::string& line_range);
+			~DifferenceChunk() {}
 
 			void addLine(const std::string& lineText, const Line::LineType lineType);
 

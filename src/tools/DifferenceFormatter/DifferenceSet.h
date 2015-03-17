@@ -1,7 +1,7 @@
 #ifndef DIFFERENCESET_H
 #define DIFFERENCESET_H
 
-#include "Difference.h"
+#include "DifferenceChunk.h"
 #include "utilities.h"
 #include <string>
 
@@ -23,18 +23,18 @@ class DifferenceSet
 			return *this;
 		}
 
-		Difference& leftDifference();
-        Difference& rigthDifference();
+		DifferenceChunk& leftDifference();
+		DifferenceChunk& rigthDifference();
 
         void addDifference(const std::string& line);
 
     private:
-        Difference left_difference{};
-        Difference right_difference{};
+		DifferenceChunk left_difference{};
+		DifferenceChunk right_difference{};
         int left_lines{};
         int right_lines{};
 
-		void BalanceWithBlankLines(Difference &difference, int imballance);
+		void BalanceWithBlankLines(DifferenceChunk &difference, int imballance);
 };
 
 };

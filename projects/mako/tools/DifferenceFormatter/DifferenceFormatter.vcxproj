@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -56,33 +56,33 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DifferenceFormatter.dir\Debug\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DifferenceFormatter</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DifferenceFormatter.dir\Release\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DifferenceFormatter</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">DifferenceFormatter.dir\MinSizeRel\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">DifferenceFormatter</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DifferenceFormatter.dir\RelWithDebInfo\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DifferenceFormatter</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
-      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
-      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DifferenceFormatter.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DifferenceFormatter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DifferenceFormatter.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DifferenceFormatter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">DifferenceFormatter.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">DifferenceFormatter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Projects\DifferenceFormatter\build\mako\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DifferenceFormatter.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">DifferenceFormatter</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Projects\DifferenceFormatter\include;C:\Projects\DifferenceFormatter\include\sdks;C:\Projects\DifferenceFormatter\build\sdks\$(Configuration)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -133,7 +133,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImportLibrary>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -153,7 +154,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -188,7 +190,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImportLibrary>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -208,7 +211,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -243,7 +247,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImportLibrary>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -298,7 +303,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ImportLibrary>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.lib</ImportLibrary>
       <ProgramDataBaseFile>C:/Projects/DifferenceFormatter/build/mako/$(Configuration)/DifferenceFormatter.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <Version></Version>
+      <Version>
+      </Version>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -362,23 +368,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.h" />
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.h" />
+    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceChunk.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceSet.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.h" />
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\json_stream.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.h" />
-    <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utf8_json.h" />
     <ClInclude Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utilities.h" />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceSet.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\main.cpp"  />
-    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\CodeLine.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceChunk.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceFormatterApp.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\DifferenceSet.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\FileDifference.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\main.cpp" />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/ZERO_CHECK.vcxproj">
