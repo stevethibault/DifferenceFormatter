@@ -381,6 +381,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Line.cpp"  />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\main.cpp"  />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\UnifiedDifferenceFile.cpp"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\utilities.cpp"  />
+    <None Include="C:\Projects\DifferenceFormatter\src\tools\DifferenceFormatter\Difference.tpl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/mako/ZERO_CHECK.vcxproj">

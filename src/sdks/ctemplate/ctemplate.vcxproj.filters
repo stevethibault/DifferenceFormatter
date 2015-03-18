@@ -40,6 +40,9 @@
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\statemachine.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\windows\port.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\CMakeLists.txt" />

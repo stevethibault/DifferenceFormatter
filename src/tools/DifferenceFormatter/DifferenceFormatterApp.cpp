@@ -33,11 +33,23 @@ void DifferenceFormatterApp::defineOptions(OptionSet& options)
             .callback(OptionCallback<DifferenceFormatterApp>(this, &DifferenceFormatterApp::handleHelp)));
 
     options.addOption(
-        Option("diff_file", "d", "bind option value to diff_file")
+        Option("diff_file", "d", "bind option value to 'diff_file'")
             .required(true)
             .repeatable(false)
             .argument("file")
             .binding("diff_file"));
+	options.addOption(
+		Option("left_path", "l", "bind option value to 'left_path'")
+		.required(true)
+		.repeatable(false)
+		.argument("path")
+		.binding("left_path"));
+	options.addOption(
+		Option("right_path", "r", "bind option value to 'right_path'")
+		.required(true)
+		.repeatable(false)
+		.argument("path")
+		.binding("right_path"));
 }
 
 void DifferenceFormatterApp::handleHelp(const std::string& name, const std::string& value)
@@ -65,7 +77,7 @@ void DifferenceFormatterApp::parseDifferenceFile()
 
 		diff.parse();
 
-		diff.serializeToJSON();
+		diff.generateHTMLReport(config().getString("left_path"), config().getString("right_path"));
 	}
 	else
 	{

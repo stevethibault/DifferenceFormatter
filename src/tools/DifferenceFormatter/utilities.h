@@ -4,9 +4,12 @@
 #include <string>
 #include <vector>
 #include <tuple>
+#include <chrono>
+#include <ctime>
 
 namespace util
 {
+	std::string getTime();
 
     template<typename T>
     std::vector<T> split(const T & str, const T & delimiters)

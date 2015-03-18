@@ -262,6 +262,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\htmlparser.cc"  />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\jsparser.cc"  />
     <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\htmlparser\statemachine.cc"  />
+    <ClCompile Include="C:\Projects\DifferenceFormatter\src\sdks\ctemplate\src\windows\port.cc"  />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:/Projects/DifferenceFormatter/projects/sdks/ctemplate/CTemplatePythonGeneratedFiles.vcxproj">

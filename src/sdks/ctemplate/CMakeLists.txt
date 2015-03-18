@@ -190,25 +190,44 @@ add_custom_target(
 
 # Create the 'ctemplate' target with appropriate dependencies, definitions, and
 # includes.
-add_library( ctemplate STATIC
-	${CTEMPLATE_SOURCE_ROOT}/src/base/arena.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/per_expand_data.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_annotator.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_cache.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_dictionary.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_modifiers.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_namelist.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_pathops.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/template_string.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/htmlparser.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/jsparser.cc
-	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/statemachine.cc )
+if (WIN32)
+  add_library( ctemplate STATIC
+  	${CTEMPLATE_SOURCE_ROOT}/src/base/arena.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/per_expand_data.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_annotator.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_cache.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_dictionary.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_modifiers.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_namelist.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_pathops.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/template_string.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/htmlparser.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/jsparser.cc
+  	${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/statemachine.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/windows/port.cc)
+else(WIN32)
+  add_library( ctemplate STATIC
+    ${CTEMPLATE_SOURCE_ROOT}/src/base/arena.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/per_expand_data.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_annotator.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_cache.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_dictionary.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_modifiers.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_namelist.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_pathops.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/template_string.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/htmlparser.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/jsparser.cc
+    ${CTEMPLATE_SOURCE_ROOT}/src/htmlparser/statemachine.cc)
+endif (WIN32)
+
 add_dependencies( ctemplate CTemplatePythonGeneratedFiles )
 add_definitions( -DNO_THREADS )
 include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}
   ${CTEMPLATE_SOURCE_ROOT}/src )
 
-install(TARGETS ctemplate DESTINATION lib)
+install (TARGETS ctemplate DESTINATION lib)
 install (FILES ${HEADERS} DESTINATION "include/ctemplate")

@@ -7,6 +7,7 @@
 #include "FileDifference.h"
 #include "DirectoryDifference.h"
 #include <iostream>
+#include <fstream>
 #include <memory>
 
 namespace Waters
@@ -19,7 +20,7 @@ class UnifiedDifferenceFile
         virtual ~UnifiedDifferenceFile();
 
         void parse();
-		void generateHTMLReport() const;
+		void generateHTMLReport(const std::string& leftPath, const std::string& rightPath) const;
 
     protected:
 
@@ -30,6 +31,7 @@ class UnifiedDifferenceFile
         std::shared_ptr<DifferenceSet> diffSet{};
 
         void parseLine(const std::string& line);
+		void addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const;
 };
 
 };

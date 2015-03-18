@@ -59,9 +59,48 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 }
 
 
-void UnifiedDifferenceFile::generateHTMLReport() const
+void UnifiedDifferenceFile::generateHTMLReport(const std::string& leftPath, const std::string& rightPath) const
 {
+	ctemplate::TemplateDictionary templateDictionary("main");
+
+	templateDictionary.SetValue("INSTRUMENT", "Velox Core TUV to Altus UV Core");
+	templateDictionary.SetValue("DATE_GENERATED", util::getTime());
 	
+	templateDictionary.SetValue("LEFT_PATH", leftPath);
+	templateDictionary.SetValue("RIGHT_PATH", rightPath);
+
+	for (auto& diff : diffs)
+	{
+		auto fileDiff = std::dynamic_pointer_cast<FileDifferences>(diff);
+		if (fileDiff != nullptr)
+		{
+			addFileDifferenceDictionary(*fileDiff, templateDictionary);
+		}
+		else
+		{ 
+			auto dirDiff = std::dynamic_pointer_cast<DirectoryDifference>(diff);
+			//addDirectoryDifferenceDictionary(std::dynamic_pointer_cast<DirectoryDifference>(diff), templateDictionary);
+		}
+	}
+
+	std::string report_text{};
+	ctemplate::ExpandTemplate("Difference.tpl", ctemplate::DO_NOT_STRIP, &templateDictionary, &report_text);
+	std::ofstream report_stm("diff_report.html");
+	report_stm << report_text;
+	report_stm.close();
+}
+
+void UnifiedDifferenceFile::addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const
+{
+	ctemplate::TemplateDictionary *subDictionary = dictionary.AddSectionDictionary("DIFFERENCES");
+	subDictionary->SetValue("DIRECTORY_DISPLAY_PROPERTY", "display: none");
+	subDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: list-item");
+
+
+	subDictionary->SetValue("LEFT_RELATIVE_PATH", fileDiff.leftFile().toString());
+	subDictionary->SetValue("RIGHT_RELATIVE_PATH", fileDiff.rightFile().toString());
+
+
 }
 
 };
