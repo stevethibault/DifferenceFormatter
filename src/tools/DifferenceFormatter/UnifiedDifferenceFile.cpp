@@ -3,7 +3,8 @@
 namespace Waters
 {
 
-UnifiedDifferenceFile::UnifiedDifferenceFile(std::istream& istm) : diff_stream{istm}
+	UnifiedDifferenceFile::UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath) 
+		: diff_stream{istm}, left_path{leftPath}, right_path{rightPath}
 {
     //ctor
 }
@@ -34,7 +35,7 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 		diff = std::make_shared<FileDifferences>(line);
 		diffs.push_back(diff);
 	}
-	else if (line.substr(0, 5) == "Only")
+	else if (line.substr(0, 4) == "Only")
 	{
 		diff = std::make_shared<DirectoryDifference>(line);
 		diffs.push_back(diff);
@@ -59,15 +60,15 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 }
 
 
-void UnifiedDifferenceFile::generateHTMLReport(const std::string& leftPath, const std::string& rightPath) const
+void UnifiedDifferenceFile::generateHTMLReport() const
 {
 	ctemplate::TemplateDictionary templateDictionary("main");
 
 	templateDictionary.SetValue("INSTRUMENT", "Velox Core TUV to Altus UV Core");
 	templateDictionary.SetValue("DATE_GENERATED", util::getTime());
 	
-	templateDictionary.SetValue("LEFT_PATH", leftPath);
-	templateDictionary.SetValue("RIGHT_PATH", rightPath);
+	templateDictionary.SetValue("LEFT_PATH", left_path.toString());
+	templateDictionary.SetValue("RIGHT_PATH", right_path.toString());
 
 	for (auto& diff : diffs)
 	{
@@ -78,8 +79,8 @@ void UnifiedDifferenceFile::generateHTMLReport(const std::string& leftPath, cons
 		}
 		else
 		{ 
-			auto dirDiff = std::dynamic_pointer_cast<DirectoryDifference>(diff);
-			//addDirectoryDifferenceDictionary(std::dynamic_pointer_cast<DirectoryDifference>(diff), templateDictionary);
+			auto dirDiff = *std::dynamic_pointer_cast<DirectoryDifference>(diff);
+			addDirectoryDifferenceDictionary(dirDiff, templateDictionary);
 		}
 	}
 
@@ -92,16 +93,85 @@ void UnifiedDifferenceFile::generateHTMLReport(const std::string& leftPath, cons
 
 void UnifiedDifferenceFile::addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const
 {
-	ctemplate::TemplateDictionary *subDictionary = dictionary.AddSectionDictionary("DIFFERENCES");
+	ctemplate::TemplateDictionary *subDictionary = dictionary.AddSectionDictionary("FILE_DIFFERENCES");
 	subDictionary->SetValue("DIRECTORY_DISPLAY_PROPERTY", "display: none");
-	subDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: list-item");
+	subDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: list-item; width: 100%");
 
 
-	subDictionary->SetValue("LEFT_RELATIVE_PATH", fileDiff.leftFile().toString());
-	subDictionary->SetValue("RIGHT_RELATIVE_PATH", fileDiff.rightFile().toString());
-
-
+	for (auto& diffSet : fileDiff.getDifferences())
+	{
+		addDifferenceSetDictionary(*diffSet, fileDiff.leftFile(), fileDiff.rightFile(), subDictionary);
+	}
 }
+
+
+const std::string UnifiedDifferenceFile::getRelativePathString(const Poco::Path& basePath, const Poco::File& file)
+{
+	std::string relativePath{};
+
+	std::string basePathString = basePath.toString();
+	std::string filePathString = file.path();
+
+	relativePath = filePathString.substr(basePathString.length() - 1, filePathString.length() - basePathString.length() + 1);
+
+	return relativePath;
+}
+
+void UnifiedDifferenceFile::addDifferenceSetDictionary(const DifferenceSet& diffSet, const Poco::File& leftFile, const Poco::File& rightFile, ctemplate::TemplateDictionary *dictionary) const
+{
+	ctemplate::TemplateDictionary *diffSetDictionary = dictionary->AddSectionDictionary("DIFFERENCE_SET");
+	diffSetDictionary->SetValue("LEFT_FILE", leftFile.path());
+	diffSetDictionary->SetValue("RIGHT_FILE", rightFile.path());
+
+	auto leftLines = diffSet.leftDifference().getLines();
+	auto rightLines = diffSet.rightDifference().getLines();
+
+	for (int i = 0; i < leftLines.size(); ++i)
+	{
+		Line left_line = leftLines[i];
+		Line right_line = rightLines[i];
+
+		ctemplate::TemplateDictionary *lineSubDictionary = diffSetDictionary->AddSectionDictionary("LINES");
+		if (left_line.lineType() != Line::LineType::missing)
+		{
+			lineSubDictionary->SetIntValue("LEFT_LINE_NUMBER", left_line.lineNumber());
+		}
+		lineSubDictionary->SetValue("LEFT_LINE_CLASS", getCSSClassFromLineType(left_line.lineType()));
+		lineSubDictionary->SetValue("LEFT_LINE", left_line.codeLine());
+
+		if (right_line.lineType() != Line::LineType::missing)
+		{
+			lineSubDictionary->SetIntValue("RIGHT_LINE_NUMBER", right_line.lineNumber());
+		}
+		lineSubDictionary->SetValue("RIGHT_LINE_CLASS", getCSSClassFromLineType(right_line.lineType()));
+		lineSubDictionary->SetValue("RIGHT_LINE", right_line.codeLine());
+	}
+}
+
+const std::string UnifiedDifferenceFile::getCSSClassFromLineType(Line::LineType lineType)
+{
+	switch (lineType)
+	{
+	case Line::LineType::added:
+		return "insert";
+
+	case Line::LineType::removed:
+		return "delete";
+
+	case Line::LineType::unchanged:
+		return "equal";
+
+	case Line::LineType::missing:
+		return "empty";
+
+	default:
+		return "";
+	}
+}
+
+void UnifiedDifferenceFile::addDirectoryDifferenceDictionary(const DirectoryDifference& dirDiff, ctemplate::TemplateDictionary& dictionary) const
+{}
+
 
 };
 

@@ -23,9 +23,9 @@ class DifferenceSet
 			return *this;
 		}
 
-		DifferenceChunk& leftDifference();
-		DifferenceChunk& rigthDifference();
-
+		const DifferenceChunk& leftDifference() const;
+		const DifferenceChunk& rightDifference() const;
+		const std::string& lineNumbers() const;
         void addDifference(const std::string& line);
 
     private:
@@ -33,6 +33,7 @@ class DifferenceSet
 		DifferenceChunk right_difference{};
         int left_lines{};
         int right_lines{};
+		std::string line_numbers{};
 
 		void BalanceWithBlankLines(DifferenceChunk &difference, int imballance);
 };

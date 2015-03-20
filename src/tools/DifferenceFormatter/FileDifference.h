@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <ctime>
 
 namespace Waters
 {
@@ -37,10 +38,10 @@ class FileDifferences : public Difference
         std::string commandLine() const;
         void commandLine(const std::string& commandline);
 
-        Poco::Path leftFile() const;
+        Poco::File leftFile() const;
         void leftFile(const std::string& left_file);
 
-        Poco::Path rightFile() const;
+        Poco::File rightFile() const;
         void rightFile(const std::string& right_file);
 
         void addDifferenceSet(std::shared_ptr<DifferenceSet> diffSet);
@@ -49,10 +50,13 @@ class FileDifferences : public Difference
 
 
     private:
-        std::string line{};
-        Poco::Path left_file{};
-        Poco::Path right_file{};
+		std::string line{};
+        Poco::File left_file{};
+		Poco::Timestamp left_file_ts{};
+        Poco::File right_file{};
+		Poco::Timestamp right_file_ts{};
         std::vector<std::shared_ptr<DifferenceSet>> differences{};
+		static Poco::Timestamp getTimestamp(std::string dateTimeAndZone);
 };
 
 }

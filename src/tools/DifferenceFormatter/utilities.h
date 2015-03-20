@@ -11,6 +11,8 @@ namespace util
 {
 	std::string getTime();
 
+	std::string encode(const std::string& data);
+
     template<typename T>
     std::vector<T> split(const T & str, const T & delimiters)
     {

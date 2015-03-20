@@ -3,12 +3,27 @@
 namespace Waters
 {
 
-DifferenceSet::DifferenceSet(const std::string& line_numbers)
+DifferenceSet::DifferenceSet(const std::string& lineNumbers) : line_numbers(lineNumbers)
 {
     auto tokens = util::split<std::string>(line_numbers, " ");
 
 	left_difference = DifferenceChunk(tokens[0]);
 	right_difference = DifferenceChunk(tokens[1]);
+}
+
+const DifferenceChunk& DifferenceSet::leftDifference() const
+{
+	return left_difference;
+}
+
+const DifferenceChunk& DifferenceSet::rightDifference() const
+{
+	return right_difference;
+}
+
+const std::string& DifferenceSet::lineNumbers() const
+{
+	return line_numbers;
 }
 
 void DifferenceSet::addDifference(const std::string& line)
@@ -27,7 +42,6 @@ void DifferenceSet::addDifference(const std::string& line)
 		newLine = line.substr(1, line.length() - 1);
 	}
 
-
     switch (lineType)
     {
         case Line::LineType::unchanged:
@@ -39,7 +53,7 @@ void DifferenceSet::addDifference(const std::string& line)
             }
             else if (right_lines > left_lines)
             {
-				BalanceWithBlankLines(right_difference, right_lines - left_lines);
+				BalanceWithBlankLines(left_difference, right_lines - left_lines);
 				left_lines = right_lines;
 			}
 

@@ -18,7 +18,11 @@ namespace Waters
 			DifferenceChunk(const std::string& line_range);
 			~DifferenceChunk() {}
 
+			int startLine() const;
+			int lineCount() const;
+
 			void addLine(const std::string& lineText, const Line::LineType lineType);
+			const std::vector<Line> getLines() const;
 
 		private:
 			int start_line{};

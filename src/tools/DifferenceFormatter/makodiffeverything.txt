@@ -1,0 +1,333 @@
+diff --recursive --expand-tabs --tabsize=2 --unified=10 C:\Q\ICS\Instruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVFormManager.cs C:\Q\ICS\FirstPartyInstruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVFormManager.cs
+--- C:\Q\ICS\Instruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVFormManager.cs	2015-02-06 18:58:02.000000000 -0500
++++ C:\Q\ICS\FirstPartyInstruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVFormManager.cs	2014-12-09 14:21:30.000000000 -0500
+@@ -41,21 +41,21 @@
+         void CancelAutoZero(ServerLibEnum.TUVChannel ch);  // enum changed
+         void SetSwitchState(ServerLibEnum.TUVSwitches sw, bool bOn);  // enum changed
+         void SetFilterPosition(ServerLibEnum.TUVFilterPosition pos);  // enum changed
+     };
+
+     #region Do Not Translate
+
+   /// <summary>
+   /// Summary description for TUVFormManager.
+   /// </summary>
+-  public class TUVFormManager : IFormManager2, ILeakDetectors, IConsoleArguments, ITUVFormManagerCompatibility
++    public class TUVFormManager : IStartupFormManager, ILeakDetectors, IConsoleArguments, ITUVFormManagerCompatibility
+     {
+       private class TUVFormManagerCompatibility
+       {
+           internal ServerLibEnum.TUVFilterPosition filterPosition = ServerLibEnum.TUVFilterPosition.NoFilter;
+       }
+
+       #region Private Fields
+     private TUVDetectorTopForm tuvDetectorTopForm = null;
+     private TUVSchematicForm tuvSchematicForm = null;
+     private IRemoteTUV iRemoteTUV = null;
+@@ -78,34 +78,34 @@
+
+     private ConsoleToolBar systemToolBar;
+
+     private InstrumentImage instrumentImage = null;
+
+     //private string instrumentId = "TUV"; // NOTRANSLATE
+     private string instrumentId = string.Empty;
+
+     private string consoleArgs = string.Empty;
+
+-    //private MessageLog log = null;
+-    //private TUVEquilControl tuvEquilControl = null;
+-    //private TUVStartupSettings tuvStartupSettings = null;
++    private MessageLog log = null;
++    private TUVEquilControl tuvEquilControl = null;
++    private TUVStartupSettings tuvStartupSettings = null;
+
+     private IdentityInfo identityInfo = Identity.Info();
+
+     enum Stage
+       {
+       Null=0,
+       SettingMethod=1
+       };
+
+-    //private Stage startupStage = Stage.Null;
+-    //private StState startupState;
++    private Stage startupStage = Stage.Null;
++    private StState startupState;
+
+     #endregion
+
+     public TUVFormManager()
+       {
+       }
+
+     #region IFormManager Members
+
+     public void Initialize(string instId, Form mdiParentForm, EventHandler showSystemHandler, EventHandler showPageHandler)
+@@ -643,73 +643,58 @@
+
+     #region ITUVFormManagerCompatibility Members
+
+     private bool? _IsServer140 = null;
+     public bool IsServer140
+     {
+         get
+         {
+             if (_IsServer140 == null)
+             {
+-                if (TryBrandResources.CompanyName == "Waters")
+-                {
+-                    int major, minor;
+-                    string version = IcsVersion(out major, out minor);
+-                    _IsServer140 = (major == 1 && minor == 40);
+-                }
+-                else
+-                    _IsServer140 = false;
++                int major, minor;
++                string version = IcsVersion(out major, out minor);
++                _IsServer140 = (major == 1 && minor == 40);
+             }
+
+             return (_IsServer140 == null) ? false : (bool)_IsServer140;
+         }
+     }
+
+     private bool? _IsServer150 = null;
+     public bool IsServer150(bool orLater)
+     {
+         if (_IsServer150 == null)
+         {
+-            if (TryBrandResources.CompanyName == "Waters")
+-            {
+-                int major, minor;
+-                string version = IcsVersion(out major, out minor);
++            int major, minor;
++            string version = IcsVersion(out major, out minor);
+
+-                if (orLater)
+-                    _IsServer150 = (major > 1 || (major == 1 && minor >= 50));
+-                else
+-                    _IsServer150 = (major == 1 && minor >= 50 && minor < 60);
+-            }
++            if (orLater)
++                _IsServer150 = (major > 1 || (major == 1 && minor >= 50));
+             else
+-                _IsServer150 = orLater;
++                _IsServer150 = (major == 1 && minor >= 50 && minor < 60);
+         }
+
+         return (_IsServer150 == null) ? false : (bool)_IsServer150;
+     }
+
+     private bool? _IsServer160 = null;
+     public bool IsServer160(bool orLater)
+     {
+         if (_IsServer160 == null)
+         {
+-            if (TryBrandResources.CompanyName == "Waters")
+-            {
+-                int major, minor;
+-                string version = IcsVersion(out major, out minor);
++            int major, minor;
++            string version = IcsVersion(out major, out minor);
+
+-                if (orLater)
+-                    _IsServer160 = (major > 1 || (major == 1 && minor >= 60));
+-                else
+-                    _IsServer160 = (major == 1 && (minor >= 60 && minor < 70));
+-            }
++            if (orLater)
++                _IsServer160 = (major > 1 || (major == 1 && minor >= 60));
+             else
+-                _IsServer160 = true;
++                _IsServer160 = (major == 1 && (minor >= 60 && minor < 70));
+         }
+
+         return (_IsServer160 == null) ? false : (bool)_IsServer160;
+     }
+
+     private string _ClientVersion = null;
+     public string ClientVersion
+     {
+         get
+         {
+@@ -1172,13 +1157,179 @@
+                 }
+             }
+ #else
+             if (IsServer150(true))
+                 iRemoteTUV.SetFilterPosition(pos);
+ #endif
+         }
+     }
+
+     #endregion
++
++    #region IStartupFormManager Members
++
++    public UserControl CharacterizeControl
++    {
++        get
++        {
++            return null;
++        }
++    }
++
++
++    public UserControl EquilControl
++    {
++        get
++        {
++            if (tuvEquilControl == null)
++                tuvEquilControl = new TUVEquilControl();
++
++            return tuvEquilControl;
++        }
++    }
++
++
++    public void LoadSettings()
++    {
++    }
++
++    public string Get(string parameter)
++    {
++        return null;
++    }
++
++    public UserControl PrimeControl
++    {
++        get
++        {
++            return null;
++        }
++    }
++
++
++    public MessageLog Log
++    {
++        get
++        {
++            return log;
++        }
++        set
++        {
++            log = value;
++        }
++    }
++
++    public void Set(string parameter, string value)
++    {
++    }
++
++    public void UpdateData(bool readFromForms)
++    {
++    }
++
++    public bool Validate(out string msg)
++    {
++        msg = "";
++        return true;
++    }
++
++    public XmlDocument doc
++    {
++        get
++        {
++            return new XmlDocument();
++        }
++    }
++
++    #endregion
++
++    #region IStartup Members
++
++    public bool AdvanceStartup()
++    {
++        return true;
++    }
++
++    public void DefaultNanoSettings()
++    {
++        log.Post(this, "Setting nano defaults"); //NOTRANSLATE
++        tuvStartupSettings.SetNanoDefaults();
++        ((TUVEquilControl)EquilControl).Apply(tuvStartupSettings.parameters);
++    }
++
++    public void DefaultSettings()
++    {
++        log.Post(this, "Setting defaults"); //NOTRANSLATE
++        tuvStartupSettings.SetDefaults();
++        ((TUVEquilControl)EquilControl).Apply(tuvStartupSettings.parameters);
++    }
++
++    public void InterruptStartup()
++    {
++    }
++
++    public bool LogResult(string functionName, string instrumentName, string context)
++    {
++        return true;
++    }
++
++    public void RestoreSettings()
++    {
++        if (tuvStartupSettings == null)
++            tuvStartupSettings = new TUVStartupSettings(this.instrumentId);
++
++        tuvStartupSettings.Restore();
++        ((TUVEquilControl)EquilControl).Apply(tuvStartupSettings.parameters);
++    }
++
++    public bool RunStartup()
++    {
++        log.Post(this, "RunStartup() begins"); // NOTRANSLATE
++        if( iRemoteTUV != null )
++        {
++            iRemoteTUV.SetLamp(tuvStartupSettings.parameters.lampOn);
++        }
++        return true;
++    }
++
++    public string Settings
++    {
++        get
++        {
++            return null;
++        }
++        set
++        {
++        }
++    }
++
++    public int StartupStage
++    {
++        get
++        {
++            return (int)this.startupStage;
++        }
++        set
++        {
++            if (this.StartupState == StState.Idle)
++                this.startupStage = (Stage)value;
++        }
++    }
++
++    public StState StartupState
++    {
++        get
++        {
++            return this.startupState;
++        }
++    }
++
++    public void StoreSettings()
++    {
++        ((TUVEquilControl)EquilControl).Retrieve(tuvStartupSettings.parameters);
++        tuvStartupSettings.Store();
++    }
++
++    #endregion
+     }
+   #endregion
+   }

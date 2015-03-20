@@ -71,13 +71,13 @@ void DifferenceFormatterApp::displayHelp()
 void DifferenceFormatterApp::parseDifferenceFile()
 {
 	std::ifstream input_stream(config().getString("diff_file"), std::ifstream::in);
-	if (!input_stream.fail())
+		if (!input_stream.fail())
 	{
-		UnifiedDifferenceFile diff{input_stream};
+		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path")};
 
 		diff.parse();
 
-		diff.generateHTMLReport(config().getString("left_path"), config().getString("right_path"));
+		diff.generateHTMLReport();
 	}
 	else
 	{
@@ -103,6 +103,7 @@ int DifferenceFormatterApp::main(const ArgVec& args)
 		}
     }
 
+	std::cout << "Report complete. Press any key to exit.";
 	std::cin.get();
 
     return Application::EXIT_OK;

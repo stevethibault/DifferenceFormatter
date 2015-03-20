@@ -24,7 +24,7 @@ diff --recursive --expand-tabs --tabsize=2 --unified=10 C:\Q\ICS\Instruments\TUV
      private Waters.ACQUITY.ConsoleLabel functionState;
      private Waters.Controls.CounterControl runtimeCounter;
 @@ -971,22 +972,23 @@
- 
+
 
        private void testSelectInput_SelectionChangeCommitted(object sender, System.EventArgs e)
        {

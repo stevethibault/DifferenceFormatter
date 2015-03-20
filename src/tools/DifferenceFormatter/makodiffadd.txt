@@ -1,0 +1,55 @@
+diff --recursive --expand-tabs --tabsize=2 --unified=10 C:\Q\ICS\Instruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVControlPanel.cs C:\Q\ICS\FirstPartyInstruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVControlPanel.cs
+--- C:\Q\ICS\Instruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVControlPanel.cs	2014-12-09 16:15:00.000000000 -0500
++++ C:\Q\ICS\FirstPartyInstruments\TUV\CoreTUV/Console/ConsoleCoreTUV/CoreTUVControlPanel.cs	2015-02-17 16:52:12.000000000 -0500
+@@ -14,20 +14,28 @@
+ using Crownwood.DotNetMagic.Common;
+ using System.Diagnostics;
+ using MutexSecurity;
+
+ namespace Waters.ACQUITY
+   {
+   /// <summary>
+   /// Summary description for TUVControlPanel.
+   /// </summary>
+   ///
++  //#if BUILD_2489
++  //  [Guid( "EB00FA3D-E151-40dd-9AD1-6F47052D4879" )]
++  //#else
++  //  [Guid("B2CEA281-8EE9-40cf-B53F-C4500547B9C5")]
++  //#endif
++  [Guid(ServerLibClass.GUID_CONTROL_PANEL)]
++  [ClassInterface(ClassInterfaceType.AutoDispatch)]
++
+   public class TUVControlPanel : System.Windows.Forms.UserControl
+     {
+     private System.ComponentModel.IContainer components;
+
+     [ComRegisterFunctionAttribute]
+     public static void RegisterFunction(Type t)
+       {
+       ComHelper.RegisterSafeForScripting(t);
+       }
+     [ComUnregisterFunctionAttribute]
+@@ -1183,21 +1191,21 @@
+     private void autozeroMenu_Click(object sender, System.EventArgs e)
+       {
+       Autozero();
+
+       }
+
+     private void SetChannelAVisibility(bool shutterOpen, bool hideAllFields)
+       {
+       this.label10.Visible = !hideAllFields;
+       this.channelAAbsorbance.Visible = !hideAllFields && shutterOpen;
+-      this.channelAAULabel.Visible = !hideAllFields && shutterOpen;
++      this.channelAAULabel.Visible = !hideAllFields && bLampOn && shutterOpen;
+       this.waveBoxA.Visible = !hideAllFields;
+       this.consoleLabel3.Visible = !hideAllFields;
+       }
+
+     private void SetChannelBVisibility(bool dual, bool shutterOpen, bool hideAllFields)
+       {
+       this.label27.Visible = !hideAllFields && dual;
+       this.channelBAbsorbance.Visible = dual && (!hideAllFields && shutterOpen);
+       this.channelBAULabel.Visible = dual && (!hideAllFields && bLampOn && shutterOpen);
+       this.waveBoxB.Visible = !hideAllFields && dual;

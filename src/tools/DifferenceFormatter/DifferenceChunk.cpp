@@ -23,4 +23,10 @@ void DifferenceChunk::addLine(const std::string& lineText, Line::LineType lineTy
     }
 }
 
+
+const std::vector<Line> DifferenceChunk::getLines() const
+{
+	return lines;
+}
+
 };
