@@ -1,71 +1,118 @@
-div.diffoutput {
-	border:1px solid darkgray;
-  width:100%;
-  overflow: hidden;
+div.diffOutput {
+	border-top:1px solid darkgray;
+	border-bottom:1px solid darkgray;
+	border-right:1px solid darkgray;
+	overflow: hidden;
+	width:100%;
 }
-div.diffoutput div.codeList {
-	font-family:Courier, monospace
+
+div.header{
+	width: 100%;
+	border-bottom: 1px solid darkgray;
+	border-collapse: collapse;
+	overflow: hidden;
 }
-div.diffoutput div.codeList td.lineNumbers {
-	font-family:verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+
+div.diffOutput div.codeList {
+	font-family:Courier, monospace;
+	overflow: hidden;
+	width:100%;
+}
+
+div.codeList div.codeSide{
+	float: left;
+	overflow: hidden;
+	width: 50%;
+}
+
+div.lineNumber {
+	font-family:verdana,arial,
+		'Bitstream Vera Sans',helvetica,sans-serif;
 	background:#EED;
 	font-size:11px;
 	font-weight:normal;
-	border:1px solid #BBC;
+	border-left:1px solid darkgray;
+	border-right:1px solid darkgray;
+	border-bottom:1px solid darkgray;
 	color:#886;
-  padding:.3em .5em .1em 1em;
+  padding:.3em .5em .1em .5em;
 	text-align:right;
 	vertical-align:top;
-  width:5em;
-}
-table.diff thead {
-	border-bottom:1px solid #BBC;
-	background:#EFEFEF;
-	font-family:Verdana
-}
-div.diffoutput div.texttitle {
-	text-align:center;
-  word-wrap: break-word;
-  float: left;
-  width: 50%;
-  background:#EFEFEF;
-  font-family:Verdana;
-  border-bottom:1px solid #BBC;
+  width:4em;
+	display: inline;
+	list-style-type: none;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }
 
-table.diff.tbody td {
+div.textTitle {
+	text-align:center;
+  word-wrap: break-word;
+	float: left;
   width: 50%;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	background:#EFEFEF;
+  font-family:Verdana;
+	font-weight: bold;
+	border-left: 1px solid darkgray;
+	border-collapse: collapse;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
-table.diff tbody td pre {
-  padding:.2em .5em .1em 1em;
+
+div.equal{
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+}
+
+div.codeList div pre {
+  padding: .1em .5em .1em 1em;
 	vertical-align:top;
   margin: 0;
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
+	display: inline-block;
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 
 }
-table.diff .empty {
+
+div.empty {
 	background-color:#DDD;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }
-table.diff .replace {
-	background-color:#FD8
+div.replace {
+	background-color:#FD8;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }
-table.diff .delete {
+div.delete {
 	background-color:#E99;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }
-table.diff .skip {
+div.skip {
 	background-color:#EFEFEF;
 	border:1px solid #AAA;
 	border-right:1px solid #BBC;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }
-table.diff .insert {
-	background-color:#9E9
-}
-table.diff th.author {
-	text-align:right;
-	border-top:1px solid #BBC;
-	background:#EFEFEF;
+div.insert {
+	background-color:#9E9;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
 }

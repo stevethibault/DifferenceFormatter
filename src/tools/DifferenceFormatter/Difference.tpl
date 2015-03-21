@@ -1,6 +1,4 @@
-{{%AUTOESCAPE context="HTML"}}
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="diffview.css">
@@ -8,45 +6,41 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="heading">Difference Report for {{INSTRUMENT}}</h1>
+			<h1 id="heading">Difference Report for Velox Core TUV to Altus UV Core</h1>
 			<section id="folders">
-				<h2 id="leftFolder">Left Folder: {{LEFT_PATH}}</h2>
-				<h2 id="rigthFolder">Right Folder: {{RIGHT_PATH}}</h2>
-			</section>
-			<h3 id="subHeading">{{DATE_GENERATED}}</h3>
+				<h2 id="leftFolder">Left Folder: C:\Q\ICS\OEMInstruments\TUV\CoreTUV</h2>
+  			<h2 id="rightFolder">Right Folder: C:\Q\ICS\VeloxInstruments\TUV\CoreTUV</h2>
+ 			</section>
+			<h3 id="subHeading">Fri Mar 20 16:11:54 2015 </h3>
 		</header>
-		<main>
-			<ul style="list-style-type: none">
-				{{#FILE_DIFFERENCES}}
-				<li style="{{FILE_DISPLAY_PROPERTY:none}}">
-					{{#DIFFERENCE_SET}}
-					<div id="diffoutput" style="width:100%">
-						<table class="diff">
-							<thead>
-								<tr>
-									<th class="texttitle" colspan="2">{{LEFT_FILE}}</th>
-									<th class="texttitle" colspan="2">{{RIGHT_FILE}}</th>
-								</tr>
-							</thead>
-							<tbody>
-								{{#LINES}}
-								<tr>
-									<td class="lineNumbers">{{LEFT_LINE_NUMBER}}</td>
-									<td class="{{LEFT_LINE_CLASS}}"><pre>{{LEFT_LINE}}</pre></td>
-									<td class="lineNumbers">{{RIGHT_LINE_NUMBER}}</td>
-									<td class="{{RIGHT_LINE_CLASS}}"><pre>{{RIGHT_LINE}}</pre></td>
-								</tr>
-								{{/LINES}}
-							</tbody>
-						</table>
+ 		<main>
+			{{#DIFFERENCE_SET}}
+			<div class="diffOutput" style="{{FILE_DISPLAY_PROPERTY:none}}"> <!-- repeat for each change in a file -->
+				<div class="header">
+					<div class="textTitle" >{{LEFT_FILE}}</div>
+					<div class="textTitle" >{{RIGHT_FILE}}</div>
+				</div>
+				<div class="codeList"><!-- repeate for each line of code -->
+					{{#LINES}}
+					<div class="codeSide">
+						<div class="lineNumber">
+							{{LEFT_LINE_NUMBER}}
+						</div>
+						<div class="{{LEFT_LINE_CLASS}}">
+							<pre>{{LEFT_LINE}}</pre>
+						</div>
 					</div>
-					{{/DIFFERENCE_SET}}
-				</li>
-				<li style="{{DIRECTORY_DISPLAY_PROPERTY:none}}"> {{DIRECTORY_DIFFERENCE}} </li>
-				{{/FILE_DIFFERENCES}}
-			</ul>
-		</main>
-	</body>
-</html>
-
-
+					<div class="codeSide">
+						<div class="lineNumber">
+							{{RIGHT_LINE_NUMBER}}
+						</div>
+						<div class="{{RIGHT_LINE_CLASS}}">
+							<pre>{{RIGHT_LINE}}</pre>
+						</div>
+					</div>
+					{{/LINES}}
+				</div>
+			</div>
+			{{/DIFFERENCE_SET}}			<div>		</main>
+	</body>
+</html>

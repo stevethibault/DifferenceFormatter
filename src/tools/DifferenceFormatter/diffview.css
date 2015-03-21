@@ -1,65 +1,46 @@
-table.diff {
-	border-collapse:collapse;
-	border:1px solid darkgray;
-  width:100%;
-}
-table.diff tbody {
-	font-family:Courier, monospace
-}
-table.diff tbody td.lineNumbers {
-	font-family:verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
-	background:#EED;
-	font-size:11px;
-	font-weight:normal;
-	border:1px solid #BBC;
-	color:#886;
-  padding:.3em .5em .1em 1em;
-	text-align:right;
-	vertical-align:top;
-  width:5em;
-}
-table.diff thead {
-	border-bottom:1px solid #BBC;
-	background:#EFEFEF;
-	font-family:Verdana
-}
-table.diff thead th.texttitle {
-	text-align:center;
-}
-
-table.diff.tbody td {
-  width: 50%;
-}
-table.diff tbody td pre {
-  padding:.2em .5em .1em 1em;
-	vertical-align:top;
-  margin: 0;
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-
-}
-table.diff .empty {
-	background-color:#DDD;
-}
-table.diff .replace {
-	background-color:#FD8
-}
-table.diff .delete {
-	background-color:#E99;
-}
-table.diff .skip {
-	background-color:#EFEFEF;
-	border:1px solid #AAA;
-	border-right:1px solid #BBC;
-}
-table.diff .insert {
-	background-color:#9E9
-}
-table.diff th.author {
-	text-align:right;
-	border-top:1px solid #BBC;
-	background:#EFEFEF;
-}
+<!DOCTYPE html><html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="diffview.css">
+		<!-- include css and javascript references here -->
+	</head>
+	<body>
+		<header>
+			<h1 id="heading">Difference Report for Velox Core TUV to Altus UV Core</h1>
+			<section id="folders">
+				<h2 id="leftFolder">Left Folder: C:\Q\ICS\OEMInstruments\TUV\CoreTUV</h2>
+  			<h2 id="rightFolder">Right Folder: C:\Q\ICS\VeloxInstruments\TUV\CoreTUV</h2>
+ 			</section>
+			<h3 id="subHeading">Fri Mar 20 16:11:54 2015 </h3>
+		</header>
+ 		<main>
+			{{#DIFFERENCE_SET}}
+			<div class="diffOutput" style="{{FILE_DISPLAY_PROPERTY:none}}"> <!-- repeat for each change in a file -->
+				<div class="header">
+					<div class="textTitle" >{{LEFT_FILE}}</div>
+					<div class="textTitle" >{{RIGHT_FILE}}</div>
+				</div>
+				<div class="codeList"><!-- repeate for each line of code -->
+					{{#LINES}}
+					<div class="codeSide">
+						<div class="lineNumber">
+							{{LEFT_LINE_NUMBER}}
+						</div>
+						<div class="{{LEFT_LINE_CLASS}}">
+							<pre>{{LEFT_LINE}}</pre>
+						</div>
+					</div>
+					<div class="codeSide">
+						<div class="lineNumber">
+							{{RIGHT_LINE_NUMBER}}
+						</div>
+						<div class="{{RIGHT_LINE_CLASS}}">
+							<pre>{{RIGHT_LINE}}</pre>
+						</div>
+					</div>
+					{{/LINES}}
+				</div>
+			</div>
+			{{/DIFFERENCE_SET}}			<div>		</main>
+	</body>
+</html>

@@ -93,14 +93,10 @@ void UnifiedDifferenceFile::generateHTMLReport() const
 
 void UnifiedDifferenceFile::addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const
 {
-	ctemplate::TemplateDictionary *subDictionary = dictionary.AddSectionDictionary("FILE_DIFFERENCES");
-	subDictionary->SetValue("DIRECTORY_DISPLAY_PROPERTY", "display: none");
-	subDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: list-item; width: 100%");
-
 
 	for (auto& diffSet : fileDiff.getDifferences())
 	{
-		addDifferenceSetDictionary(*diffSet, fileDiff.leftFile(), fileDiff.rightFile(), subDictionary);
+		addDifferenceSetDictionary(*diffSet, fileDiff.leftFile(), fileDiff.rightFile(), &dictionary);
 	}
 }
 
