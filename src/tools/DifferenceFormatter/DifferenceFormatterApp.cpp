@@ -50,6 +50,13 @@ void DifferenceFormatterApp::defineOptions(OptionSet& options)
 		.repeatable(false)
 		.argument("path")
 		.binding("right_path"));
+	options.addOption(
+		Option("header", "h", "bind option value to 'header' the header text on the difference report")
+		.required(true)
+		.repeatable(false)
+		.argument("text")
+		.binding("header"));
+
 }
 
 void DifferenceFormatterApp::handleHelp(const std::string& name, const std::string& value)
@@ -73,7 +80,7 @@ void DifferenceFormatterApp::parseDifferenceFile()
 	std::ifstream input_stream(config().getString("diff_file"), std::ifstream::in);
 		if (!input_stream.fail())
 	{
-		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path")};
+		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path"), config().getString("header") };
 
 		diff.parse();
 

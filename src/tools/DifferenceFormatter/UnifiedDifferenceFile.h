@@ -16,7 +16,7 @@ namespace Waters
 class UnifiedDifferenceFile
 {
     public:
-		UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath);
+		UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath, const std::string& header);
         virtual ~UnifiedDifferenceFile();
 
         void parse();
@@ -31,6 +31,7 @@ class UnifiedDifferenceFile
         std::shared_ptr<DifferenceSet> diffSet{};
 		Poco::Path left_path{};
 		Poco::Path right_path{};
+		std::string report_header{};
 
         void parseLine(const std::string& line);
 		void addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const;

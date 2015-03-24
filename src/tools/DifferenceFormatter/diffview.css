@@ -1,46 +1,152 @@
-<!DOCTYPE html><html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="diffview.css">
-		<!-- include css and javascript references here -->
-	</head>
-	<body>
-		<header>
-			<h1 id="heading">Difference Report for Velox Core TUV to Altus UV Core</h1>
-			<section id="folders">
-				<h2 id="leftFolder">Left Folder: C:\Q\ICS\OEMInstruments\TUV\CoreTUV</h2>
-  			<h2 id="rightFolder">Right Folder: C:\Q\ICS\VeloxInstruments\TUV\CoreTUV</h2>
- 			</section>
-			<h3 id="subHeading">Fri Mar 20 16:11:54 2015 </h3>
-		</header>
- 		<main>
-			{{#DIFFERENCE_SET}}
-			<div class="diffOutput" style="{{FILE_DISPLAY_PROPERTY:none}}"> <!-- repeat for each change in a file -->
-				<div class="header">
-					<div class="textTitle" >{{LEFT_FILE}}</div>
-					<div class="textTitle" >{{RIGHT_FILE}}</div>
-				</div>
-				<div class="codeList"><!-- repeate for each line of code -->
-					{{#LINES}}
-					<div class="codeSide">
-						<div class="lineNumber">
-							{{LEFT_LINE_NUMBER}}
-						</div>
-						<div class="{{LEFT_LINE_CLASS}}">
-							<pre>{{LEFT_LINE}}</pre>
-						</div>
-					</div>
-					<div class="codeSide">
-						<div class="lineNumber">
-							{{RIGHT_LINE_NUMBER}}
-						</div>
-						<div class="{{RIGHT_LINE_CLASS}}">
-							<pre>{{RIGHT_LINE}}</pre>
-						</div>
-					</div>
-					{{/LINES}}
-				</div>
-			</div>
-			{{/DIFFERENCE_SET}}			<div>		</main>
-	</body>
-</html>
+div.diffOutput {
+	border-top:1px solid darkgray;
+	border-bottom:1px solid darkgray;
+	border-right:1px solid darkgray;
+	overflow: hidden;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width:100%;
+}
+
+div.header{
+	width: 100%;
+	border-bottom: 1px solid darkgray;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+div.diffOutput div.codeList {
+	font-family:Courier, monospace;
+	overflow: hidden;
+	width:100%;
+}
+
+div.codeList div.codeSide{
+	float: left;
+	overflow: hidden;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	width: 50%;
+}
+
+div.lineNumber {
+	font-family:verdana,arial,
+		'Bitstream Vera Sans',helvetica,sans-serif;
+	background:#EED;
+	font-size:11px;
+	font-weight:normal;
+	border-left:1px solid darkgray;
+	border-right:1px solid darkgray;
+	border-bottom:1px solid darkgray;
+	color:#886;
+  padding:.3em .5em .1em .5em;
+	text-align:right;
+	vertical-align:top;
+  width:4em;
+	display: inline;
+	list-style-type: none;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+}
+
+div.codeTitle {
+	text-align:center;
+	word-wrap: break-word;
+	float: left;
+	width: 50%;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	background:#EFEFEF;
+	font-family:Verdana;
+	font-weight: bold;
+	border-left: 1px solid darkgray;
+	border-collapse: collapse;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.dirTitle {
+	width: 	100%;
+	text-align:left;
+  word-wrap: break-word;
+	float: left;
+	border:1px solid darkgray;
+	padding-left: 1em;
+	padding-right: 1em;
+	background:#EFEFEF;
+  font-family:Verdana;
+	font-weight: bold;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.dirDiff {
+	overflow: hidden;
+	margin-bottom: 1em;
+	width:100%;
+}
+
+div.equal{
+	background-color: #FFF;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+}
+
+div.codeList div pre {
+  padding: .1em .5em .1em 1em;
+	vertical-align:top;
+  margin: 0;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+	display: inline-block;
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+div.empty {
+	background-color:#DDD;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+
+}
+div.replace {
+	background-color:#FD8;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+
+}
+div.delete {
+	background-color:#E99;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+
+}
+div.skip {
+	background-color:#EFEFEF;
+	border:1px solid #AAA;
+	border-right:1px solid #BBC;
+	float: left;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+
+}
+div.insert {
+	background-color:#9E9;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	overflow: hidden;
+
+}

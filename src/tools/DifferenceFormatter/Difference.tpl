@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en">
+{{%AUTOESCAPE context="HTML"}}
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="diffview.css">
@@ -6,19 +8,20 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="heading">Difference Report for Velox Core TUV to Altus UV Core</h1>
+			<h1>Difference Report</h1>
+			<h1 id="heading">{{HEADING}}</h1>
 			<section id="folders">
-				<h2 id="leftFolder">Left Folder: C:\Q\ICS\OEMInstruments\TUV\CoreTUV</h2>
-  			<h2 id="rightFolder">Right Folder: C:\Q\ICS\VeloxInstruments\TUV\CoreTUV</h2>
+				<h2 id="leftFolder">Left Folder: {{LEFT_PATH}}</h2>
+  				<h2 id="rightFolder">Right Folder: {{RIGHT_PATH}}</h2>
  			</section>
-			<h3 id="subHeading">Fri Mar 20 16:11:54 2015 </h3>
+			<h3 id="subHeading">{{DATE_GENERATED}}</h3>
 		</header>
  		<main>
 			{{#DIFFERENCE_SET}}
 			<div class="diffOutput" style="{{FILE_DISPLAY_PROPERTY:none}}"> <!-- repeat for each change in a file -->
 				<div class="header">
-					<div class="textTitle" >{{LEFT_FILE}}</div>
-					<div class="textTitle" >{{RIGHT_FILE}}</div>
+					<div class="codeTitle" >{{LEFT_FILE}}</div>
+					<div class="codeTitle" >{{RIGHT_FILE}}</div>
 				</div>
 				<div class="codeList"><!-- repeate for each line of code -->
 					{{#LINES}}
@@ -41,6 +44,15 @@
 					{{/LINES}}
 				</div>
 			</div>
-			{{/DIFFERENCE_SET}}			<div>		</main>
-	</body>
-</html>
+			<div class="dirDiff" style="{{DIR_DISPLAY_PROPERTY:none}}">
+				<div class="dirTitle">
+				{{DIR_DIFFERENCE}}
+				</div>
+			</div>
+			{{/DIFFERENCE_SET}}
+			<div>
+		</main>
+
+	</body>
+
+</html>

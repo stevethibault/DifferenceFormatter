@@ -11,6 +11,7 @@ namespace Waters
 		DirectoryDifference() {}
 		DirectoryDifference(std::string input_line) : line(input_line) {}
 	
+		std::string difference() const { return line; }
 	protected:
 		std::string line{};
 	};

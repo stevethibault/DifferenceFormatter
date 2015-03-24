@@ -3,8 +3,8 @@
 namespace Waters
 {
 
-	UnifiedDifferenceFile::UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath) 
-		: diff_stream{istm}, left_path{leftPath}, right_path{rightPath}
+	UnifiedDifferenceFile::UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath, const std::string& header) 
+		: diff_stream{istm}, left_path{leftPath}, right_path{rightPath}, report_header(header)
 {
     //ctor
 }
@@ -64,7 +64,7 @@ void UnifiedDifferenceFile::generateHTMLReport() const
 {
 	ctemplate::TemplateDictionary templateDictionary("main");
 
-	templateDictionary.SetValue("INSTRUMENT", "Velox Core TUV to Altus UV Core");
+	templateDictionary.SetValue("HEADING", report_header);
 	templateDictionary.SetValue("DATE_GENERATED", util::getTime());
 	
 	templateDictionary.SetValue("LEFT_PATH", left_path.toString());
@@ -118,6 +118,8 @@ void UnifiedDifferenceFile::addDifferenceSetDictionary(const DifferenceSet& diff
 	ctemplate::TemplateDictionary *diffSetDictionary = dictionary->AddSectionDictionary("DIFFERENCE_SET");
 	diffSetDictionary->SetValue("LEFT_FILE", leftFile.path());
 	diffSetDictionary->SetValue("RIGHT_FILE", rightFile.path());
+	diffSetDictionary->SetValue("DIR_DISPLAY_PROPERTY", "display: none;");
+
 
 	auto leftLines = diffSet.leftDifference().getLines();
 	auto rightLines = diffSet.rightDifference().getLines();
@@ -166,7 +168,12 @@ const std::string UnifiedDifferenceFile::getCSSClassFromLineType(Line::LineType 
 }
 
 void UnifiedDifferenceFile::addDirectoryDifferenceDictionary(const DirectoryDifference& dirDiff, ctemplate::TemplateDictionary& dictionary) const
-{}
+{
+	ctemplate::TemplateDictionary *diffSetDictionary = dictionary.AddSectionDictionary("DIFFERENCE_SET");
+	diffSetDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: none;");
+
+	diffSetDictionary->SetValue("DIR_DIFFERENCE", dirDiff.difference());
+}
 
 
 };
