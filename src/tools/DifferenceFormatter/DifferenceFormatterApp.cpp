@@ -57,6 +57,13 @@ void DifferenceFormatterApp::defineOptions(OptionSet& options)
 		.argument("text")
 		.binding("header"));
 
+	options.addOption(
+		Option("context", "c", "bind option value to 'context_lines' how many lines before and after a change are included in the report")
+		.required(false)
+		.repeatable(false)
+		.argument("lines")
+		.binding("context_lines"));
+
 }
 
 void DifferenceFormatterApp::handleHelp(const std::string& name, const std::string& value)

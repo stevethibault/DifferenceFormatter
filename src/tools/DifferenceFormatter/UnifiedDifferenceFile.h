@@ -37,7 +37,7 @@ class UnifiedDifferenceFile
 		void addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const;
 		void addDirectoryDifferenceDictionary(const DirectoryDifference& dirDiff, ctemplate::TemplateDictionary& dictionary) const;
 		const static std::string getRelativePathString(const Poco::Path& basePath, const Poco::File& file);
-		void addDifferenceSetDictionary(const DifferenceSet& diffSet, const Poco::File& leftFile, const Poco::File& rightFile, ctemplate::TemplateDictionary *dictionary) const;
+		void addDifferenceSetDictionary(const DifferenceSet& diffSet, ctemplate::TemplateDictionary *dictionary) const;
 		const static std::string getCSSClassFromLineType(const Line::LineType lineType);
 };
 

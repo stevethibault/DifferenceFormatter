@@ -12,6 +12,16 @@ DifferenceChunk::DifferenceChunk(const std::string& line_numbers)
 	current_line_number = start_line;
 }
 
+int DifferenceChunk::startLine() const
+{
+	return start_line;
+}
+
+int DifferenceChunk::lineCount() const
+{
+	return line_count;
+}
+
 void DifferenceChunk::addLine(const std::string& lineText, Line::LineType lineType)
 {
 

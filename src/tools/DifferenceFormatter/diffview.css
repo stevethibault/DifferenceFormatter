@@ -8,11 +8,31 @@ div.diffOutput {
 	width:100%;
 }
 
-div.header{
+div.fileHeader{
 	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+div.changeHeader{
+	width: 100%;
+	border-top: 1px solid darkgray;
 	border-bottom: 1px solid darkgray;
 	border-collapse: collapse;
 	overflow: hidden;
+}
+
+div.changeHeader:hover{
+	cursor: pointer;
+}
+
+
+div.changeHeader.collapsed:after{
+	font-family: webdings;
+	font-size: 11pt;
+	content: "\36";
+	float:right;
+	color: grey;
 }
 
 div.diffOutput div.codeList {
@@ -50,7 +70,7 @@ div.lineNumber {
 	margin-bottom: -100%;
 }
 
-div.codeTitle {
+div.fileTitle {
 	text-align:center;
 	word-wrap: break-word;
 	float: left;
@@ -70,6 +90,26 @@ div.codeTitle {
 	box-sizing: border-box;
 }
 
+div.codeTitle {
+	text-align:center;
+	word-wrap: break-word;
+	float: left;
+	width: 50%;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+	background:#EFEFEF;
+	font-family:Verdana;
+	font-weight: normal;
+	border-left: 1px solid darkgray;
+	border-collapse: collapse;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 div.dirTitle {
 	width: 	100%;
 	text-align:left;
@@ -80,7 +120,7 @@ div.dirTitle {
 	padding-right: 1em;
 	background:#EFEFEF;
   font-family:Verdana;
-	font-weight: bold;
+	font-weight: normal;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;

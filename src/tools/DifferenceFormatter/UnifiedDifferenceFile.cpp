@@ -93,10 +93,14 @@ void UnifiedDifferenceFile::generateHTMLReport() const
 
 void UnifiedDifferenceFile::addFileDifferenceDictionary(const FileDifferences& fileDiff, ctemplate::TemplateDictionary& dictionary) const
 {
+	ctemplate::TemplateDictionary *diffFileDictionary = dictionary.AddSectionDictionary("FILE_DIFFERNCE");
+
+	diffFileDictionary->SetValue("LEFT_FILE", fileDiff.leftFile().path());
+	diffFileDictionary->SetValue("RIGHT_FILE", fileDiff.rightFile().path());
 
 	for (auto& diffSet : fileDiff.getDifferences())
 	{
-		addDifferenceSetDictionary(*diffSet, fileDiff.leftFile(), fileDiff.rightFile(), &dictionary);
+		addDifferenceSetDictionary(*diffSet, diffFileDictionary);
 	}
 }
 
@@ -113,13 +117,14 @@ const std::string UnifiedDifferenceFile::getRelativePathString(const Poco::Path&
 	return relativePath;
 }
 
-void UnifiedDifferenceFile::addDifferenceSetDictionary(const DifferenceSet& diffSet, const Poco::File& leftFile, const Poco::File& rightFile, ctemplate::TemplateDictionary *dictionary) const
+void UnifiedDifferenceFile::addDifferenceSetDictionary(const DifferenceSet& diffSet, ctemplate::TemplateDictionary *dictionary) const
 {
 	ctemplate::TemplateDictionary *diffSetDictionary = dictionary->AddSectionDictionary("DIFFERENCE_SET");
-	diffSetDictionary->SetValue("LEFT_FILE", leftFile.path());
-	diffSetDictionary->SetValue("RIGHT_FILE", rightFile.path());
-	diffSetDictionary->SetValue("DIR_DISPLAY_PROPERTY", "display: none;");
 
+	diffSetDictionary->SetIntValue("LEFT_STARTLINE", diffSet.leftDifference().startLine());
+	diffSetDictionary->SetIntValue("LEFT_ENDLINE", diffSet.leftDifference().startLine() + diffSet.leftDifference().lineCount() - 1);
+	diffSetDictionary->SetIntValue("RIGHT_STARTLINE", diffSet.rightDifference().startLine());
+	diffSetDictionary->SetIntValue("RIGHT_ENDLINE", diffSet.rightDifference().startLine() + diffSet.rightDifference().lineCount() - 1);
 
 	auto leftLines = diffSet.leftDifference().getLines();
 	auto rightLines = diffSet.rightDifference().getLines();
@@ -169,8 +174,7 @@ const std::string UnifiedDifferenceFile::getCSSClassFromLineType(Line::LineType 
 
 void UnifiedDifferenceFile::addDirectoryDifferenceDictionary(const DirectoryDifference& dirDiff, ctemplate::TemplateDictionary& dictionary) const
 {
-	ctemplate::TemplateDictionary *diffSetDictionary = dictionary.AddSectionDictionary("DIFFERENCE_SET");
-	diffSetDictionary->SetValue("FILE_DISPLAY_PROPERTY", "display: none;");
+	ctemplate::TemplateDictionary *diffSetDictionary = dictionary.AddSectionDictionary("DIRECTORY_DIFFERNCE");
 
 	diffSetDictionary->SetValue("DIR_DIFFERENCE", dirDiff.difference());
 }
