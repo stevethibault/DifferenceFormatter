@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="diffview.css" media="screen"/>
 		<script src="jquery-2.1.3.js"></script>
-		<!-- include css and javascript references here -->
 	</head>
 	<body>
 		<header>
@@ -31,8 +30,8 @@
 			{{#FILE_DIFFERNCE}}
 			<div class="diffOutput"> <!-- repeat for each change in a file -->
 				<div class="fileHeader">
-					<a href="file:///{{LEFT_FILE}}"><div class="fileTitle" >{{LEFT_FILE}}</div></a>
-					<a href="file:///{{LEFT_FILE}}"><div class="fileTitle" >{{RIGHT_FILE}}</div></a>
+					<a href="file:///{{LEFT_FILE}}" download><div class="fileTitle" >{{LEFT_FILE}}</div></a>
+					<a href="file:///{{LEFT_FILE}}" download><div class="fileTitle" >{{RIGHT_FILE}}</div></a>
 				</div>
 				{{#DIFFERENCE_SET}}
 				<div id="changeHeaderParent">
