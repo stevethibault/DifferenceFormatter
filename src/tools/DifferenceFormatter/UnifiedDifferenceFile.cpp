@@ -42,11 +42,11 @@ void UnifiedDifferenceFile::parseLine(const std::string& line)
 	}
     else if (line.substr(0, 4) == "--- ")
     {
-		std::dynamic_pointer_cast<FileDifferences>(diff)->leftFile(line.substr(3, line.length() - 4));
+		std::dynamic_pointer_cast<FileDifferences>(diff)->leftFile(line.substr(4, line.length() - 5));
     }
     else if (line.substr(0, 4) == "+++ ")
     {
-		std::dynamic_pointer_cast<FileDifferences>(diff)->rightFile(line.substr(3, line.length() - 4));
+		std::dynamic_pointer_cast<FileDifferences>(diff)->rightFile(line.substr(4, line.length() - 5));
     }
     else if (line.substr(0, 3) == "@@ ")
     {

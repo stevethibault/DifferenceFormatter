@@ -31,8 +31,8 @@
 			{{#FILE_DIFFERNCE}}
 			<div class="diffOutput"> <!-- repeat for each change in a file -->
 				<div class="fileHeader">
-					<div class="fileTitle" >{{LEFT_FILE}}</div>
-					<div class="fileTitle" >{{RIGHT_FILE}}</div>
+					<a href="file:///{{LEFT_FILE}}"><div class="fileTitle" >{{LEFT_FILE}}</div></a>
+					<a href="file:///{{LEFT_FILE}}"><div class="fileTitle" >{{RIGHT_FILE}}</div></a>
 				</div>
 				{{#DIFFERENCE_SET}}
 				<div id="changeHeaderParent">
