@@ -801,3 +801,6 @@ C:/Projects/DifferenceFormatter/build/sdks/Debug/include/Poco/Zip/ZipStream.h
 C:/Projects/DifferenceFormatter/build/sdks/Debug/include/Poco/Zip/ZipUtil.h
 C:/Projects/DifferenceFormatter/build/sdks/Debug/lib/PocoZipd.lib
 C:/Projects/DifferenceFormatter/build/sdks/Debug/bin/PocoZipd.dll
+C:/Projects/DifferenceFormatter/build/sdks/Debug/bin/diff.exe
+C:/Projects/DifferenceFormatter/build/sdks/Debug/bin/libiconv2.dll
+C:/Projects/DifferenceFormatter/build/sdks/Debug/bin/libintl3.dll

@@ -32,6 +32,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Projects/DifferenceFormatter/src/sdks/unittest++/cmake_install.cmake")
   include("C:/Projects/DifferenceFormatter/src/sdks/ctemplate/cmake_install.cmake")
   include("C:/Projects/DifferenceFormatter/src/sdks/poco-1.5.3/cmake_install.cmake")
+  include("C:/Projects/DifferenceFormatter/src/sdks/gnudiff/cmake_install.cmake")
 
 endif()
 

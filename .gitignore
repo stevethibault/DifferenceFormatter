@@ -73,3 +73,4 @@ syntax: regexp
 ^include/vxworks/
 ^src/sdks/zeromq-3.2.2/lib/Win32/
 ^data_store/
+^CMakeFiles/
