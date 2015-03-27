@@ -194,8 +194,8 @@
 			<h1>Difference Report</h1>
 			<h1 id="heading">{{HEADING}}</h1>
 			<section id="folders">
-				<a href="file://{{LEFT_PATH}}" download><h2 id="leftFolder">Left Folder: {{LEFT_PATH}}</h2></a>
-  				<a href="file://{{RIGHT_PATH}}" download><h2 id="rightFolder">Right Folder: {{RIGHT_PATH}}</h2></a>
+				<a href="file://{{LEFT_PATH}}" ><h2 id="leftFolder">Left Folder: {{LEFT_PATH}}</h2></a>
+				<a href="file://{{RIGHT_PATH}}" ><h2 id="rightFolder">Right Folder: {{RIGHT_PATH}}</h2></a>
  			</section>
 			<h3 id="subHeading">{{DATE_GENERATED}}</h3>
 		</header>
