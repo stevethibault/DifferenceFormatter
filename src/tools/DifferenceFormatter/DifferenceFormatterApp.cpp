@@ -38,31 +38,41 @@ void DifferenceFormatterApp::defineOptions(OptionSet& options)
             .repeatable(false)
             .argument("file")
             .binding("diff_file"));
+
+	options.addOption(
+		Option("template", "t", "bind option value to 'template'")
+			.required(true)
+			.repeatable(false)
+			.argument("file")
+			.binding("template"));
+
 	options.addOption(
 		Option("left_path", "l", "bind option value to 'left_path'")
-		.required(true)
-		.repeatable(false)
-		.argument("path")
-		.binding("left_path"));
+			.required(true)
+			.repeatable(false)
+			.argument("path")
+			.binding("left_path"));
+
 	options.addOption(
 		Option("right_path", "r", "bind option value to 'right_path'")
-		.required(true)
-		.repeatable(false)
-		.argument("path")
-		.binding("right_path"));
+			.required(true)
+			.repeatable(false)
+			.argument("path")
+			.binding("right_path"));
+
 	options.addOption(
 		Option("header", "h", "bind option value to 'header' the header text on the difference report")
-		.required(true)
-		.repeatable(false)
-		.argument("text")
-		.binding("header"));
+			.required(true)
+			.repeatable(false)
+			.argument("text")
+			.binding("header"));
 
 	options.addOption(
 		Option("context", "c", "bind option value to 'context_lines' how many lines before and after a change are included in the report")
-		.required(false)
-		.repeatable(false)
-		.argument("lines")
-		.binding("context_lines"));
+			.required(false)
+			.repeatable(false)
+			.argument("lines")
+			.binding("context_lines"));
 
 }
 
@@ -85,9 +95,10 @@ void DifferenceFormatterApp::displayHelp()
 void DifferenceFormatterApp::parseDifferenceFile()
 {
 	std::ifstream input_stream(config().getString("diff_file"), std::ifstream::in);
-		if (!input_stream.fail())
+
+	if (!input_stream.fail())
 	{
-		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path"), config().getString("header") };
+		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path"), config().getString("header"), config().getString("template") };
 
 		diff.parse();
 
