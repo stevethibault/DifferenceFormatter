@@ -3,12 +3,6 @@
 namespace Waters
 {
 
-	UnifiedDifferenceFile::UnifiedDifferenceFile(std::istream& istm, const std::string& leftPath, const std::string& rightPath, const std::string& header, const std::string& templateFile) 
-		: diff_stream(istm), left_path(leftPath), right_path(rightPath), template_file(templateFile), report_header(header)
-{
-    //ctor
-}
-
 UnifiedDifferenceFile::~UnifiedDifferenceFile()
 {
     //dtor
@@ -86,7 +80,7 @@ void UnifiedDifferenceFile::generateHTMLReport() const
 
 	std::string report_text{};
 	ctemplate::ExpandTemplate(template_file, ctemplate::DO_NOT_STRIP, &templateDictionary, &report_text);
-	std::ofstream report_stm("diff_report.html");
+	std::ofstream report_stm(output_file);
 	report_stm << report_text;
 	report_stm.close();
 }

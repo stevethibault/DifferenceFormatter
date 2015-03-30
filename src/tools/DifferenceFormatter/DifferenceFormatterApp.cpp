@@ -68,6 +68,13 @@ void DifferenceFormatterApp::defineOptions(OptionSet& options)
 			.binding("header"));
 
 	options.addOption(
+		Option("output_file", "o", "bind option value to 'output_file' the path and file to save the report")
+		.required(true)
+		.repeatable(false)
+		.argument("file")
+		.binding("output_file"));
+
+	options.addOption(
 		Option("context", "c", "bind option value to 'context_lines' how many lines before and after a change are included in the report")
 			.required(false)
 			.repeatable(false)
@@ -98,7 +105,7 @@ void DifferenceFormatterApp::parseDifferenceFile()
 
 	if (!input_stream.fail())
 	{
-		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path"), config().getString("header"), config().getString("template") };
+		UnifiedDifferenceFile diff{input_stream, config().getString("left_path"), config().getString("right_path"), config().getString("header"), config().getString("template"), config().getString("output_file") };
 
 		diff.parse();
 
