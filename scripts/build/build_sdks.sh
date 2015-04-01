@@ -19,7 +19,7 @@ PROJECTROOT=${DEVROOT}/projects/sdks/$CONFIG
 mkdir -p $PROJECTROOT
 cd $PROJECTROOT
 
-cmake $DEVROOT/src/sdks -DCMAKE_BUILD_TYPE=$CONFIG -DCMAKE_TOOLCHAIN_FILE=$CMAKE_TOOLCHAIN_FILE || exit 1
+cmake $DEVROOT/src/sdks -DCMAKE_BUILD_TYPE=$CONFIG  || exit 1
 cmake --build . --target install || exit 1
 
 cd $CURRENT_DIR

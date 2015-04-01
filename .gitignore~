@@ -45,7 +45,6 @@ installer\mako_config_*.wxs
 
 src/sdks/poco-1.5.3/Foundation/src/pocomsg.rc
 src/sdks/poco-1.5.3/Foundation/src/pocomsg.h
-/src/ctemplate/ctemplate/
 
 syntax: regexp
 ^bin/
