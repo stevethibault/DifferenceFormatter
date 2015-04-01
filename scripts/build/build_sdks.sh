@@ -1,14 +1,25 @@
-stepLineNumber=0
-arguments="$@"
-function exitError
-{
-  echo "Exiting ${0} ${arguments}: error at or near line ${stepLineNumber}"
-}
-trap exitError EXIT 
-trap 'stepLineNumber=${LINENO}' DEBUG
+#!/bin/bash
+CONFIG=${1}
+if [ -z "$CONFIG" ]
+  then
+  CONFIG=${MAKO_DEFAULT_CONFIG}
+fi
+if [ -z "$CONFIG" ]
+  then
+  CONFIG=Debug
+fi
 
-./build_sdks_for_configuration.sh Debug || trap DEBUG; exit 1
-./build_sdks_for_configuration.sh Release || trap DEBUG; exit 1
-# ./set_sdks.sh || trap DEBUG; exit 1
+echo "Building sdks for $CONFIG"
+CURRENT_DIR=$PWD
+cd ../..
+DEVROOT=$PWD
+PROJECTROOT=${DEVROOT}/projects/sdks/$CONFIG
 
-trap EXIT 
+
+mkdir -p $PROJECTROOT
+cd $PROJECTROOT
+
+cmake $DEVROOT/src/sdks -DCMAKE_BUILD_TYPE=$CONFIG -DCMAKE_TOOLCHAIN_FILE=$CMAKE_TOOLCHAIN_FILE || exit 1
+cmake --build . --target install || exit 1
+
+cd $CURRENT_DIR
